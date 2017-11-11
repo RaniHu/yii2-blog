@@ -1,0 +1,198 @@
+@charset "UTF-8";
+/*背景图标*/
+.article-notSearch-icon {
+  display: inline-block;
+  background: url("../../image/article-notSearch.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-notfound-icon {
+  display: inline-block;
+  background: url("../../image/article-notfound.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-detail-tag-icon {
+  display: inline-block;
+  background: url("../../image/article-detail-tag.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-time-icon {
+  display: inline-block;
+  background: url("../../image/article-time.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-search-icon {
+  display: inline-block;
+  background: url("../../image/article-search.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-sort-icon {
+  display: inline-block;
+  background: url("../../image/article-sort.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-timeline-icon {
+  display: inline-block;
+  background: url("../../image/article-timeline.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-cate-icon {
+  display: inline-block;
+  background: url("../../image/article-cate.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-tag-icon {
+  display: inline-block;
+  background: url("../../image/article-tag.png") no-repeat center;
+  background-size: 100% 100%; }
+
+#main {
+  background-color: #f7f7f7;
+  /*头图*/
+  /*中间内容*/ }
+  #main .main-image {
+    height: 320px;
+    width: 100%;
+    background-size: contain; }
+    #main .main-image.home-page {
+      background: url("../../image/main-image.jpg") no-repeat center; }
+    #main .main-image.cate-page {
+      background: url("../../image/main-image9.jpg") no-repeat center; }
+    #main .main-image.tag-page {
+      background: url("../../image/main-image2.jpg") no-repeat center; }
+    #main .main-image.detail-page {
+      background: url("../../image/main-image5.jpg") no-repeat center; }
+  #main .content-wrapper {
+    width: 980px;
+    margin: 0 auto;
+    padding: 40px 0;
+    /*====左边内容====*/ }
+    #main .content-wrapper .left-content {
+      float: left;
+      width: 75%;
+      padding-right: 90px;
+      box-sizing: border-box;
+      /*=====当前文章列表=====*/
+      /*=====当前文章详细内容=====*/
+      /*=====标签页=====*/ }
+      #main .content-wrapper .left-content a {
+        text-decoration: none;
+        cursor: pointer; }
+      #main .content-wrapper .left-content .article-notfound {
+        margin-top: 60px;
+        text-align: center; }
+        #main .content-wrapper .left-content .article-notfound .article-notfound-icon {
+          width: 100px;
+          height: 100px; }
+        #main .content-wrapper .left-content .article-notfound .article-notSearch-icon {
+          width: 160px;
+          height: 100px; }
+        #main .content-wrapper .left-content .article-notfound .no-article-text {
+          text-align: center;
+          font-size: 16px;
+          margin-top: 10px; }
+      #main .content-wrapper .left-content .cur-article-list {
+        padding: 20px 25px;
+        background-color: #ffffff;
+        text-align: left;
+        margin-bottom: 25px;
+        border-radius: 6px;
+        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: 0.5s;
+        /*文章标题*/
+        /*文章介绍*/
+        /*其他信息*/ }
+        #main .content-wrapper .left-content .cur-article-list:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          transform: translateY(-3px); }
+        #main .content-wrapper .left-content .cur-article-list h3 {
+          color: #444444;
+          font-size: 20px; }
+        #main .content-wrapper .left-content .cur-article-list .article-intro {
+          color: #666666;
+          margin: 15px 0 10px 0; }
+          #main .content-wrapper .left-content .cur-article-list .article-intro:hover {
+            color: #0ABFBC;
+            cursor: pointer; }
+        #main .content-wrapper .left-content .cur-article-list .other-info {
+          font-size: 12px;
+          color: #999;
+          /*图标*/ }
+          #main .content-wrapper .left-content .cur-article-list .other-info span {
+            margin-right: 15px; }
+          #main .content-wrapper .left-content .cur-article-list .other-info span, #main .content-wrapper .left-content .cur-article-list .other-info i {
+            display: inline-block;
+            vertical-align: bottom; }
+          #main .content-wrapper .left-content .cur-article-list .other-info .article-time-icon, #main .content-wrapper .left-content .cur-article-list .other-info .article-sort-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 3px; }
+      #main .content-wrapper .left-content .article-detail-box h1 {
+        font-size: 32px;
+        font-weight: bold; }
+      #main .content-wrapper .left-content .article-detail-box .article-attach-info {
+        margin: 20px 0; }
+        #main .content-wrapper .left-content .article-detail-box .article-attach-info .pubtime-cate {
+          float: left;
+          padding-left: 5px;
+          font-size: 12px;
+          color: #777; }
+          #main .content-wrapper .left-content .article-detail-box .article-attach-info .pubtime-cate .cate-name {
+            padding: 2px 5px;
+            font-size: 12px;
+            color: #FC354C;
+            border: 1px solid #FC354C;
+            border-radius: 5px; }
+          #main .content-wrapper .left-content .article-detail-box .article-attach-info .pubtime-cate .article-pub-time {
+            padding-left: 5px; }
+        #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all {
+          float: right;
+          font-size: 0; }
+          #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all .article-detail-tag-icon {
+            display: inline-block;
+            vertical-align: middle;
+            width: 24px;
+            height: 24px; }
+          #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul {
+            display: inline-block;
+            vertical-align: middle; }
+            #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li {
+              display: inline-block;
+              margin: 0 3px; }
+              #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a {
+                color: #666666;
+                font-size: 13px;
+                text-decoration: underline; }
+                #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+                  color: #2aabd2; }
+      #main .content-wrapper .left-content .article-detail-box .cur-article-text {
+        text-align: justify;
+        color: #444;
+        text-indent: 32px;
+        line-height: 26px;
+        font-size: 16px; }
+      #main .content-wrapper .left-content .tag-page-info, #main .content-wrapper .left-content .cate-page-info {
+        padding: 15px 0; }
+      #main .content-wrapper .left-content .list-block {
+        margin-bottom: 45px;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed #ccc; }
+        #main .content-wrapper .left-content .list-block h3 {
+          color: #0ABFBC;
+          margin-bottom: 20px; }
+        #main .content-wrapper .left-content .list-block ul {
+          padding-left: 15px; }
+          #main .content-wrapper .left-content .list-block ul li {
+            font-size: 15px;
+            color: #666;
+            list-style-type: disc; }
+            #main .content-wrapper .left-content .list-block ul li a {
+              display: block;
+              color: #666;
+              margin-top: 10px; }
+              #main .content-wrapper .left-content .list-block ul li a:hover {
+                text-decoration: underline; }
+              #main .content-wrapper .left-content .list-block ul li a .pub-time {
+                font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+                font-size: 12px;
+                color: #777; }

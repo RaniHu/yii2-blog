@@ -1,0 +1,199 @@
+@import '../common/common_mixin.scss';
+@import '../common/common_define.scss';
+
+/*======markdown插件样式更改*/
+
+#main {
+  .CodeMirror {
+    height: 260px;
+  }
+  .editor-toolbar {
+    opacity: 1;
+    a {
+      margin: 1px 10px;
+    }
+  }
+  .editor-statusbar {
+    color: #666;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  } //中间容器
+  .content-wrapper.write-article {
+    width: 1080px;
+  }
+  .CodeMirror-scroll{
+    padding: 10px 20px;
+    margin: 0;
+    color: #333;
+    @include box-sizing(border-box);
+  }
+}
+
+
+/*=====创建文章样式======*/
+
+#write-article-form {
+
+  //文章信息表单(除正文)
+  .article-info-form {
+    border-radius: 8px; 
+
+    //表单列表
+    .info-form-list {
+      background: #ffffff;
+      margin-bottom: 30px;
+      border: 1px solid #eee; 
+
+      //标题
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        color: #34495E;
+        padding: 15px 0 15px 25px;
+        border-bottom: 1px solid #eee;
+      }
+      >div {
+        padding: 10px 25px;
+      } 
+
+      //基本信息
+      &.basic-info-box {
+
+        //输入框盒子
+        >div {
+          padding: 10px 25px;
+          input[type='text'],
+          textarea {
+            width: 100%;
+            height: 35px;
+            padding: 5px 15px;
+            color: #999;
+            font-size: 13px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+          } 
+
+          //文章标题
+          &.article-title-input {
+            margin-top: 12px;
+          } 
+
+          //文章简介
+          &.article-intro-input {
+            margin-bottom: 13px;
+          } 
+
+          //文章简介输入框
+          textarea.intro-inputArea {
+            height: 100px;
+          }
+        }
+      } 
+
+    
+      //文章分类与标签
+      .article-cate-input,.article-tag-input {
+        font-size: 0;
+        input {
+          height: 0;
+          display: none;
+        }
+        span {
+          font-size: 14px;
+          vertical-align: middle;
+          &:hover{
+            color: #0ABFBC;
+          }
+        } 
+        .radio-val,.checkbox-val{
+          font-weight: normal;
+          color: #34495e;
+        }
+
+        //每一个单选项
+        label {
+          font-size: 0;
+          padding: 10px 0 10px 0;
+          margin-right: 20px;
+          margin-bottom: 0;
+          cursor: pointer;
+        
+          //单选与多选的自定义框
+          .icon-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #D7DBDE;
+            margin-right: 5px;
+          }
+        } 
+        //文章标签
+        &.article-tag-input{
+          .icon-box{
+            @include border-radius(5px);
+          }
+          //当前选择的自定义框
+          label.checked .icon-box {
+            position: relative;
+            background-color: #0ABFBC;
+            border: 3px solid #0ABFBC;
+            &:before {
+              content: '';
+              position: absolute;
+              display: block;
+              width: 12px;
+              height: 7px;
+              left: 50%;
+              top:50%;
+              left: 1px;
+              top:2px;
+              border-left: 2px solid #ffffff;
+              border-bottom: 2px solid #ffffff;
+              @include transform(rotate(-45deg));
+            }
+          }
+        }
+
+        //文章分类
+        &.article-cate-input {
+          .icon-box {
+            @include border-radius(50%);
+          } 
+          //当前选择的自定义框
+          label.checked .icon-box {
+            position: relative;
+            border: 3px solid #0ABFBC;
+            &:before {
+              content: '';
+              display: block;
+              width: 6px;
+              height: 6px;
+              background-color: #0ABFBC;
+              @include all-center-hasWH(6px,6px);
+              @include border-radius(50%);
+            }
+          }
+        }
+      }
+    }
+  } //文章正文
+  .article-content-area {
+    border: 1px solid #eee;
+    background: #ffffff;
+    @include border-radius(8px);
+  } //提交按钮
+  .submit-btn {
+    text-align: center;
+    margin-top: 30px;
+    input {
+      width: 120px;
+      height: 35px;
+      background-color: #0ABFBC;
+      @include border-radius(5px);
+      color: #ffffff;
+      &::hover {
+        background-color: darken(#0ABFBC, 20%);
+      }
+    }
+  }
+}

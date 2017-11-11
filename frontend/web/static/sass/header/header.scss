@@ -1,0 +1,56 @@
+
+//自定义字体
+@font-face {
+  font-family: 'lovely_eunike_hans';
+  src: url('../../fonts/Hand_Of_Sean_Demo.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#header {
+  padding: 0 70px 0 100px;
+  background-color: #29221f;
+  height: 55px;
+  line-height: 55px;
+
+
+  .user-name {
+    float: left;
+    font-size: 26px;
+    font-family: lovely_eunike_hans;
+    span{
+      &:nth-child(1){
+        color: #FC354C;
+      }
+      &:nth-child(2){
+        color: #FCF7C5;
+      }
+      &:nth-child(3){
+        color: #0ABFBC;
+      }
+    }
+  }
+
+  //头部菜单
+  .header-nav {
+    float: right;
+    font-size: 0;
+    li {
+      display: inline-block;
+      a {
+        font-size: 14px;
+        display: block;
+        padding: 0 20px;
+        color: #fffef1;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover{
+          color: #0ABFBC;
+        }
+        &.active{
+          color: #0ABFBC;
+        }
+      }
+    }
+  }
+}

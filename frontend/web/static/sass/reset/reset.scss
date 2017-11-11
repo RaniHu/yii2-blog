@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, table, td, dl, dt, dd, img, div, input, select, option {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Microsoft Yahei';
+}
+
+a,input, select, textarea, button {
+  outline: none;
+  border: none;
+  vertical-align: middle;
+}
+
+
+img {
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+//去掉表格间隙
+table{
+  border-collapse: collapse;
+}
+
+
+//左浮动
+.float_l {
+  float: left;
+}
+
+//右浮动
+.float_r {
+  float: right;
+}
+
+//清除浮动
+.clearFix:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

@@ -1,0 +1,315 @@
+@import './common_mixin.scss';
+
+/*======展开小图标>======*/
+
+@mixin openIcon($borderColor, $size) {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: pxToRem(-$size / 2);
+    width: pxToRem($size);
+    height: pxToRem($size);
+    border-right: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    @include transform(rotate(-45deg));
+}
+
+
+/*======向上小三角======*/
+
+@mixin triangle-up($size, $color) {
+    width: 0;
+    height: 0;
+    border-left: pxToRem($size) solid transparent;
+    border-right: pxToRem($size) solid transparent;
+    border-bottom: pxToRem($size * 1.5) solid $color;
+}
+
+
+/*======向下小三角======*/
+
+@mixin triangle-down($size, $color) {
+    width: 0;
+    height: 0;
+    border-left: pxToRem($size) solid transparent;
+    border-right: pxToRem($size) solid transparent;
+    border-top: pxToRem($size * 1.5) solid $color;
+}
+
+
+/*======向右小三角======*/
+
+@mixin triangle-right($size, $color) {
+    width: 0;
+    height: 0;
+    border-left: pxToRem($size * 1.5) solid $color;
+    border-bottom: pxToRem($size) solid transparent;
+    border-top: pxToRem($size) solid transparent;
+}
+
+
+/*======在手机端滑动时更顺畅======*/
+
+%overflow-scroll-mobile {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/*=====单行文本溢出省略号=====*/
+
+%overflow-ellipsis-oneline {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/*=====多行文本溢出省略号=====*/
+
+@mixin overflow-ellipsis-moreline($line-num, $visible-height) {
+    overflow: hidden;
+    text-overflow: ellipsis; //可以用来多行文本的情况下，用省略号“...”隐藏超出范围的文本
+    -webkit-line-clamp: $line-num; //限制在一个块元素显示的文本的行数
+    display: -webkit-box; //必须结合的属性,将对象作为弹性伸缩盒子模型显示
+    -webkit-box-orient: vertical; //必须结合的属性,设置或检索伸缩盒对象的子元素的排列方式
+    height: $visible-height;
+}
+
+
+/*=====圆圈头像=====*/
+
+@mixin circle_icon($circle_icon_size) {
+    width: $circle_icon_size;
+    height: $circle_icon_size;
+    @include border-radius(50%);
+}
+
+
+/*=====水平垂直居中已知宽高======*/
+
+@mixin all-center-hasWH($width, $height) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -$width / 2;
+    margin-top: -$height / 2;
+}
+
+
+/*=====水平垂直居中=====*/
+
+%all-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translateX(-50%));
+    @include transform(translateY(-50%));
+}
+
+
+/*=====水平居中=====*/
+
+%center-horizontally {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+
+/*=====垂直居中=====*/
+
+%vertical-center {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+
+/*=====遮罩层=====*/
+
+#mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+//弹性盒子外层
+.flex {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.flex-main {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.loading-text {
+    position: relative;
+    width: pxToRem(280px);
+    height: pxToRem(8px);
+    border-radius: 2px;
+    margin: pxToRem(130px) auto;
+    background: #38ADFF;
+    -webkit-animation: changeBgColor 1.04s ease-in infinite alternate;
+    span {
+        display: inline-block;
+        width: pxToRem(28px);
+        height: pxToRem(28px);
+        border-radius: 50%;
+        background: lightgreen;
+        position: absolute;
+        -webkit-animation: changePosition 1.04s ease-in infinite alternate;
+        @extend %vertical-center;
+    }
+    @-webkit-keyframes changeBgColor {
+        0% {
+            background: #38ADFF;
+        }
+        100% {
+            background: lightblue;
+        }
+    }
+    @-webkit-keyframes changePosition {
+        0% {
+            background: #38ADFF;
+        }
+        100% {
+            margin-left: pxToRem(270px);
+            background: lightblue;
+        }
+    }
+}
+
+@-webkit-keyframes loading1 {
+    0% {
+        @include transform(scale(1))
+    }
+    50% {
+        @include transform(scale(0.4))
+    }
+    100% {
+        @include transform(scale(1))
+    }
+}
+
+@-webkit-keyframes loading2 {
+    50% {
+        @include transform(scale(0.4));
+        @include opacity(0.4);
+    }
+    100% {
+        @include transform(scale(1));
+        @include opacity(1);
+    }
+}
+
+
+/*=======loading======*/
+
+$basic-info-height: 480px;
+$transition-delay: 0.2s;
+//loading条形状
+.loading-line {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    display: inline-block;
+    margin-top: pxToRem(-20px);
+    @include transform(translateX(-50%) translateY(-50%));
+    p {
+        font-size: pxToRem(26px);
+        color: #656c78;
+    }
+    i {
+        display: inline-block;
+        width: pxToRem(8px);
+        height: pxToRem(65px);
+        background-color: #008CEE;
+        border-radius: 3px;
+        margin: 0 pxToRem(4px);
+        &:nth-child(1) {
+            @include animation(loading1 1s ease-in infinite)
+        }
+        &:nth-child(2) {
+            @include animation(loading1 1s ease-in $transition-delay*0.3 infinite)
+        }
+        &:nth-child(3) {
+            @include animation(loading1 1s ease-in $transition-delay*0.8 infinite)
+        }
+        &:nth-child(4) {
+            @include animation(loading1 1s ease-in $transition-delay*1.2 infinite)
+        }
+        &:nth-child(5) {
+            @include animation(loading1 1s ease-in $transition-delay*1.5 infinite)
+        }
+    }
+}
+
+.loading-circle {
+    text-align: center;
+    margin-top: pxToRem(300px);
+    span {
+        display: inline-block;
+        width: pxToRem(20px);
+        height: pxToRem(20px);
+        margin-right: pxToRem(12px);
+        background: #99CCFF;
+        -webkit-transform-origin: right bottom;
+        -webkit-animation: load 1s ease infinite;
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+@-webkit-keyframes load {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: rotate(90deg);
+    }
+}
+
+.loading span:nth-child(1) {
+    -webkit-animation-delay: 0.13s;
+}
+
+.loading span:nth-child(2) {
+    -webkit-animation-delay: 0.26s;
+}
+
+.loading span:nth-child(3) {
+    -webkit-animation-delay: 0.39s;
+}
+
+.loading span:nth-child(4) {
+    -webkit-animation-delay: 0.52s;
+}
+
+.loading span:nth-child(5) {
+    -webkit-animation-delay: 0.65s;
+}

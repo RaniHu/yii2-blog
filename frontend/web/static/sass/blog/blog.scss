@@ -1,0 +1,236 @@
+/*背景图标*/
+$bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag;
+@each $bg-icon-list in $bg-icon {
+  .#{$bg-icon-list}-icon {
+    display: inline-block;
+    background: url("../../image/#{$bg-icon-list}.png") no-repeat center;
+    background-size: 100% 100%;
+  }
+}
+
+
+
+#main {
+  background-color: #f7f7f7;
+  /*头图*/
+  .main-image {
+    height: 320px;
+    width: 100%;
+    background-size: contain;
+    &.home-page{
+      background: url("../../image/main-image.jpg") no-repeat center;
+    }
+    &.cate-page{
+      background: url("../../image/main-image9.jpg") no-repeat center;
+    }
+    &.tag-page{
+      background: url("../../image/main-image2.jpg") no-repeat center;
+    }
+    &.detail-page{
+      background: url("../../image/main-image5.jpg") no-repeat center;
+    }
+
+  }
+
+  /*中间内容*/
+  .content-wrapper {
+    width: 980px;
+    margin: 0 auto;
+    padding: 40px 0;
+    /*====左边内容====*/
+    .left-content {
+      float: left;
+      width: 75%;
+      padding-right: 90px;
+      box-sizing: border-box;
+
+      a{
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+
+      //=====暂无文章提示=====
+      .article-notfound{
+        margin-top: 60px;
+        text-align: center;
+        .article-notfound-icon{
+          width: 100px;
+          height: 100px;
+        }
+        .article-notSearch-icon{
+          width: 160px;
+          height: 100px;
+        }
+        .no-article-text {
+          text-align: center;
+          font-size: 16px;
+          margin-top: 10px;
+        }
+
+      }
+
+      /*=====当前文章列表=====*/
+      .cur-article-list {
+        padding: 20px 25px;
+        background-color: #ffffff;
+        text-align: left;
+        margin-bottom: 25px;
+        border-radius: 6px;
+        box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+          transform: translateY(-3px);
+        }
+        /*文章标题*/
+        h3 {
+          color: #444444;
+          font-size: 20px;
+        }
+        /*文章介绍*/
+        .article-intro {
+          color: #666666;
+          margin: 15px 0 10px 0;
+          &:hover {
+            color: #0ABFBC;
+            cursor: pointer;
+          }
+        }
+        /*其他信息*/
+        .other-info {
+          font-size: 12px;
+          color: #999;
+          span {
+            margin-right: 15px;
+          }
+          span, i {
+            display: inline-block;
+            vertical-align: bottom;
+          }
+          /*图标*/
+          .article-time-icon, .article-sort-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 3px;
+          }
+        }
+      }
+
+      /*=====当前文章详细内容=====*/
+      .article-detail-box{
+
+        //文章标题
+        h1{
+          font-size: 32px;
+          font-weight: bold;
+        }
+
+        .article-attach-info{
+          margin: 20px 0;
+
+          //发布时间和分类
+          .pubtime-cate {
+            float: left;
+            padding-left: 5px;
+            font-size: 12px;
+            color: #777;
+            //分类
+            .cate-name {
+              padding: 2px 5px;
+              font-size: 12px;
+              color: #FC354C;
+              border: 1px solid #FC354C;
+              border-radius: 5px;
+            }
+            .article-pub-time {
+              padding-left: 5px;
+            }
+          }
+          //标签
+          .cur-article-tag-all {
+            float: right;
+            font-size: 0;
+            .article-detail-tag-icon {
+              display: inline-block;
+              vertical-align: middle;
+              width: 24px;
+              height: 24px;
+            }
+
+            ul {
+              display: inline-block;
+              vertical-align: middle;
+              li {
+                display: inline-block;
+                margin: 0 3px;
+                a {
+                  color: #666666;
+                  font-size: 13px;
+                  text-decoration: underline;
+                  &:hover {
+                    color: #2aabd2;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+
+
+        //文章正文
+        .cur-article-text{
+          text-align: justify;
+          color: #444;
+          text-indent: 32px;
+          line-height: 26px;
+          font-size: 16px;
+        }
+      }
+
+      /*=====标签页=====*/
+      .tag-page-info,.cate-page-info {
+        padding: 15px 0;
+        }
+        //标签和分类下的文章列表
+        .list-block {
+          margin-bottom: 45px;
+          padding-bottom: 15px;
+          border-bottom: 1px dashed #ccc;
+
+          //标签名
+          h3 {
+            color: #0ABFBC;
+            margin-bottom: 20px;
+          }
+          //文章列表
+          ul {
+            padding-left: 15px;
+              li{
+                font-size: 15px;
+                color: #666;
+                list-style-type: disc;
+                a {
+                  display: block;
+                  color: #666;
+                  margin-top: 10px;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                  .pub-time {
+                    font-family: Lato, "PingFang SC", "Microsoft YaHei", sans-serif;
+                    font-size: 12px;
+                    color: #777;
+                  }
+                }
+              }
+          }
+        }
+      }
+
+    }
+   
+  }
+
