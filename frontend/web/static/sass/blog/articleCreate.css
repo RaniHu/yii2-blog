@@ -276,8 +276,18 @@
         display: none; }
       #write-article-form .article-info-form .info-form-list .article-cate-input span, #write-article-form .article-info-form .info-form-list .article-tag-input span {
         font-size: 14px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        -webkit-transition: 0.15s;
+        -moz-transition: 0.15s;
+        -ms-transiton: 0.15s;
+        -o-transition: 0.15s;
+        transition: 0.15s; }
         #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+          -webkit-transition: 0.15s;
+          -moz-transition: 0.15s;
+          -ms-transiton: 0.15s;
+          -o-transition: 0.15s;
+          transition: 0.15s;
           color: #0ABFBC; }
       #write-article-form .article-info-form .info-form-list .article-cate-input .radio-val, #write-article-form .article-info-form .info-form-list .article-cate-input .checkbox-val, #write-article-form .article-info-form .info-form-list .article-tag-input .radio-val, #write-article-form .article-info-form .info-form-list .article-tag-input .checkbox-val {
         font-weight: normal;

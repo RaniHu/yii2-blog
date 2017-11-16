@@ -2,10 +2,322 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71041aea-e1a6-42b0-a121-6314a817c3ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/backend/web/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/static/js/blog/test.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/build/Release/obj.target/binding.node" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/build/Release/obj.target/binding.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/m4/.gitkeep" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/m4/.gitkeep" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/vendor/linux-x64-48/binding.node" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/vendor/linux-x64-48/binding.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ijackua/yii2-lepture-markdown-editor-widget" afterPath="$PROJECT_DIR$/vendor/ijackua/yii2-lepture-markdown-editor-widget" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/config/main.php" afterPath="$PROJECT_DIR$/common/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/main.php" afterPath="$PROJECT_DIR$/frontend/config/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/BlogController.php" afterPath="$PROJECT_DIR$/frontend/controllers/BlogController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/Article.php" afterPath="$PROJECT_DIR$/frontend/models/Article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/ArticleCate.php" afterPath="$PROJECT_DIR$/frontend/models/ArticleCate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/ArticleTag.php" afterPath="$PROJECT_DIR$/frontend/models/ArticleTag.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/blog/create.php" afterPath="$PROJECT_DIR$/frontend/views/blog/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/blog/view.php" afterPath="$PROJECT_DIR$/frontend/views/blog/view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-install" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-install" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-publish" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-publish" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/mkdirp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/mkdirp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/node-gyp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/node-gyp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/node-sass" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/node-sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/nopt" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/nopt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/not-in-install" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/not-in-install" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/not-in-publish" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/not-in-publish" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/rimraf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sassgraph" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sassgraph" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/semver" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/semver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sshpk-conv" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sshpk-conv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sshpk-sign" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sshpk-sign" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sshpk-verify" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/sshpk-verify" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/strip-indent" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/strip-indent" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/uglifyjs" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/uglifyjs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/uuid" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/which" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/which" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/ajv/scripts/info" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/ajv/scripts/info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/ajv/scripts/prepare-tests" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/ajv/scripts/prepare-tests" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/ajv/scripts/travis-gh-pages" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/ajv/scripts/travis-gh-pages" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/boom/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/boom/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/boom/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/boom/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/boom/lib/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/boom/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/lib/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/node_modules/boom/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/node_modules/boom/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/node_modules/boom/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/node_modules/boom/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/node_modules/boom/lib/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/node_modules/boom/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/package.json" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/cryptiles/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/duplexer2/example.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/duplexer2/example.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-concat/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-concat/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-jshint/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-jshint/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-util/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-util/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-util/node_modules/replace-ext/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/gulp-util/node_modules/replace-ext/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/.npmignore" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/client.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/browser.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/client.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/crypto.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/crypto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/server.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/utils.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/package.json" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hawk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hoek/lib/escape.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hoek/lib/escape.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hoek/lib/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/hoek/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/in-install.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/in-install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/in-publish.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/in-publish.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/not-in-install.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/not-in-install.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/not-in-publish.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/in-publish/not-in-publish.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/mkdirp/bin/cmd.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/mkdirp/bin/cmd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/nan/tools/1to2.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/nan/tools/1to2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/bin/node-gyp.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/bin/node-gyp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/buildbot/buildbot_run.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/buildbot/buildbot_run.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/gyp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/gyp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/gyp_main.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/gyp_main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/gyptest.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/gyptest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/MSVSSettings_test.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/MSVSSettings_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/__init__.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/common_test.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/common_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/easy_xml_test.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/easy_xml_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/flock_tool.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/flock_tool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs_test.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/generator/msvs_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/input_test.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/input_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/mac_tool.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/mac_tool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/pylib/gyp/win_tool.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/samples/samples" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/samples/samples" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/setup.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/emacs/run-unit-tests.sh" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/emacs/run-unit-tests.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/graphviz.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/graphviz.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/pretty_gyp.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/pretty_gyp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/pretty_sln.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/pretty_sln.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/pretty_vcproj.py" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/gyp/tools/pretty_vcproj.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/node_modules/.bin/semver" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/node_modules/.bin/semver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/node_modules/semver/bin/semver" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/node_modules/semver/bin/semver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/test/docker.sh" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-gyp/test/docker.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/bin/node-sass" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/bin/node-sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.editorconfig" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.gitattributes" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.github/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.github/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.github/ISSUE_TEMPLATE.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.github/ISSUE_TEMPLATE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.npmignore" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.travis.yml" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/COPYING" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/COPYING" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/GNUmakefile.am" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/GNUmakefile.am" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/INSTALL" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/INSTALL" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/Makefile" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/Makefile.conf" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/Makefile.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/Readme.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/SECURITY.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/SECURITY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/appveyor.yml" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/appveyor.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/configure.ac" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/configure.ac" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/contrib/libsass.spec" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/contrib/libsass.spec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/contrib/plugin.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/contrib/plugin.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-context-example.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-context-example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-context-internal.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-context-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-context.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-context.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-doc.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-doc.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-function-example.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-function-example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-function-internal.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-function-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-function.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-function.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-importer-example.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-importer-example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-importer-internal.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-importer-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-importer.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-importer.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-value-example.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-value-example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-value-internal.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-value-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-value.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/api-value.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-on-darwin.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-on-darwin.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-on-gentoo.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-on-gentoo.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-on-windows.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-on-windows.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-shared-library.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-shared-library.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-autotools.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-autotools.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-makefiles.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-makefiles.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-mingw.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-mingw.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-visual-studio.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build-with-visual-studio.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/build.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/compatibility-plan.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/compatibility-plan.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/contributing.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/contributing.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/custom-functions-internal.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/custom-functions-internal.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/dev-ast-memory.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/dev-ast-memory.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/implementations.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/implementations.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/plugins.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/plugins.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/setup-environment.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/setup-environment.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/source-map-internals.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/source-map-internals.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/trace.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/trace.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/triage.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/triage.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/unicode.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/docs/unicode.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/extconf.rb" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/extconf.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/base.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/base.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/context.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/context.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/functions.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/functions.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/values.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/values.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/version.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/version.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/version.h.in" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass/version.h.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass2scss.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/include/sass2scss.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/m4/m4-ax_cxx_compile_stdcxx_11.m4" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/m4/m4-ax_cxx_compile_stdcxx_11.m4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/res/resource.rc" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/res/resource.rc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/bootstrap" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/bootstrap" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/branding" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/branding" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-build-libsass" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-build-libsass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-build-plugin" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-build-plugin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-install-compiler" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-install-compiler" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-install-deps" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-install-deps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-report-coverage" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/ci-report-coverage" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/spec" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/spec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/tap-driver" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/tap-driver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/tap-runner" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/tap-runner" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/test-leaks.pl" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/script/test-leaks.pl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/GNUmakefile.am" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/GNUmakefile.am" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast_def_macros.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast_def_macros.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast_fwd_decl.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast_fwd_decl.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast_fwd_decl.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/ast_fwd_decl.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/b64/cencode.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/b64/cencode.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/b64/encode.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/b64/encode.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/backtrace.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/backtrace.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/base64vlq.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/base64vlq.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/base64vlq.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/base64vlq.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/bind.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/bind.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/bind.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/bind.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/c99func.c" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/c99func.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/cencode.c" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/cencode.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/check_nesting.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/check_nesting.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/check_nesting.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/check_nesting.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/color_maps.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/color_maps.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/color_maps.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/color_maps.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/constants.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/constants.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/constants.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/constants.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/context.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/context.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/context.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/context.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/cssize.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/cssize.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/cssize.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/cssize.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/debug.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/debug.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/debugger.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/debugger.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/emitter.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/emitter.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/emitter.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/emitter.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/environment.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/environment.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/environment.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/environment.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/error_handling.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/error_handling.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/error_handling.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/error_handling.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/eval.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/eval.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/eval.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/eval.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/expand.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/expand.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/expand.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/expand.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/extend.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/extend.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/extend.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/extend.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/file.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/file.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/file.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/file.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/functions.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/functions.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/functions.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/functions.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/inspect.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/inspect.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/inspect.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/inspect.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/json.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/json.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/json.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/json.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/kwd_arg_macros.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/kwd_arg_macros.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/lexer.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/lexer.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/lexer.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/lexer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/listize.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/listize.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/listize.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/listize.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/mapping.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/mapping.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/memory/SharedPtr.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/memory/SharedPtr.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/memory/SharedPtr.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/memory/SharedPtr.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/node.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/node.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/node.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/node.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/operation.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/operation.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/output.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/output.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/output.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/output.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/parser.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/parser.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/parser.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/parser.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/paths.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/paths.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/plugins.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/plugins.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/plugins.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/plugins.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/position.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/position.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/position.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/position.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/prelexer.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/prelexer.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/prelexer.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/prelexer.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/remove_placeholders.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/remove_placeholders.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/remove_placeholders.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/remove_placeholders.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass2scss.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass2scss.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_context.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_context.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_context.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_context.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_functions.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_functions.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_functions.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_functions.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_util.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_util.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_util.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_util.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_values.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_values.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_values.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/sass_values.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/source_map.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/source_map.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/source_map.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/source_map.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/subset_map.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/subset_map.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/subset_map.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/subset_map.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/support/libsass.pc.in" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/support/libsass.pc.in" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_c.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_c.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_c.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_c.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_value.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_value.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_value.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/to_value.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/units.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/units.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/units.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/units.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8/checked.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8/checked.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8/core.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8/core.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8/unchecked.h" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8/unchecked.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8_string.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8_string.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8_string.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/utf8_string.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/util.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/util.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/util.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/util.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/values.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/values.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/values.hpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/src/values.hpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_node.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_node.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_paths.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_paths.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_selector_difference.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_selector_difference.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_specificity.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_specificity.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_subset_map.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_subset_map.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_superselector.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_superselector.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_unification.cpp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/test/test_unification.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/version.sh" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/version.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.sln" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.sln" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.targets" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.targets" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.vcxproj" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.vcxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.vcxproj.filters" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/win/libsass.vcxproj.filters" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/nopt/bin/nopt.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/nopt/bin/nopt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/nopt/examples/my-program.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/nopt/examples/my-program.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/delayed-call.coffee" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/delayed-call.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/delayed-require.coffee" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/delayed-require.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/difference.coffee" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/difference.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/initial-value.coffee" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/performance-now/test/scripts/initial-value.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/replace-ext/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/replace-ext/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/request/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/request/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/rimraf/bin.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/rimraf/bin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sass-graph/bin/sassgraph" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sass-graph/bin/sassgraph" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/semver/bin/semver" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/semver/bin/semver" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/.npmignore" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/LICENSE" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/lib/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/package.json" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sntp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/spdx-license-ids/README.md" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/spdx-license-ids/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sshpk/bin/sshpk-conv" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sshpk/bin/sshpk-conv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sshpk/bin/sshpk-sign" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sshpk/bin/sshpk-sign" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sshpk/bin/sshpk-verify" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/sshpk/bin/sshpk-verify" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/strip-indent/cli.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/strip-indent/cli.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/uglify-js/bin/uglifyjs" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/uglify-js/bin/uglifyjs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/uuid/bin/uuid" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/uuid/bin/uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/which/bin/which" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/which/bin/which" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/wrap-ansi/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/wrap-ansi/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/css/blog/articleCreate.css" afterPath="$PROJECT_DIR$/frontend/web/static/css/blog/articleCreate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js" afterPath="$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii" afterPath="$PROJECT_DIR$/yii" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii_test" afterPath="$PROJECT_DIR$/yii_test" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,31 +327,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.73735726">
+    <splitter split-orientation="horizontal" split-proportion="0.71858543">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="articleCreate.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="articleCreate.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+                <state relative-caret-position="624">
+                  <caret line="122" column="8" lean-forward="true" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="formHandle.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js">
+          <file leaf-file-name="index-test.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/index-test.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -48,12 +350,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="articleCreate.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css">
+          <file leaf-file-name="formHandle.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="429">
-                  <caret line="49" column="110" lean-forward="false" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
+                <state relative-caret-position="416">
+                  <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="BlogController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="4784">
+                  <caret line="193" column="24" lean-forward="false" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#40#68#0#PHP" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -61,12 +375,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="create.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="650">
-                  <caret line="56" column="113" lean-forward="false" selection-start-line="56" selection-start-column="113" selection-end-line="56" selection-end-column="113" />
+                <state relative-caret-position="624">
+                  <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -87,6 +401,10 @@
     <findStrings>
       <find>icon-box</find>
       <find>info-form-list</find>
+      <find>ibase.max_lin</find>
+      <find>date.timezone</find>
+      <find>order</find>
+      <find>create</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,11 +414,17 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/create.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" />
         <option value="$PROJECT_DIR$/frontend/web/static/js/blog/articleCreate.js" />
         <option value="$PROJECT_DIR$/.jscsrc" />
+        <option value="$PROJECT_DIR$/frontend/config/main.php" />
+        <option value="$PROJECT_DIR$/common/config/main.php" />
+        <option value="$PROJECT_DIR$/frontend/web/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/frontend/controllers/BlogController.php" />
         <option value="$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js" />
+        <option value="$PROJECT_DIR$/frontend/views/blog/create.php" />
+        <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" />
+        <option value="$USER_HOME$/AppData/Local/Temp/【秋季新品】女针织衫款镂空荷叶边毛衣薄线衫.url" />
       </list>
     </option>
   </component>
@@ -135,8 +459,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -144,97 +466,18 @@
               <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="header" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="articleCreate.scss" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="blog.scss" type="620a8d5e:NestingTreeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.jscs" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="Z:/banggo" />
     <property name="nodejs_interpreter_path" value="D:/node/node" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
@@ -242,6 +485,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\backend\web" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web" />
       <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web\static\js\blog" />
     </key>
   </component>
@@ -270,17 +516,21 @@
       <workItem from="1510220025996" duration="125000" />
       <workItem from="1510220153487" duration="1157000" />
       <workItem from="1510277466170" duration="4133000" />
+      <workItem from="1510553970608" duration="7043000" />
+      <workItem from="1510708520253" duration="1215000" />
+      <workItem from="1510717796753" duration="5651000" />
+      <workItem from="1510800120352" duration="3915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5415000" />
+    <option name="totallyTimeSpent" value="23239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-440" width="1616" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21208227" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14588688" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -310,6 +560,145 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/index-test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="61" lean-forward="true" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5018">
+          <caret line="193" column="24" lean-forward="false" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2470">
+          <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1014">
+          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2470">
+          <caret line="95" column="21" lean-forward="false" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="48" column="44" lean-forward="false" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1924">
+          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1274">
+          <caret line="49" column="110" lean-forward="false" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="936">
@@ -338,39 +727,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="49" column="110" lean-forward="false" selection-start-line="49" selection-start-column="110" selection-end-line="49" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="56" column="113" lean-forward="false" selection-start-line="56" selection-start-column="113" selection-end-line="56" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="74" column="11" lean-forward="false" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="7098">
+          <caret line="273" column="110" lean-forward="false" selection-start-line="273" selection-start-column="110" selection-end-line="273" selection-end-column="110" />
         </state>
       </provider>
     </entry>
@@ -378,14 +741,129 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/test.xml" />
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../etc/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="1041" column="36" lean-forward="true" selection-start-line="1041" selection-start-column="36" selection-end-line="1041" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="52" column="6" lean-forward="false" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/models/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/index-test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4784">
+          <caret line="193" column="24" lean-forward="false" selection-start-line="193" selection-start-column="24" selection-end-line="193" selection-end-column="24" />
+          <folding>
+            <element signature="e#40#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/【秋季新品】女针织衫款镂空荷叶边毛衣薄线衫.url">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="122" column="8" lean-forward="true" selection-start-line="122" selection-start-column="8" selection-end-line="122" selection-end-column="8" />
           <folding />
         </state>
       </provider>

@@ -101,7 +101,10 @@
         span {
           font-size: 14px;
           vertical-align: middle;
+          @include transition( 0.15s);
           &:hover{
+          @include transition( 0.15s);
+            
             color: #0ABFBC;
           }
         } 

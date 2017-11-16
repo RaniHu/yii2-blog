@@ -41,7 +41,7 @@ class BlogController extends Controller
         $query = Article::find();
         $cateQuery = ArticleCate::find()->all();
         $tagQuery = ArticleTag::find()->all();
-        $articleSearchLists=Article::find()->with('cates')->andFilterWhere(['like','article_title',$searchText])->asArray()->all();
+        $articleSearchLists = Article::find()->with('cates')->andFilterWhere(['like', 'article_title', $searchText])->orderBy(['pub_date' => SORT_DESC])->asArray()->all();
 
 
         $pagination = new Pagination([                                                    //分页器
@@ -165,11 +165,9 @@ class BlogController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
+    public function actionView()
     {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
+        return $this->render('view');
     }
 
     /**
@@ -177,16 +175,34 @@ class BlogController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+    public $enableCsrfValidation = false;
+     
     public function actionCreate()
     {
         $model = new Article();
         $cateQuery = ArticleCate::find()->all();
         $tagQuery = ArticleTag::find()->all();
+        $post = Yii::$app->request->post();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+
+        //提交且验证有效
+        if ($model->load(Yii::$app->request->post())) {
+//            print_r($_POST['article_tag']);
+
+            $model->setAttributes(array(
+                'article_title' => $_POST['article_title'],
+                'article_intro' => $_POST['article_intro'],
+                'pub_date' => date("Y-m-d H:i:s"),
+                'cate_id' => $_POST['article_cate'],
+            ));
+            $model->save();
+            if ($model->save()) {
+
+                return $this->redirect(['view']);
+            }
+
+
         } else {
-
             return $this->render('create', [
                 'model' => $model,
                 'cates' => $cateQuery,

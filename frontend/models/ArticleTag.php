@@ -45,7 +45,7 @@ class ArticleTag extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'tag' => 'TAG',
+            'tag' => '文章标签',
         ];
     }
 

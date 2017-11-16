@@ -17,7 +17,7 @@ MarkdowneditorAssets::register($this);
     <!--=======左侧创建文章=======-->
     <div class="left-content">
         <div id="write-article-form">
-            <form>
+            <form method="post" name="create-article-form">
                 <!--=====基本信息填写======-->
                 <div class="article-info-form">
                     <!--===信息表单列表===-->
@@ -25,11 +25,11 @@ MarkdowneditorAssets::register($this);
                         <h4>文章基本信息填写</h4>
                         <!--文章标题-->
                         <div class="article-title-input">
-                            <input type="text" placeHolder="文章标题">
+                            <input type="text" placeHolder="文章标题" name='article_title'>
                         </div>
                         <!--文章简介-->
                         <div class="article-intro-input">
-                            <textarea placeHolder="请填写文章简介" class="intro-inputArea"></textarea>
+                            <textarea placeHolder="请填写文章简介" class="intro-inputArea" name='article_intro'></textarea>
 
                         </div>
                     </div>
@@ -39,9 +39,9 @@ MarkdowneditorAssets::register($this);
                         <!--文章分类-->
                         <div class="article-cate-input">
                             <?php foreach ($cates as $key => $cate) : ?>
-                                <label for=<?php echo "cate-radio".$key?>>
+                                <label>
                                     <span class="icon-box radio-icon-box"></span>
-                                    <input type="radio" name="article-cate" id=<?php echo "cate-radio".$key?> class="custom-check">
+                                    <input type="radio" name="article_cate"  value=<?php echo $cate->id?>  id=<?php echo "cate-radio".$key?> class="custom-check">
                                     <span class="radio-val"><?= $cate->cate ?></span>
                                 </label>
                             <?php endforeach; ?>
@@ -55,7 +55,7 @@ MarkdowneditorAssets::register($this);
                             <?php foreach ($tags as $key=>$tag) : ?>
                                 <label for=<?php echo "tag-checkbox".$key?>>
                                     <span class="icon-box radio-icon-box"></span>
-                                    <input type="checkbox" name="article-tag" id=<?php echo "tag-checkbox".$key?> class="custom-check">
+                                    <input type="checkbox" name="article_tag"  value=<?php echo $tag->id?> id=<?php echo "tag-checkbox".$key?> class="custom-check">
                                     <span class="checkbox-val"><?= $tag->tag ?></span>
                                 </label>
                             <?php endforeach; ?>
@@ -65,7 +65,7 @@ MarkdowneditorAssets::register($this);
 
                 <!--文章正文-->
                 <div class="article-content-area">
-                    <?php echo Markdowneditor::widget(['model' => $model, 'attribute' => 'article_content']); ?>
+                    <?php echo Markdowneditor::widget(['model' => $model, 'attribute' => 'article_content','name'=>'article_content']); ?>
                 </div>
                 <div class="submit-btn">
                     <input type="submit" value="确定">

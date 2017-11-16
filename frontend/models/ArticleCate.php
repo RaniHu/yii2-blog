@@ -44,7 +44,7 @@ class ArticleCate extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'cate' => 'CATE',
+            'cate' => '文章分类',
         ];
     }
     //获取文章的分类

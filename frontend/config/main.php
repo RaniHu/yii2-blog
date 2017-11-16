@@ -50,7 +50,7 @@ return [
             'uploadDir' => '@webroot/uploads', 
             'uploadUrl' => '@webroot/uploads/images', 
             'imageAllowExtensions'=>['jpg','png','gif'] 
-    ], 
+    ],
 
     ],
     'params' => $params,
