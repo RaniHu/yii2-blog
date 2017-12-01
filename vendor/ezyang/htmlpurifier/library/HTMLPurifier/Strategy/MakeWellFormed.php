@@ -191,7 +191,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
 
                 // send error [TagClosedSuppress]
                 if ($e && !isset($top_nesting->armor['MakeWellFormed_TagClosedError'])) {
-                    $e->send(E_NOTICE, 'Strategy_MakeWellFormed: ArticleTag closed by document end', $top_nesting);
+                    $e->send(E_NOTICE, 'Strategy_MakeWellFormed: tag closed by document end', $top_nesting);
                 }
 
                 // append, don't splice, since this is the end
@@ -340,9 +340,9 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                             // [TagClosedSuppress]
                             if ($e && !isset($parent->armor['MakeWellFormed_TagClosedError'])) {
                                 if (!$carryover) {
-                                    $e->send(E_NOTICE, 'Strategy_MakeWellFormed: ArticleTag auto closed', $parent);
+                                    $e->send(E_NOTICE, 'Strategy_MakeWellFormed: tag auto closed', $parent);
                                 } else {
-                                    $e->send(E_NOTICE, 'Strategy_MakeWellFormed: ArticleTag carryover', $parent);
+                                    $e->send(E_NOTICE, 'Strategy_MakeWellFormed: tag carryover', $parent);
                                 }
                             }
                             if ($carryover) {
@@ -481,7 +481,7 @@ class HTMLPurifier_Strategy_MakeWellFormed extends HTMLPurifier_Strategy
                     // notice we exclude $j == 0, i.e. the current ending tag, from
                     // the errors... [TagClosedSuppress]
                     if (!isset($skipped_tags[$j]->armor['MakeWellFormed_TagClosedError'])) {
-                        $e->send(E_NOTICE, 'Strategy_MakeWellFormed: ArticleTag closed by element end', $skipped_tags[$j]);
+                        $e->send(E_NOTICE, 'Strategy_MakeWellFormed: tag closed by element end', $skipped_tags[$j]);
                     }
                 }
             }

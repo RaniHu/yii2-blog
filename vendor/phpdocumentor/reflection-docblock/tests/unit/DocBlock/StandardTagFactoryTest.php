@@ -95,7 +95,7 @@ class StandardTagFactoryTest extends \PHPUnit_Framework_TestCase
         $fqsen              = '\Tag';
         $resolver           = m::mock(FqsenResolver::class)
             ->shouldReceive('resolve')
-            ->with('ArticleTag', m::type(Context::class))
+            ->with('tag', m::type(Context::class))
             ->andReturn(new Fqsen($fqsen))
             ->getMock()
         ;
@@ -106,7 +106,7 @@ class StandardTagFactoryTest extends \PHPUnit_Framework_TestCase
         $tagFactory->addService($descriptionFactory, DescriptionFactory::class);
 
         /** @var See $tag */
-        $tag = $tagFactory->create('@see ArticleTag');
+        $tag = $tagFactory->create('@see tag');
 
         $this->assertInstanceOf(See::class, $tag);
         $this->assertSame($fqsen, (string)$tag->getReference());

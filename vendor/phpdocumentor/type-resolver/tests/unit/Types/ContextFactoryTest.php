@@ -49,7 +49,7 @@ namespace phpDocumentor\Reflection\Types {
             $expected = [
                 'm' => 'Mockery',
                 'DocBlock' => 'phpDocumentor\Reflection\DocBlock',
-                'ArticleTag' => 'phpDocumentor\Reflection\DocBlock\Tag',
+                'tag' => 'phpDocumentor\Reflection\DocBlock\Tag',
                 'phpDocumentor' => 'phpDocumentor',
                 'ReflectionClass' => 'ReflectionClass'
             ];
@@ -80,7 +80,7 @@ namespace phpDocumentor\Reflection\Types {
             $expected = [
                 'm'               => 'Mockery',
                 'DocBlock'        => 'phpDocumentor\Reflection\DocBlock',
-                'ArticleTag'             => 'phpDocumentor\Reflection\DocBlock\Tag',
+                'tag'             => 'phpDocumentor\Reflection\DocBlock\Tag',
                 'phpDocumentor' => 'phpDocumentor',
                 'ReflectionClass' => 'ReflectionClass'
             ];

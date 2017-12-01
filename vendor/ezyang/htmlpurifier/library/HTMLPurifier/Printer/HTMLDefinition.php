@@ -73,7 +73,7 @@ class HTMLPurifier_Printer_HTMLDefinition extends HTMLPurifier_Printer
         $ret .= $this->end('tr');
 
         $ret .= $this->start('tr');
-        $ret .= $this->element('th', 'ArticleTag transforms');
+        $ret .= $this->element('th', 'tag transforms');
         $list = array();
         foreach ($def->info_tag_transform as $old => $new) {
             $new = $this->getClass($new, 'TagTransform_');
@@ -255,7 +255,7 @@ class HTMLPurifier_Printer_HTMLDefinition extends HTMLPurifier_Printer
 
     /**
      * Listifies a tag lookup table.
-     * @param array $array ArticleTag lookup array in form of array('tagname' => true)
+     * @param array $array tag lookup array in form of array('tagname' => true)
      * @return string
      */
     protected function listifyTagLookup($array)

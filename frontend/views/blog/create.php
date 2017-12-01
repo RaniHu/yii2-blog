@@ -55,7 +55,7 @@ MarkdowneditorAssets::register($this);
                             <?php foreach ($tags as $key=>$tag) : ?>
                                 <label for=<?php echo "tag-checkbox".$key?>>
                                     <span class="icon-box radio-icon-box"></span>
-                                    <input type="checkbox" name="article_tag"  value=<?php echo $tag->id?> id=<?php echo "tag-checkbox".$key?> class="custom-check">
+                                    <input type="checkbox" name="article_tag[]"  value=<?php echo $tag->id?> id=<?php echo "tag-checkbox".$key?> class="custom-check">
                                     <span class="checkbox-val"><?= $tag->tag ?></span>
                                 </label>
                             <?php endforeach; ?>

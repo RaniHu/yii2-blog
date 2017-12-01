@@ -19,10 +19,10 @@ use phpDocumentor\Reflection\Types\Context as TypeContext;
 use Webmozart\Assert\Assert;
 
 /**
- * Creates a ArticleTag object given the contents of a tag.
+ * Creates a tag object given the contents of a tag.
  *
  * This Factory is capable of determining the appropriate class for a tag and instantiate it using its `create`
- * factory method. The `create` factory method of a ArticleTag can have a variable number of arguments; this way you can
+ * factory method. The `create` factory method of a tag can have a variable number of arguments; this way you can
  * pass the dependencies that you need to construct a tag object.
  *
  * > Important: each parameter in addition to the body variable for the `create` method must default to null, otherwise
@@ -32,8 +32,8 @@ use Webmozart\Assert\Assert;
  * This Factory also features a Service Locator component that is used to pass the right dependencies to the
  * `create` method of a tag; each dependency should be registered as a service or as a parameter.
  *
- * When you want to use a ArticleTag of your own with custom handling you need to call the `registerTagHandler` method, pass
- * the name of the tag and a Fully Qualified Class Name pointing to a class that implements the ArticleTag interface.
+ * When you want to use a tag of your own with custom handling you need to call the `registerTagHandler` method, pass
+ * the name of the tag and a Fully Qualified Class Name pointing to a class that implements the tag interface.
  */
 final class StandardTagFactory implements TagFactory
 {
@@ -77,7 +77,7 @@ final class StandardTagFactory implements TagFactory
 
     /**
      * @var mixed[] an array representing a simple Service Locator where we can store parameters and
-     *     services that can be inserted into the Factory Methods of ArticleTag Handlers.
+     *     services that can be inserted into the Factory Methods of tag Handlers.
      */
     private $serviceLocator = [];
 
@@ -197,7 +197,7 @@ final class StandardTagFactory implements TagFactory
     }
 
     /**
-     * Determines the Fully Qualified Class Name of the Factory or ArticleTag (containing a Factory Method `create`).
+     * Determines the Fully Qualified Class Name of the Factory or tag (containing a Factory Method `create`).
      *
      * @param string  $tagName
      * @param TypeContext $context
@@ -274,8 +274,8 @@ final class StandardTagFactory implements TagFactory
      * Context.
      *
      * @param TypeContext $context The Context (namespace and aliasses) that may be passed and is used to resolve FQSENs.
-     * @param string      $tagName The name of the tag that may be passed onto the factory method of the ArticleTag class.
-     * @param string      $tagBody The body of the tag that may be passed onto the factory method of the ArticleTag class.
+     * @param string      $tagName The name of the tag that may be passed onto the factory method of the tag class.
+     * @param string      $tagBody The body of the tag that may be passed onto the factory method of the tag class.
      *
      * @return mixed[]
      */

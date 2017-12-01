@@ -214,8 +214,8 @@ final class DocBlockFactory implements DocBlockFactoryInterface
     /**
      * Creates the tag objects.
      *
-     * @param string $tags ArticleTag block to parse.
-     * @param Types\Context $context Context of the parsed ArticleTag
+     * @param string $tags tag block to parse.
+     * @param Types\Context $context Context of the parsed tag
      *
      * @return DocBlock\Tag[]
      */

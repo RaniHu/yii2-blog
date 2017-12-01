@@ -165,7 +165,7 @@ EOF
 
         $errors = libxml_get_errors();
         $this->assertCount(1, $errors);
-        $this->assertEquals("ArticleTag nav invalid\n", $errors[0]->message);
+        $this->assertEquals("tag nav invalid\n", $errors[0]->message);
 
         libxml_clear_errors();
         libxml_use_internal_errors($internalErrors);

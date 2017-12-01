@@ -73,7 +73,7 @@ interface TagFactory
      * Registers a handler for tags.
      *
      * If you want to use your own tags then you can use this method to instruct the TagFactory to register the name
-     * of a tag with the FQCN of a 'ArticleTag Handler'. The ArticleTag handler should implement the {@see ArticleTag} interface (and thus
+     * of a tag with the FQCN of a 'tag Handler'. The tag handler should implement the {@see tag} interface (and thus
      * the create method).
      *
      * @param string $tagName Name of tag to register a handler for. When registering a namespaced tag, the full
@@ -85,7 +85,7 @@ interface TagFactory
      *     a backslash
      * @throws \InvalidArgumentException if the handler is not a string
      * @throws \InvalidArgumentException if the handler is not an existing class
-     * @throws \InvalidArgumentException if the handler does not implement the {@see ArticleTag} interface
+     * @throws \InvalidArgumentException if the handler does not implement the {@see tag} interface
      *
      * @return void
      */

@@ -285,7 +285,7 @@
                     stackElement.loading = false;
                     stackElement.statusCode = self.status;
                     stackElement.error = self.status < 200 || self.status >= 400;
-                    stackElement.profile = self.getResponseHeader("X-Debug-ArticleTag");
+                    stackElement.profile = self.getResponseHeader("X-Debug-tag");
                     stackElement.profilerUrl = self.getResponseHeader("X-Debug-Link");
                     renderAjaxRequests();
                 }

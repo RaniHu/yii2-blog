@@ -3,8 +3,8 @@
 namespace frontend\models;
 
 use Yii;
-use frontend\models\ArticleTagView;
 
+use frontend\models\Tag;
 
 /**
  * This is the model class for table "article".
@@ -24,7 +24,7 @@ class ArticleTag extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'articleTag';
+        return 'article_tag';
     }
 
     /**
@@ -33,8 +33,7 @@ class ArticleTag extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'tag'], 'required'],
-            [['tag'], 'string'],
+            [['id', 'tag_id','article_id'], 'required'],
         ];
     }
 
@@ -45,10 +44,23 @@ class ArticleTag extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'tag' => '文章标签',
+            'tag_id' => '文章标签id',
+            'article_id' => '文章id',
         ];
     }
 
+    //获取标签下的文章
+    public function getTagArticle()
+    {
+        return $this->hasMany(Article::className(),['id'=>'article_id'])
+            ->asArray();
+    }
 
+    //获取标签名
+    public function getTagsName()
+    {
+        return $this->hasMany(Tag::className(),['id'=>'tag_id'])
+            ->asArray();
+    }
 
 }

@@ -4117,7 +4117,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		};
 	}
 
-	// ArticleTag
+	// tag
 	Expr.find["TAG"] = support.tagNameNoComments ?
 		function( tag, context ) {
 			if ( typeof context.getElementsByTagName !== strundefined ) {

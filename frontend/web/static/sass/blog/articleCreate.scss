@@ -194,7 +194,7 @@
       background-color: #0ABFBC;
       @include border-radius(5px);
       color: #ffffff;
-      &::hover {
+      &:hover {
         background-color: darken(#0ABFBC, 20%);
       }
     }

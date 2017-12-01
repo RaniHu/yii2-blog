@@ -188,7 +188,7 @@ final class DocBlock
     /**
      * Checks if a tag of a certain type is present in this DocBlock.
      *
-     * @param string $name ArticleTag name to check for.
+     * @param string $name tag name to check for.
      *
      * @return bool
      */

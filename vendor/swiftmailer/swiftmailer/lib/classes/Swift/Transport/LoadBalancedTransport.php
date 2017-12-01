@@ -168,7 +168,7 @@ class Swift_Transport_LoadBalancedTransport implements Swift_Transport
     }
 
     /**
-     * ArticleTag the currently used (top of stack) transport as dead/useless.
+     * tag the currently used (top of stack) transport as dead/useless.
      */
     protected function _killCurrentTransport()
     {

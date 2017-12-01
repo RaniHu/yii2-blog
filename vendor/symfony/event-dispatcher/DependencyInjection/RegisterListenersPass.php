@@ -43,8 +43,8 @@ class RegisterListenersPass implements CompilerPassInterface
      * Constructor.
      *
      * @param string $dispatcherService Service name of the event dispatcher in processed container
-     * @param string $listenerTag       ArticleTag name used for listener
-     * @param string $subscriberTag     ArticleTag name used for subscribers
+     * @param string $listenerTag       tag name used for listener
+     * @param string $subscriberTag     tag name used for subscribers
      */
     public function __construct($dispatcherService = 'event_dispatcher', $listenerTag = 'kernel.event_listener', $subscriberTag = 'kernel.event_subscriber')
     {

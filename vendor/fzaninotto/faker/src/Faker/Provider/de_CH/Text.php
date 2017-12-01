@@ -114,7 +114,7 @@ hinunter und findest dich vor einem Gewölbe, da wohl zwanzig Stufen hinabgehen,
 unten das klarste Wasser aus Marmorfelsen quillt. Die kleine Mauer, die oben
 umher die Einfassung macht, die hohen Bäume, die den Platz rings umher bedecken,
 die Kühle des Orts; das hat alles so was Anzügliches, was Schauerliches. Es
-vergeht kein ArticleTag, dass ich nicht eine Stunde da sitze. Da kommen die Mädchen aus
+vergeht kein tag, dass ich nicht eine Stunde da sitze. Da kommen die Mädchen aus
 der Stadt und holen Wasser, das harmloseste Geschäft und das nötigste, das
 ehemals die Töchter der Könige selbst verrichteten. Wenn ich da sitze, so lebt die
 patriarchalische Idee so lebhaft um mich, wie sie, alle die Altväter, am Brunnen
@@ -237,7 +237,7 @@ und Birkenreiser regiert werden: das will niemand gern glauben, und mich
 dünkt, man kann es mit Händen greifen.
 
 Ich gestehe dir gern, denn ich weiss, was du mir hierauf sagen möchtest, dass
-diejenigen die Glücklichsten sind, die gleich den Kindern in den ArticleTag hinein leben,
+diejenigen die Glücklichsten sind, die gleich den Kindern in den tag hinein leben,
 ihre Puppen herumschleppen, aus—und anziehen und mit grossem Respekt um die
 Schublade umherschleichen, wo Mama das Zuckerbrot hineingeschlossen hat, und, wenn
 sie das gewünschte endlich erhaschen, es mit vollen Backen verzehren und
@@ -677,7 +677,7 @@ ich dir hätte vorschwatzen können, statt zu schreiben, ich dich vielleicht bis
 an den Morgen aufgehalten hätte.
 
 Was auf unserer Hereinfahrt vom Balle geschehen ist, habe ich noch nicht
-erzählt, habe auch heute keinen ArticleTag dazu.
+erzählt, habe auch heute keinen tag dazu.
 
 Es war der herrlichste Sonnenaufgang. Der tröpfelnde Wald und das erfrischte
 Feld umher! Unsere Gesellschafterinnen nickten ein. Sie fragte mich, ob ich
@@ -688,7 +688,7 @@ Magd leise aufmachte und auf ihr Fragen versicherte, dass Vater und Kleine wohl
 seien und alle noch schliefen. Da verliess ich sie mit der Bitte, sie selbigen
 Tags noch sehen zu dürfen; sie gestand mir's zu, und ich bin gekommen—und seit
 der Zeit können Sonne, Mond und Sterne geruhig ihre Wirtschaft treiben, ich
-weiss weder dass ArticleTag noch dass Nacht ist, und die ganze Welt verliert sich um mich
+weiss weder dass tag noch dass Nacht ist, und die ganze Welt verliert sich um mich
 her.
 
 Am 21. Junius
@@ -828,7 +828,7 @@ Welt sich wendete, den Faden zu ergreifen und recht herzlich gegen die üble
 Laune zu reden.—"wir Menschen beklagen uns oft", fing ich an, "dass der guten
 Tage so wenig sind und der schlimmen so viel, und, wie mich dünkt, meist mit
 Unrecht. Wenn wir immer ein offenes Herz hätten, das Gute zu geniessen, das uns Gott
-für jeden ArticleTag bereitet, wir würden alsdann auch Kraft genug haben, das Übel zu
+für jeden tag bereitet, wir würden alsdann auch Kraft genug haben, das Übel zu
 tragen, wenn es kommt". —"Wir haben aber unser Gemüt nicht in unserer Gewalt",
 versetzte die Pfarrerin, "wie viel hängt vom Körper ab! Wenn einem nicht wohl ist,
 ist's einem überall nicht recht".—Ich gestand ihr das ein.—"Wir wollen es also",
@@ -1058,7 +1058,7 @@ Den 19. Julius
 
 "Ich werde sie sehen!" ruf' ich morgens aus, wenn ich mich ermuntere und mit
 aller Heiterkeit der schönen Sonne entgegenblicke; "ich werde sie sehen!" und da
-habe ich für den ganzen ArticleTag keinen Wunsch weiter. Alles, alles verschlingt sich
+habe ich für den ganzen tag keinen Wunsch weiter. Alles, alles verschlingt sich
 in dieser Aussicht.
 
 Eure Idee will noch nicht die meinige werden, dass ich mit dem Gesandten nach
@@ -1102,7 +1102,7 @@ morgen willst du einmal wegbleiben. Und wenn der Morgen kommt, finde ich doch
 wieder eine unwiderstehliche Ursache, und ehe ich mich's versehe, bin ich bei
 ihr. Entweder sie hat des Abends gesagt: "Sie kommen doch morgen?"—wer könnte
 da wegbleiben? Oder sie gibt mir einen Auftrag, und ich finde schicklich, ihr
-selbst die Antwort zu bringen; oder der ArticleTag ist gar zu schön, ich gehe nach
+selbst die Antwort zu bringen; oder der tag ist gar zu schön, ich gehe nach
 Wahlheim, und wenn ich nun da bin, ist's nur noch eine halbe Stunde zu ihr!—ich bin
 zu nah in der Atmosphäre—zuck! So bin ich dort. Meine Grossmutter hatte ein
 Märchen vom Magnetenberg: die Schiffe, die zu nahe kamen, wurden auf einmal alles
@@ -1373,7 +1373,7 @@ wirken lassen, die Verzweifelung würde sich schon gelegt, es würde sich schon 
 anderer sie zu trösten vorgefunden haben.'—Das ist eben, als wenn einer sagte:
 'der Tor, stirbt am Fieber! Hätte er gewartet, bis seine Kräfte sich erholt,
 seine Säfte sich verbessert, der Tumult seines Blutes sich gelegt hätten: alles
-wäre gut gegangen, und er lebte bis auf den heutigen ArticleTag! '"
+wäre gut gegangen, und er lebte bis auf den heutigen tag! '"
 
 Albert, dem die Vergleichung noch nicht anschaulich war, wandte noch einiges ein,
 und unter andern: ich hätte nur von einem einfältigen Mädchen gesprochen; wie
@@ -1484,7 +1484,7 @@ Lässigkeit verstimmt, ich kann nicht müssig sein und kann doch auch nichts tun
 habe keine Vorstellungskraft, kein Gefühl an der Natur, und die Bücher ekeln
 mich an. Wenn wir uns selbst fehlen, fehlt uns doch alles. Ich schwöre dir,
 manchmal wünschte ich, ein Tagelöhner zu sein, um nur des Morgens beim Erwachen
-eine Aussicht auf den künftigen ArticleTag, einen Drang, eine Hoffnung zu haben. Oft
+eine Aussicht auf den künftigen tag, einen Drang, eine Hoffnung zu haben. Oft
 beneide ich Alberten, den ich über die Ohren in Akten begraben sehe, und bilde mir
 ein, mir wäre wohl, wenn ich an seiner Stelle wäre! Schon etlichemal ist mir's
 so aufgefahren, ich wollte dir schreiben und dem Minister, um die Stelle bei

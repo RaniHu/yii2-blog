@@ -7,14 +7,14 @@ abstract class HTMLPurifier_TagTransform
 {
 
     /**
-     * ArticleTag name to transform the tag to.
+     * tag name to transform the tag to.
      * @type string
      */
     public $transform_to;
 
     /**
      * Transforms the obsolete tag into the valid tag.
-     * @param HTMLPurifier_Token_Tag $tag ArticleTag to be transformed.
+     * @param HTMLPurifier_Token_Tag $tag tag to be transformed.
      * @param HTMLPurifier_Config $config Mandatory HTMLPurifier_Config object
      * @param HTMLPurifier_Context $context Mandatory HTMLPurifier_Context object
      */

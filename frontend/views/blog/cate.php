@@ -25,11 +25,11 @@ use yii\helpers\Url;
                 <div class="cate-list list-block">
                     <h3><?= $cateArticle['cate'] ?></h3>
                     <ul class="cur-cate-article-list">
-                        <?php if (!$cateArticle['cates']):?>
+                        <?php if (!$cateArticle['cateArticles']):?>
                             <li>该分类下暂无文章哦！</li>
                         <?php else:?>
 
-                        <?php foreach ($cateArticle['cates'] as $articles):?>
+                        <?php foreach ($cateArticle['cateArticles'] as $articles):?>
                             <li>
                                 <a  href="<?= Url::to(['blog/detail', 'id' => $articles['id']]) ?>">
                                     <span class="pub-time"><?= $articles['pub_date']?></span>

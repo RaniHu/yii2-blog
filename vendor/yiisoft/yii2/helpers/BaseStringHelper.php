@@ -160,7 +160,7 @@ class BaseStringHelper
         $depth = 0;
         $truncated = [];
         foreach ($tokens as $token) {
-            if ($token instanceof \HTMLPurifier_Token_Start) { //ArticleTag begins
+            if ($token instanceof \HTMLPurifier_Token_Start) { //tag begins
                 $openTokens[$depth] = $token->name;
                 $truncated[] = $token;
                 ++$depth;
@@ -175,7 +175,7 @@ class BaseStringHelper
                 }
                 $totalCount += $currentCount;
                 $truncated[] = $token;
-            } elseif ($token instanceof \HTMLPurifier_Token_End) { //ArticleTag ends
+            } elseif ($token instanceof \HTMLPurifier_Token_End) { //tag ends
                 if ($token->name === $openTokens[$depth-1]) {
                     --$depth;
                     unset($openTokens[$depth]);

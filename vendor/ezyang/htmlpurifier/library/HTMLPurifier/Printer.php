@@ -44,7 +44,7 @@ class HTMLPurifier_Printer
 
     /**
      * Returns a start tag
-     * @param string $tag ArticleTag name
+     * @param string $tag tag name
      * @param array $attr Attribute array
      * @return string
      */
@@ -57,7 +57,7 @@ class HTMLPurifier_Printer
 
     /**
      * Returns an end tag
-     * @param string $tag ArticleTag name
+     * @param string $tag tag name
      * @return string
      */
     protected function end($tag)
@@ -69,9 +69,9 @@ class HTMLPurifier_Printer
 
     /**
      * Prints a complete element with content inside
-     * @param string $tag ArticleTag name
+     * @param string $tag tag name
      * @param string $contents Element contents
-     * @param array $attr ArticleTag attributes
+     * @param array $attr tag attributes
      * @param bool $escape whether or not to escape contents
      * @return string
      */

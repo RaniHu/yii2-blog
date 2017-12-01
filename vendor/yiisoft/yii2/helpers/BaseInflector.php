@@ -355,7 +355,7 @@ class BaseInflector
 
     /**
      * Converts a CamelCase name into space-separated words.
-     * For example, 'PostTag' will be converted to 'Post ArticleTag'.
+     * For example, 'PostTag' will be converted to 'Post tag'.
      * @param string $name the string to be converted
      * @param bool $ucwords whether to capitalize the first letter in each word
      * @return string the resulting words

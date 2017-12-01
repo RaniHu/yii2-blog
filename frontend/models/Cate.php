@@ -2,9 +2,6 @@
 
 namespace frontend\models;
 
-use Yii;
-use frontend\models\Article;
-
 /**
  * This is the model class for table "article".
  *
@@ -16,14 +13,14 @@ use frontend\models\Article;
  * @property integer $tag_id
  * @property integer $cate_id
  */
-class ArticleCate extends \yii\db\ActiveRecord
+class Cate extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'articleCate';
+        return 'cate';
     }
 
     /**
@@ -47,10 +44,20 @@ class ArticleCate extends \yii\db\ActiveRecord
             'cate' => '文章分类',
         ];
     }
-    //获取文章的分类
-    public function getCates()
+
+
+    //获取所有分类
+    public function getAllCates()
     {
-        return $this->hasMany(Article::className(),['cate_id'=>'id']);
+        return Cate::find()->all();
+    }
+
+
+    //获取分类下的文章
+    public function getCateArticles()
+    {
+        return $this->hasMany(Article::className(),['cate_id'=>'id'])
+            ->asArray();
 
     }
 

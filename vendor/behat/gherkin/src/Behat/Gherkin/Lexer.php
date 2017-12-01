@@ -496,7 +496,7 @@ class Lexer
             return null;
         }
 
-        $token = $this->takeToken('ArticleTag');
+        $token = $this->takeToken('tag');
         $tags = explode('@', mb_substr($line, 1, mb_strlen($line, 'utf8') - 1, 'utf8'));
         $tags = array_map('trim', $tags);
         $token['tags'] = $tags;

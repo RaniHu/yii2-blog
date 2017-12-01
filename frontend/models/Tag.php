@@ -3,8 +3,8 @@
 namespace frontend\models;
 
 use Yii;
-
 use frontend\models\ArticleTag;
+
 
 /**
  * This is the model class for table "article".
@@ -17,14 +17,14 @@ use frontend\models\ArticleTag;
  * @property integer $tag_id
  * @property integer $cate_id
  */
-class ArticleTagView extends \yii\db\ActiveRecord
+class Tag extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'articleTagView';
+        return 'tag';
     }
 
     /**
@@ -33,7 +33,8 @@ class ArticleTagView extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'tag_id','article_id'], 'required'],
+            [['id', 'tag'], 'required'],
+            [['tag'], 'string'],
         ];
     }
 
@@ -44,21 +45,23 @@ class ArticleTagView extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'tag_id' => 'ArticleTag ID',
-            'cate_id' => 'ArticleCate ID',
+            'tag' => '文章标签',
         ];
     }
 
-    //获取标签下的文章
-    public function getTagArticle()
+    //获取所有标签
+    public function getAllTags()
     {
-        return $this->hasMany(Article::className(),['id'=>'article_id']);
+        return Tag::find()->all();
     }
 
-    //获取分类名
-    public function getTagsName()
-    {
-        return $this->hasMany(ArticleTag::className(),['id'=>'tag_id']);
+
+    //获取标签下的文章
+    public function getTagArticles(){
+        return $this->hasMany(Article::className(),['id'=>'article_id'])
+            ->viaTable('article_tag',['tag_id'=>'id'])
+            ->asArray();
     }
+
 
 }

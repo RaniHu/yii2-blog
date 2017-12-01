@@ -384,5 +384,5 @@
     border-radius: 5px;
     /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
     color: #ffffff; }
-    #write-article-form .submit-btn input::hover {
+    #write-article-form .submit-btn input:hover {
       background-color: #055e5d; }

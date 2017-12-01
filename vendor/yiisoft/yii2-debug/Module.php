@@ -248,7 +248,7 @@ class Module extends \yii\base\Module implements BootstrapInterface
             'tag' => $this->logTarget->tag,
         ]);
         $event->sender->getHeaders()
-            ->set('X-Debug-ArticleTag', $this->logTarget->tag)
+            ->set('X-Debug-tag', $this->logTarget->tag)
             ->set('X-Debug-Duration', number_format((microtime(true) - YII_BEGIN_TIME) * 1000 + 1))
             ->set('X-Debug-Link', $url);
     }

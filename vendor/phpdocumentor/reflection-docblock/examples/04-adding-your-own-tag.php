@@ -1,6 +1,6 @@
 <?php
 /**
- * In this example we demonstrate how you can add your own ArticleTag using a Static Factory method in your ArticleTag class.
+ * In this example we demonstrate how you can add your own tag using a Static Factory method in your tag class.
  */
 
 require_once(__DIR__ . '/../vendor/autoload.php');
@@ -17,10 +17,10 @@ use Webmozart\Assert\Assert;
 /**
  * An example of a custom tag called `my-tag` with an optional description.
  *
- * A Custom ArticleTag is a class that can consist of two parts:
+ * A Custom tag is a class that can consist of two parts:
  *
  * 1. a method `create` that is a static factory for this class.
- * 2. methods and properties that have this object act as an immutable Value Object representing a ArticleTag instance.
+ * 2. methods and properties that have this object act as an immutable Value Object representing a tag instance.
  *
  * The static factory `create` is used to convert a tag line (without the tag name) into an instance of the
  * same tag object with the right constructor parameters set. This method has a dynamic list of parameters so that you
@@ -30,7 +30,7 @@ use Webmozart\Assert\Assert;
  * documentation in the form of a Value Object whose properties should not be changed after instantiation (it should be
  * immutable).
  *
- * > Important: ArticleTag classes that act as Factories using the `create` method should implement the TagFactory interface.
+ * > Important: tag classes that act as Factories using the `create` method should implement the TagFactory interface.
  */
 final class MyTag extends BaseTag implements StaticMethod
 {
@@ -44,7 +44,7 @@ final class MyTag extends BaseTag implements StaticMethod
     protected $name = 'my-tag';
 
     /**
-     * The constructor for this ArticleTag; this should contain all properties for this object.
+     * The constructor for this tag; this should contain all properties for this object.
      *
      * @param Description $description An example of how to add a Description to the tag; the Description is often
      *                                 an optional variable so passing null is allowed in this instance (though you can
@@ -58,7 +58,7 @@ final class MyTag extends BaseTag implements StaticMethod
     }
 
     /**
-     * A static Factory that creates a new instance of the current ArticleTag.
+     * A static Factory that creates a new instance of the current tag.
      *
      * In this example the MyTag tag can be created by passing a description text as $body. Because we have added
      * a $descriptionFactory that is type-hinted as DescriptionFactory we can now construct a new Description object
@@ -81,8 +81,8 @@ final class MyTag extends BaseTag implements StaticMethod
      *                                    it is highly recommended to pass it. If you omit it then it is assumed that
      *                                    the DocBlock is in the global namespace and has no `use` statements.
      *
-     * @see ArticleTag for the interface declaration of the `create` method.
-     * @see ArticleTag::create() for more information on this method's workings.
+     * @see tag for the interface declaration of the `create` method.
+     * @see tag::create() for more information on this method's workings.
      *
      * @return MyTag
      */
@@ -116,12 +116,12 @@ $docComment = <<<DOCCOMMENT
  */
 DOCCOMMENT;
 
-// Make a mapping between the tag name `my-tag` and the ArticleTag class containing the Factory Method `create`.
+// Make a mapping between the tag name `my-tag` and the tag class containing the Factory Method `create`.
 $customTags = ['my-tag' => MyTag::class];
 
 // Do pass the list of custom tags to the Factory for the DocBlockFactory.
 $factory = DocBlockFactory::createInstance($customTags);
-// You can also add Tags later using `$factory->registerTagHandler()` with a tag name and ArticleTag class name.
+// You can also add Tags later using `$factory->registerTagHandler()` with a tag name and tag class name.
 
 // Create the DocBlock
 $docblock = $factory->create($docComment);

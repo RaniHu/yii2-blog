@@ -75,7 +75,7 @@ class HTMLPurifier_Strategy_RemoveForeignElements extends HTMLPurifier_Strategy
                     $token = $definition->
                         info_tag_transform[$token->name]->transform($token, $config, $context);
                     if ($e) {
-                        $e->send(E_NOTICE, 'Strategy_RemoveForeignElements: ArticleTag transform', $original_name);
+                        $e->send(E_NOTICE, 'Strategy_RemoveForeignElements: tag transform', $original_name);
                     }
                 }
 

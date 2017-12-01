@@ -54,7 +54,7 @@ class HTMLPurifier_TokenFactory
 
     /**
      * Creates a HTMLPurifier_Token_Start.
-     * @param string $name ArticleTag name
+     * @param string $name tag name
      * @param array $attr Associative array of attributes
      * @return HTMLPurifier_Token_Start Generated HTMLPurifier_Token_Start
      */
@@ -67,7 +67,7 @@ class HTMLPurifier_TokenFactory
 
     /**
      * Creates a HTMLPurifier_Token_End.
-     * @param string $name ArticleTag name
+     * @param string $name tag name
      * @return HTMLPurifier_Token_End Generated HTMLPurifier_Token_End
      */
     public function createEnd($name)
@@ -79,7 +79,7 @@ class HTMLPurifier_TokenFactory
 
     /**
      * Creates a HTMLPurifier_Token_Empty.
-     * @param string $name ArticleTag name
+     * @param string $name tag name
      * @param array $attr Associative array of attributes
      * @return HTMLPurifier_Token_Empty Generated HTMLPurifier_Token_Empty
      */

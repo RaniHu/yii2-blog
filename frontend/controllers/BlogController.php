@@ -3,10 +3,10 @@
 namespace frontend\controllers;
 
 use frontend\models\Article;
-use frontend\models\ArticleCate;
 use frontend\models\ArticleTag;
-use frontend\models\ArticleTagView;
+use frontend\models\Cate;
 use frontend\models\SearchArticle;
+use frontend\models\Tag;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\VerbFilter;
@@ -33,16 +33,18 @@ class BlogController extends Controller
         ];
     }
 
-    
+
+    /**
+     * 首页
+     */
     public function actionIndex()
 
     {
         $searchText=Yii::$app->request->get('searchText');                         //搜索
         $query = Article::find();
-        $cateQuery = ArticleCate::find()->all();
-        $tagQuery = ArticleTag::find()->all();
+        $cateQuery = Cate::find()->all();
+        $tagQuery = Tag::find()->all();
         $articleSearchLists = Article::find()->with('cates')->andFilterWhere(['like', 'article_title', $searchText])->orderBy(['pub_date' => SORT_DESC])->asArray()->all();
-
 
         $pagination = new Pagination([                                                    //分页器
             'defaultPageSize' => 3,
@@ -51,7 +53,6 @@ class BlogController extends Controller
         $articles = $query->orderBy('id')
             ->offset($pagination->offset)
             ->limit($pagination->limit)
-
             ->all();
 
         return $this->render('home', [
@@ -68,26 +69,27 @@ class BlogController extends Controller
     {
         $articleId = Yii::$app->request->get('id');                             //当前文章id
         $articleQuery = Article::findOne(['id' => $articleId]);                   //当前文章数据
-        $cateQuery = ArticleCate::find()->all();
-        $tagQuery = ArticleTag::find()->all();
-        $curArticleCate = ArticleCate::findOne($articleQuery['cate_id']);         //当前文章分类
+        $cateQuery = Cate::find()->all();
+        $tagQuery = Tag::find()->all();
 
-        //获取当前文章的所有标签
-        $curTagsArr=array();
-        $curArticleTags = ArticleTagView::find()->with('tagsName')->where(['article_id'=>$articleId])->asArray()->all();
+        //当前文章所属分类
+        $curArticleCate = cate::findOne($articleQuery['cate_id']);
 
-        foreach ($curArticleTags as $curArticleTag){
-            $curTags =$curArticleTag['tagsName'][0];
-            array_push($curTagsArr,$curTags);
-        }
+        //当前文章的所有标签
+        $curArticleTags = $articleQuery->tags;
 
+//        $curArticleTags = ArticleTag::find()->with('tagsName')->where(['article_id'=>$articleId])->asArray()->all();
+//        foreach ($curArticleTags as $curArticleTag){
+//            $curTags =$curArticleTag['tagsName'][0];
+//            array_push($curTagsArr,$curTags);
+//        }
 
         return $this->render('detail', [
             'curArticle' => $articleQuery,
             'cates' => $cateQuery,
             'tags' => $tagQuery,
             'curCate' => $curArticleCate,
-            'curTag' => $curTagsArr
+            'curTag' => $curArticleTags
         ]);
     }
 
@@ -95,15 +97,15 @@ class BlogController extends Controller
     public function actionCate()
     {
         $cateId = Yii::$app->request->get('id');
-        $cateQuery = ArticleCate::find()->all();
-        $tagQuery = ArticleTag::find()->all();
-        $curCateArticle= ArticleCate::find()->with('cates')->where(['id'=>$cateId])->asArray()->all();
-        $articleAndCate = ArticleCate::find()->with('cates')->asArray()->all();               //文章和分类数据
-        if($cateId){
-            $cateArticles=$curCateArticle;
-        }else{
-            $cateArticles=$articleAndCate;
+        $cateQuery = Cate::find()->all();
+        $tagQuery = Tag::find()->all();
 
+        if($cateId){
+//            $cateArticles=Cate::findOne(['id' => $cateId])->cateArticles;
+            $cateArticles = Cate::find()->with('cateArticles')->where(['id' => $cateId])->all();
+
+        }else{
+            $cateArticles = Cate::find()->with('cateArticles')->all();
         }
 
         return $this->render('cate', [
@@ -117,19 +119,27 @@ class BlogController extends Controller
     public function actionTag()
     {
         $tagId = Yii::$app->request->get('id');
-        $curTagName=ArticleTag::findOne(['id'=>$tagId]);
-        $curTagArticles = ArticleTagView::find()->with('tagArticle','tagsName')->where(['tag_id'=>$tagId])->asArray()->all();
-        $allTagArticles=ArticleTagView::find()->with('tagArticle','tagsName')->orderBy('id')->asArray()->all();
 
-        //判断是否存在标签id
+        $curTagName = tag::findOne(['id' => $tagId]);
+        $curTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->where(['tag_id' => $tagId])->all();
+        $allTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->orderBy('id')->all();
+
+        print_r(Tag::findOne($tagId)->getTagArticles()->orderBy(['id' => SORT_DESC]));
+//        //当前标签对应的文章
+//        $curTagArticles = Tag::find()->with('tagArticles')->where(['id'=>$tagId])->all();
+//
+//        //所有标签对应的文章
+//        $allTagArticles=Tag::find()->with('tagArticles')->all();
+
         $res=array();
+        //判断是否存在标签id
         if($tagId){
             $curTagArticles=$curTagArticles;
         }else{
             $curTagArticles=$allTagArticles;
         }
-        $cateQuery = ArticleCate::find()->all();
-        $tagQuery = ArticleTag::find()->all();
+        $cateQuery = cate::find()->all();
+        $tagQuery = tag::find()->all();
 
         foreach ($curTagArticles as $key=>$curTagArticle){
             $res[$curTagArticle['tag_id']][]=$curTagArticle;
@@ -179,27 +189,39 @@ class BlogController extends Controller
      
     public function actionCreate()
     {
-        $model = new Article();
-        $cateQuery = ArticleCate::find()->all();
-        $tagQuery = ArticleTag::find()->all();
+        $model = new Article;
+        $articleTagModel = new ArticleTag;
+        $cateQuery = Cate::find()->all();
+        $tagQuery = Tag::find()->all();
         $post = Yii::$app->request->post();
 
 
-        //提交且验证有效
-        if ($model->load(Yii::$app->request->post())) {
-//            print_r($_POST['article_tag']);
+        //获取用户输入的数据,验证并保存
+//        if ($model->load($post)&& $articleTagModel->load($post)&& Model::validateMultiple([$model,$articleTagModel])) {
+        if ($model->load($post) && $model->validate()) {
 
-            $model->setAttributes(array(
-                'article_title' => $_POST['article_title'],
-                'article_intro' => $_POST['article_intro'],
-                'pub_date' => date("Y-m-d H:i:s"),
-                'cate_id' => $_POST['article_cate'],
-            ));
-            $model->save();
-            if ($model->save()) {
 
-                return $this->redirect(['view']);
-            }
+//            $model->save(false);
+//            $articleTagModel->article_id=$model->id;
+//            $articleTagModel->save(false);
+//            echo $model->attributes['id'];
+//            $model->setAttributes(array(
+//                'article_title' => $_POST['article_title'],
+//                'article_intro' => $_POST['article_intro'],
+//                'pub_date' => date("Y-m-d H:i:s"),
+//                'cate_id' => $_POST['article_cate'],
+//            ));
+//            $model->save();
+//            foreach ($_POST['article_tag'] as $tags) {
+//                $articleTagModel->setAttributes(array(
+//                    'article_id' => $model->id,
+//                    'tag_id' => $tags,
+//                ));
+//                $articleTagModel->save();
+//            }
+
+
+//            $model->link('tags',Tag::find()->where(['article_id'=>$model->id]));
 
 
         } else {
@@ -209,6 +231,23 @@ class BlogController extends Controller
                 'tags' => $tagQuery,
             ]);
         }
+    }
+
+    /**
+     * 保存文章标签
+     */
+    public function saveTags($id, $tag)
+    {
+        if ($tag) {
+            foreach ($tag as $key => $value) {
+                $ArticleTag = new ArticleTag();
+                $ArticleTag->tag_id = $value;
+                $ArticleTag->article_id = $id;
+                $ArticleTag->insert();
+            }
+        }
+
+        return true;
     }
 
     /**

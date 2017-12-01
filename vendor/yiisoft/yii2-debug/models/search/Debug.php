@@ -73,7 +73,7 @@ class Debug extends Base
     public function attributeLabels()
     {
         return [
-            'tag' => 'ArticleTag',
+            'tag' => 'tag',
             'ip' => 'Ip',
             'method' => 'Method',
             'ajax' => 'Ajax',

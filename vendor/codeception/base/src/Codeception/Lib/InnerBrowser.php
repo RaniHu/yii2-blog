@@ -1504,7 +1504,7 @@ class InnerBrowser extends Module implements Web, PageSourceSaver, ElementLocato
     {
         $nodes = $this->getCrawler()->filter('title');
         if (!$nodes->count()) {
-            throw new ElementNotFound("<title>", "ArticleTag");
+            throw new ElementNotFound("<title>", "tag");
         }
         $this->assertContains($title, $nodes->first()->text(), "page title contains $title");
     }

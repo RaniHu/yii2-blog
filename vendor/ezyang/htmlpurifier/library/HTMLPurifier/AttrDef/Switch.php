@@ -22,7 +22,7 @@ class HTMLPurifier_AttrDef_Switch
     protected $withoutTag;
 
     /**
-     * @param string $tag ArticleTag name to switch upon
+     * @param string $tag tag name to switch upon
      * @param HTMLPurifier_AttrDef $with_tag Call if token matches tag
      * @param HTMLPurifier_AttrDef $without_tag Call if token doesn't match, or there is no token
      */

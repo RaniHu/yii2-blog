@@ -44,7 +44,7 @@ class Person extends \Faker\Provider\Person
         "Birgit", "Birgitta", "Birgitte", "Birte", "Birthe", "Bitten", "Bjørg", "Bjørghild", "Blanca", "Bodil",
         "Bolette", "Bonnie", "Borghild", "Borgny", "Bozena", "Brigitte", "Brit", "Brita", "Britt", "Bryngjerd",
         "Brynhild", "Bushra", "Caisa", "Camilla", "Carina", "Carita", "Carla", "Carlota", "Carmen", "Carol", "Carola",
-        "Carolina", "Caroline", "Cassandra", "Catalina", "Catarina", "ArticleCate", "Catherina", "Cathinka", "Cathrine",
+        "Carolina", "Caroline", "Cassandra", "Catalina", "Catarina", "cate", "Catherina", "Cathinka", "Cathrine",
         "Catrine", "Cecilia", "Cecilie", "Celine", "Chanette", "Chantal", "Charlotte", "Chi", "Chloe", "Christel",
         "Christiane", "Christin", "Christina", "Christine", "Cicilie", "Cilje", "Cindy", "Clara", "Claudia", "Connie",
         "Conny", "Constance", "Cora", "Cordelia", "Corina", "Cornelia", "Cornelie", "Cristel", "Cristina", "Cynthia",

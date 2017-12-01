@@ -202,7 +202,7 @@ class Parser
                 return $this->parseText();
             case 'Newline':
                 return $this->parseNewline();
-            case 'ArticleTag':
+            case 'tag':
                 return $this->parseTags();
             case 'Comment':
                 return $this->parseComment();
@@ -567,7 +567,7 @@ class Parser
      */
     protected function parseTags()
     {
-        $token = $this->expectTokenType('ArticleTag');
+        $token = $this->expectTokenType('tag');
         $this->tags = array_merge($this->tags, $token['tags']);
 
         return $this->parseExpression();
