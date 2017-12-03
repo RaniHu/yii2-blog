@@ -2,6 +2,8 @@
 
 namespace frontend\models;
 
+use Yii;
+use Yii\db\Query;
 use frontend\models\Tag;
 use frontend\models\ArticleTag;
 
@@ -74,22 +76,41 @@ class Article extends \yii\db\ActiveRecord
     }
 
 
-    //执行事件
+    //创建完成之后事件方法
     private function  _eventAfterCreate($data)
     {
         $tag=new Tag();
-
+        
         //删除原先的关联关系
         ArticleTag::deleteAll(['article_id'=>$data['id']]);
 
-        //批量保存文章
+        if( $_POST['article_tag']){
+            foreach( $_POST['article_tag'] as $key=>$val){
+                $tags[$key]['article_id']=$this->id;
+                $tags[$key]['tag_id']=$val;
+            }
+            //批量插入
+            $res=(new Query()->createCommand()
+                ->batchInsert(ArticleTag::tableName(),['article_id','tag_id'],$tags)
+                ->execute();
+            )
+            if(!$res){
+                throw new Exception("关系表保存失败!");
+                
+            }
+        }
+
+      
+
 
     }
 
 
     public function create()
     {
-//        $transaction=Yii::$app->db->beginTransaction;
+
+        //事务(保证数据的完整性)
+       $transaction=Yii::$app->db->beginTransaction;
 
         try{
             $model=new Article();
@@ -100,16 +121,26 @@ class Article extends \yii\db\ActiveRecord
                 'cate_id' => $_POST['article_cate'],
             ));
 
+            //保存失败
             if(!$model->save()){
                 throw new \Exception('文章保存失败!');
             }
 
+            //保存成功
             $this->id=$model->id;
-            $this->_eventAfterCreate();
 
+            //调用事件(文章创建之后)
+            $data=arrar_merge($this->getAttributes(),$model->getAttributes());
 
-        }catch{
+            $this->_eventAfterCreate($data);
+            
+            //事件提交
+            $transaction->commit();
 
+        }catch(\Exception $e){
+            $transaction->rollBack();
+            $this->_lastError=$e->getMessage();
+            return false;
         }
     }
 

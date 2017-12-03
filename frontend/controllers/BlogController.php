@@ -200,6 +200,8 @@ class BlogController extends Controller
 //        if ($model->load($post)&& $articleTagModel->load($post)&& Model::validateMultiple([$model,$articleTagModel])) {
         if ($model->load($post) && $model->validate()) {
 
+            Article::create();
+
 
 //            $model->save(false);
 //            $articleTagModel->article_id=$model->id;
