@@ -3,6 +3,8 @@
 use frontend\assets\AppAsset;
 use ijackua\lepture\Markdowneditor;
 use ijackua\lepture\MarkdowneditorAssets;
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
 
 AppAsset::addCss($this, '@web/static/css/blog/articleCreate.css');
 AppAsset::addScript($this, '@web/static/js/blog/formHandle.js');
@@ -72,7 +74,6 @@ MarkdowneditorAssets::register($this);
                 </div>
 
             </form>
-
         </div>
     </
     <div>

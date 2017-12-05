@@ -18,6 +18,12 @@ use yii\web\NotFoundHttpException;
  */
 class BlogController extends Controller
 {
+
+
+    public $_lastError = "";
+
+
+
     /**
      * @inheritdoc
      */
@@ -124,7 +130,7 @@ class BlogController extends Controller
         $curTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->where(['tag_id' => $tagId])->all();
         $allTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->orderBy('id')->all();
 
-        print_r(Tag::findOne($tagId)->getTagArticles()->orderBy(['id' => SORT_DESC]));
+//        print_r(Tag::findOne($tagId)->getTagArticles()->orderBy(['id' => SORT_DESC]));
 //        //当前标签对应的文章
 //        $curTagArticles = Tag::find()->with('tagArticles')->where(['id'=>$tagId])->all();
 //
@@ -144,6 +150,7 @@ class BlogController extends Controller
         foreach ($curTagArticles as $key=>$curTagArticle){
             $res[$curTagArticle['tag_id']][]=$curTagArticle;
         }
+
 
 
         return $this->render('tag', [
@@ -196,11 +203,58 @@ class BlogController extends Controller
         $post = Yii::$app->request->post();
 
 
-        //获取用户输入的数据,验证并保存
-//        if ($model->load($post)&& $articleTagModel->load($post)&& Model::validateMultiple([$model,$articleTagModel])) {
-        if ($model->load($post) && $model->validate()) {
 
-            Article::create();
+        //获取用户输入的数据,验证并保存
+        if ($model->load($post) && isset($_POST['article_tag'])) {
+
+            //保存文章表
+            $model->setAttributes(array(
+                'article_title' => $_POST['article_title'],
+                'article_intro' => $_POST['article_intro'],
+                'pub_date' => date("Y-m-d H:i:s"),
+                'cate_id' => $_POST['article_cate'],
+            ));
+            $model->save();
+            $articleId = $model->attributes['id'];
+
+            if ($model->save(false)) {
+                //遍历标签
+                for ($i = 0; $i < count($_POST['article_tag'])-1; $i++) {
+                    $res[$i] = [$_POST['article_tag'][$i],$articleId ];
+                }
+                Yii::$app->db->createCommand()->batchInsert($articleTagModel::tableName(), ['tag_id', 'article_id'], $res)->execute();
+                 if($articleTagModel->save(false)){
+                     return $this->render('view');
+                 }
+            }
+
+
+//                return $this->render('view');
+
+
+//            Yii::$app->db->createCommand()->batchInsert($articleTagModel::tableName(), ['tag_id', 'article_id'], [
+//                [$model->id,$_POST['article_tag']]
+//            ])->execute();
+
+
+//            return $this->render('view');
+
+//            foreach ($_POST['article_tag'] as $tags) {
+//                $articleTagModel->setAttributes(array(
+//                    'article_id' => $model->id,
+//                    'tag_id' => $tags,
+//                ));
+//                $articleTagModel->save();
+//            }
+
+
+//        if ($model->load($post)) {
+//
+//            if(!$model->create()){
+//                Yii::$app->session->setFlash('warning',$model->_lastError);
+//            }else{
+//                return $this->render('view');
+//            }
 
 
 //            $model->save(false);
@@ -240,16 +294,19 @@ class BlogController extends Controller
      */
     public function saveTags($id, $tag)
     {
+
         if ($tag) {
-            foreach ($tag as $key => $value) {
-                $ArticleTag = new ArticleTag();
-                $ArticleTag->tag_id = $value;
-                $ArticleTag->article_id = $id;
-                $ArticleTag->insert();
+            $ArticleTag = new ArticleTag();
+            $ArticleTag->article_id = $id;
+            $ArticleTag->tag_id = 8;
+            $ArticleTag->save();
+            if ($ArticleTag->save()) {
+                return true;
+            } else {
+                echo '关系表保存失败!';
             }
         }
 
-        return true;
     }
 
     /**
