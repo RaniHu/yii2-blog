@@ -3,9 +3,6 @@
 namespace frontend\models;
 
 use Yii;
-use Yii\db\Query;
-use frontend\models\Tag;
-use frontend\models\ArticleTag;
 
 
 /**
@@ -112,46 +109,95 @@ class Article extends \yii\db\ActiveRecord
     public function create()
     {
 
-        //事务(保证数据的完整性)
-       $transaction=Yii::$app->db->beginTransaction();
+        //开启事务
+        $transaction = Yii::$app->db->beginTransaction();
 
-        try{
-            $model=new Article();
-            $model->article_title='标题';
-            $model->article_intro='简介';
-            $model->pub_date=date("Y-m-d H:i:s");
-            $model->cate_id=6;
-//            $model->setAttributes(array(
-//                'article_title' => $_POST['article_title'],
-//                'article_intro' => $_POST['article_intro'],
-//                'pub_date' => date("Y-m-d H:i:s"),
-//                'cate_id' => $_POST['article_cate'],
-//            ));
+        try {
+            $model = new Article;
+            $articleTagModel = new ArticleTag;
+            $model->setAttributes($this->attributes);
+
+            //保存文章表
+            $model->setAttributes(array(
+                'article_title' => $_POST['article_title'],
+                'article_intro' => $_POST['article_intro'],
+                'pub_date' => date("Y-m-d H:i:s"),
+                'cate_id' => $_POST['article_cate'],
+            ));
+            $model->save();
+            $articleId = $model->attributes['id'];
+
+            //批量插入文章标签关系表
+            if ($model->save(false)) {
+
+                //遍历标签
+                for ($i = 0; $i < count($_POST['article_tag']); $i++) {
+                    $res[$i] = [$_POST['article_tag'][$i], $articleId];
+                }
+                Yii::$app->db->createCommand()->batchInsert($articleTagModel::tableName(), ['tag_id', 'article_id'], $res)->execute();
+                if ($articleTagModel->save(false)) {
+                    $articleTagModel::deleteAll(['article_id' => 0]);
+                    $transaction->commit();
+                    return true;
+                }
+            }
+
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            return false;
+        }
+
+    }
+
+    public function updateArticle($articleId)
+    {
+
+        //开启事务
+        $transaction = Yii::$app->db->beginTransaction();
+
+        try {
+            $model = Article::findOne($articleId);
+            $articleTagModel = new ArticleTag;
+
+            //修改文章表
+            $model->article_title=$_POST['article_title'];
+            $model->article_intro=$_POST['article_intro'];
+            $model->cate_id=$_POST['article_cate'];
             $model->save();
 
+            //批量插入文章标签关系表
+            if ($model->save(false)) {
 
-            //保存失败
-//            if(!$model->save()){
-//                throw new \Exception('文章保存失败!');
-//            }
+                //删除关联表中之前的标签
+                $articleTagModel::deleteAll(['article_id' => $articleId]);
 
-//            //保存成功
-//            $this->id=$model->id;
-//
-//            //调用事件(文章创建之后)
-//            $data=arrar_merge($this->getAttributes(),$model->getAttributes());
-//
-//            $this->_eventAfterCreate($data);
+                //遍历标签
+                for ($i = 0; $i < count($_POST['article_tag']); $i++) {
+                    $res[$i] = [$_POST['article_tag'][$i], $articleId];
+                }
+                Yii::$app->db->createCommand()->batchInsert($articleTagModel::tableName(), ['tag_id', 'article_id'], $res)->execute();
+                if ($articleTagModel->save(false)) {
+                    $articleTagModel::deleteAll(['article_id' => 0]);
+                    $transaction->commit();
+                    return true;
+                }
+            }
 
-            //事件提交
-            $transaction->commit();
 
-            return true;
 
-        }catch(\Exception $e){
+        } catch (\Exception $e) {
             $transaction->rollBack();
-            $this->_lastError=$e->getMessage();
             return false;
+        }
+
+    }
+
+    protected function findModel($id)
+    {
+        if (($model = Article::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
 

@@ -2,8 +2,6 @@
 
 namespace frontend\models;
 
-use Yii;
-
 /**
  * This is the model class for table "article".
  *
@@ -15,14 +13,14 @@ use Yii;
  * @property integer $tag_id
  * @property integer $cate_id
  */
-class ArticleTag extends \yii\db\ActiveRecord
+class Theme extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'article_tag';
+        return 'theme';
     }
 
     /**
@@ -31,7 +29,8 @@ class ArticleTag extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'tag_id','article_id'], 'required'],
+            [['id', 'theme_name'], 'required'],
+            [['theme_name'], 'string'],
         ];
     }
 
@@ -42,31 +41,16 @@ class ArticleTag extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'tag_id' => '文章标签id',
-            'article_id' => '文章id',
+            'theme_name' => '主题名称',
         ];
     }
 
-    //获取标签下的文章
-    public function getTagArticle()
+    public function getCurTheme()
+
     {
-        return $this->hasMany(Article::className(),['id'=>'article_id'])
-            ->asArray();
+
+        return Theme::findOne(1);
+        # code...
     }
-
-    //获取标签名
-    public function getTagsName()
-    {
-        return $this->hasMany(Tag::className(),['id'=>'tag_id'])
-            ->asArray();
-    }
-
-
-    public function delete(){
-
-    }
-
-
-
 
 }

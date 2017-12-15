@@ -7,6 +7,7 @@ use frontend\models\ArticleTag;
 use frontend\models\Cate;
 use frontend\models\SearchArticle;
 use frontend\models\Tag;
+use frontend\models\Theme;
 use Yii;
 use yii\data\Pagination;
 use yii\filters\VerbFilter;
@@ -43,6 +44,9 @@ class BlogController extends Controller
     /**
      * 首页
      */
+
+    public $enableCsrfValidation = false;
+     
     public function actionIndex()
 
     {
@@ -50,6 +54,8 @@ class BlogController extends Controller
         $query = Article::find();
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;        
         $articleSearchLists = Article::find()->with('cates')->andFilterWhere(['like', 'article_title', $searchText])->orderBy(['pub_date' => SORT_DESC])->asArray()->all();
 
         $pagination = new Pagination([                                                    //分页器
@@ -61,6 +67,7 @@ class BlogController extends Controller
             ->limit($pagination->limit)
             ->all();
 
+
         return $this->render('home', [
             'cates' => $cateQuery,
             'tags' => $tagQuery,
@@ -70,13 +77,62 @@ class BlogController extends Controller
         ]);
     }
 
-    //文章详情页
+
+    /**
+     *  主题操作
+     */
+    public function actionTheme()
+    {
+        if (Yii::$app->request->isAjax) {
+        $model=Theme::findOne(1);
+        $theme = Yii::app()->request->getParam('theme');
+        echo $theme;
+        $data= $model->getCurTheme();
+        $model->theme_name=$theme;
+         $model->save();
+         return $theme;
+        // if($model->save()){
+        //     echo CJSON::encode(array('val'=>$model->remark));//Yii 的方法将数组处理成json数据
+        // }
+       
+            // $model=new Theme;
+            // $data = Yii::$app->request->post('theme');        
+            // $model->theme_name=$data;
+            // $model->save();
+            // $response->format = \yii\web\Response::FORMAT_JSON;
+            //       return[
+            //     'theme':$data
+            // ]
+
+        
+        }
+
+    
+        // $model=Theme::findOne(1);
+        // $model->theme_name=Yii::$app->request->post('theme_name');
+        //     $model->save();
+        //     return[
+        //         'theme':Yii::$app->request->post('theme_name')
+        //     ]
+
+        //     // $this->refresh();
+       
+
+
+
+    }
+
+    /**
+     * 文章详情页
+     */
     public function actionDetail()
     {
         $articleId = Yii::$app->request->get('id');                             //当前文章id
         $articleQuery = Article::findOne(['id' => $articleId]);                   //当前文章数据
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;       
 
         //当前文章所属分类
         $curArticleCate = cate::findOne($articleQuery['cate_id']);
@@ -99,12 +155,16 @@ class BlogController extends Controller
         ]);
     }
 
-    //文章分类页
+    /**
+     * 文章分类页
+     */
     public function actionCate()
     {
         $cateId = Yii::$app->request->get('id');
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;       
 
         if($cateId){
 //            $cateArticles=Cate::findOne(['id' => $cateId])->cateArticles;
@@ -121,10 +181,14 @@ class BlogController extends Controller
         ]);
     }
 
-    //文章标签页
+    /**
+     * 文章标签页
+     */
     public function actionTag()
     {
         $tagId = Yii::$app->request->get('id');
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;       
 
         $curTagName = tag::findOne(['id' => $tagId]);
         $curTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->where(['tag_id' => $tagId])->all();
@@ -184,6 +248,8 @@ class BlogController extends Controller
      */
     public function actionView()
     {
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;       
         return $this->render('view');
     }
 
@@ -192,93 +258,25 @@ class BlogController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public $enableCsrfValidation = false;
      
     public function actionCreate()
     {
         $model = new Article;
-        $articleTagModel = new ArticleTag;
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;       
         $post = Yii::$app->request->post();
-
 
 
         //获取用户输入的数据,验证并保存
         if ($model->load($post) && isset($_POST['article_tag'])) {
 
-            //保存文章表
-            $model->setAttributes(array(
-                'article_title' => $_POST['article_title'],
-                'article_intro' => $_POST['article_intro'],
-                'pub_date' => date("Y-m-d H:i:s"),
-                'cate_id' => $_POST['article_cate'],
-            ));
-            $model->save();
-            $articleId = $model->attributes['id'];
-
-            if ($model->save(false)) {
-                //遍历标签
-                for ($i = 0; $i < count($_POST['article_tag'])-1; $i++) {
-                    $res[$i] = [$_POST['article_tag'][$i],$articleId ];
-                }
-                Yii::$app->db->createCommand()->batchInsert($articleTagModel::tableName(), ['tag_id', 'article_id'], $res)->execute();
-                 if($articleTagModel->save(false)){
-                     return $this->render('view');
-                 }
+            if (!$model->create()) {
+                echo '文章表保存失败!';
+            } else {
+                return $this->redirect('view');
             }
-
-
-//                return $this->render('view');
-
-
-//            Yii::$app->db->createCommand()->batchInsert($articleTagModel::tableName(), ['tag_id', 'article_id'], [
-//                [$model->id,$_POST['article_tag']]
-//            ])->execute();
-
-
-//            return $this->render('view');
-
-//            foreach ($_POST['article_tag'] as $tags) {
-//                $articleTagModel->setAttributes(array(
-//                    'article_id' => $model->id,
-//                    'tag_id' => $tags,
-//                ));
-//                $articleTagModel->save();
-//            }
-
-
-//        if ($model->load($post)) {
-//
-//            if(!$model->create()){
-//                Yii::$app->session->setFlash('warning',$model->_lastError);
-//            }else{
-//                return $this->render('view');
-//            }
-
-
-//            $model->save(false);
-//            $articleTagModel->article_id=$model->id;
-//            $articleTagModel->save(false);
-//            echo $model->attributes['id'];
-//            $model->setAttributes(array(
-//                'article_title' => $_POST['article_title'],
-//                'article_intro' => $_POST['article_intro'],
-//                'pub_date' => date("Y-m-d H:i:s"),
-//                'cate_id' => $_POST['article_cate'],
-//            ));
-//            $model->save();
-//            foreach ($_POST['article_tag'] as $tags) {
-//                $articleTagModel->setAttributes(array(
-//                    'article_id' => $model->id,
-//                    'tag_id' => $tags,
-//                ));
-//                $articleTagModel->save();
-//            }
-
-
-//            $model->link('tags',Tag::find()->where(['article_id'=>$model->id]));
-
 
         } else {
             return $this->render('create', [
@@ -289,25 +287,6 @@ class BlogController extends Controller
         }
     }
 
-    /**
-     * 保存文章标签
-     */
-    public function saveTags($id, $tag)
-    {
-
-        if ($tag) {
-            $ArticleTag = new ArticleTag();
-            $ArticleTag->article_id = $id;
-            $ArticleTag->tag_id = 8;
-            $ArticleTag->save();
-            if ($ArticleTag->save()) {
-                return true;
-            } else {
-                echo '关系表保存失败!';
-            }
-        }
-
-    }
 
     /**
      * Updates an existing Article model.
@@ -318,12 +297,24 @@ class BlogController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $cateQuery = Cate::find()->all();
+        $tagQuery = Tag::find()->all();
+         $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;   
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post()) && isset($_POST['article_tag'])) {
+            if(!$model->updateArticle($id))
+            {
+                echo '文章表修改失败!';
+            }else
+            {
+                return $this->redirect(['index']);
+            }
         } else {
-            return $this->render('update', [
+            return $this->render('_form', [
                 'model' => $model,
+                'cates' => $cateQuery,
+                'tags' => $tagQuery,
             ]);
         }
     }
@@ -336,7 +327,12 @@ class BlogController extends Controller
      */
     public function actionDelete($id)
     {
+        //删除文章表中内容
         $this->findModel($id)->delete();
+
+        //删除关联表
+        $articleTagModel = new ArticleTag;
+        $articleTagModel::deleteAll(['article_id' => $id]);
 
         return $this->redirect(['index']);
     }

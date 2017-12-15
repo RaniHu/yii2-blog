@@ -1,3 +1,7 @@
+@import "../common/common_mixin.scss";
+@import "../common/common_define.scss";
+@import "theme.scss";
+
 /*背景图标*/
 $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag;
 @each $bg-icon-list in $bg-icon {
@@ -11,10 +15,11 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
 
 
 #main {
+  min-width: 1200px;
   background-color: #f7f7f7;
   /*头图*/
   .main-image {
-    height: 320px;
+    height: 400px;
     width: 100%;
     background-size: contain;
     &.home-page{
@@ -42,13 +47,12 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
       float: left;
       width: 75%;
       padding-right: 90px;
-      box-sizing: border-box;
+      @include box-sizing(border-box);
 
       a{
         text-decoration: none;
         cursor: pointer;
       }
-
 
       //=====暂无文章提示=====
       .article-notfound{
@@ -63,6 +67,7 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
           height: 100px;
         }
         .no-article-text {
+          color: #333;
           text-align: center;
           font-size: 16px;
           margin-top: 10px;
@@ -72,29 +77,34 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
 
       /*=====当前文章列表=====*/
       .cur-article-list {
-        padding: 20px 25px;
+        position: relative;
         background-color: #ffffff;
+        padding: 20px 55px 20px 25px;
         text-align: left;
         margin-bottom: 25px;
-        border-radius: 6px;
-        box-shadow: -5px 5px 10px rgba(0,0,0,0.1);
         cursor: pointer;
         transition: 0.5s;
-        &:hover{
-          box-shadow: 0 0 10px rgba(0,0,0,0.2);
-          transform: translateY(-3px);
+        text-align: justify;
+        @include border-radius(6px);
+        @include box-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+        > a {
+          display: block;
+        }
+        &:hover {
+          @include box-shadow(0 0 8px rgba(0, 0, 0, 0.4));
         }
         /*文章标题*/
         h3 {
-          color: #444444;
+          color: lighten(#0ABFBC, 1%);
           font-size: 20px;
         }
         /*文章介绍*/
         .article-intro {
+          font-size: 13px;
           color: #666666;
+          line-height: 22px;
           margin: 15px 0 10px 0;
           &:hover {
-            color: #0ABFBC;
             cursor: pointer;
           }
         }
@@ -114,6 +124,90 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
             width: 20px;
             height: 20px;
             margin-right: 3px;
+          }
+        }
+        /*文章操作*/
+        .article-operate {
+          position: absolute;
+          top: 28px;
+          right: 20px;
+          z-index: 999;
+          //展开按钮
+          .open-icon-box {
+            display: inline-block;
+            padding: 10px 18px;
+            position: absolute;
+            top: -28px;
+            right: -14px;
+            text-align: center;
+            &:hover{
+              .open-icon {
+                border-color: #FC354C;
+              }
+            }
+            .open-icon {
+              @include openIconPc(#444, 9px);
+            }
+          }
+          //操作菜单
+          .operate-menu {
+            background: #ffffff;
+            margin-top: 8px;
+            display: none;
+            border: 1px solid #dddddd;
+            @include box-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+            li {
+              display: block;
+              a {
+                display: block;
+                font-size: 13px;
+                color: #666666;
+                padding: 8px 12px;
+                &:hover {
+                  background: #F2F2F2;
+                }
+              }
+            }
+          }
+          //确认弹框
+          .confirm-box {
+            display: none;
+            position: absolute;
+            width: 170px;
+            top:-60px;
+            right: -30px;
+            padding: 14px 18px;
+            background: #ffffff;
+            border: 1px solid #dddddd;
+            text-align: center;
+            z-index: 999;
+            @include box-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+            p{
+              font-size: 12px;
+              color: #333333;
+              margin-bottom: 13px;
+            }
+            .confirm-btn{
+              font-size: 0;
+              a{
+                display: inline-block;
+                border: 1px solid #dddddd;
+                padding: 3px 14px;
+                font-size: 12px;
+                &:first-child{
+                  color: #ffffff;
+                  background-color: #FC354C;
+                  margin-right: 15px;
+                  &:hover{
+                    background-color: darken(#FC354C,12%);
+                  }
+                }
+                &:last-child{
+                  color: #444;
+                  background-color: #ffffff;
+                }
+              }
+            }
           }
         }
       }
@@ -142,7 +236,7 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
               font-size: 12px;
               color: #FC354C;
               border: 1px solid #FC354C;
-              border-radius: 5px;
+              @include border-radius(5px);
             }
             .article-pub-time {
               padding-left: 5px;

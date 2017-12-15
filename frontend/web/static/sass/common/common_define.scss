@@ -15,6 +15,15 @@
     @include transform(rotate(-45deg));
 }
 
+@mixin openIconPc($borderColor, $size ) {
+    display: inline-block;
+    width:($size);
+    height: ($size);
+    border-right: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    @include transform(rotate(45deg));
+}
+
 
 /*======向上小三角======*/
 

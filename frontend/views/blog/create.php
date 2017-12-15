@@ -7,7 +7,7 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
 AppAsset::addCss($this, '@web/static/css/blog/articleCreate.css');
-AppAsset::addScript($this, '@web/static/js/blog/formHandle.js');
+AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
 MarkdowneditorAssets::register($this);
 
 ?>
@@ -24,7 +24,7 @@ MarkdowneditorAssets::register($this);
                 <div class="article-info-form">
                     <!--===信息表单列表===-->
                     <div class="info-form-list basic-info-box">
-                        <h4>文章基本信息填写</h4>
+                        <h4>文章基本信息</h4>
                         <!--文章标题-->
                         <div class="article-title-input">
                             <input type="text" placeHolder="文章标题" name='article_title'>
@@ -61,6 +61,7 @@ MarkdowneditorAssets::register($this);
                                     <span class="checkbox-val"><?= $tag->tag ?></span>
                                 </label>
                             <?php endforeach; ?>
+
                         </div>
                     </div>
                 </div>

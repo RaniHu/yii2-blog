@@ -44,23 +44,32 @@ if (!in_array(strtolower($controllerId), [
 <body>
 <?php $this->beginBody() ?>
 
-<!--是否加载头部-->
+<?php
+
+ if($this->params['theme']): ?>
+<div class="blog-container" id=<?=$this->params['theme']->theme_name?>>
+
+    <!--是否加载头部-->
 <?php if ($is_show_header): ?>
     <?= $this->renderFile('../views/public/header.php') ?>
 <?php endif; ?>
 
 
-<!--======中间内容=====-->
+    <!--======中间内容=====-->
 <div id="main">
     <?= $content ?>
 </div>
 
 
-<!--是否加载底部-->
+    <!--是否加载底部-->
 <?php if ($is_show_footer): ?>
     <?= $this->renderFile('../views/public/footer.php') ?>
 <?php endif; ?>
+
+</div>
+<?php endif; ?>
 <?php $this->endBody() ?>
+
 
 </body>
 </html>

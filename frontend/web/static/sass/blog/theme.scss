@@ -1,0 +1,144 @@
+@import "../common/common_mixin.scss";
+
+//主题色列表
+$theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484762, red:#F67280,darken-green:#539092,purple:#9B5D73);
+
+
+/*===============主题样式设置===============*/
+@each $theme-name, $theme-color in $theme-color-name {
+  #theme-#{$theme-name}{
+
+    //除默认主题外
+    @if ($theme-name!='default'){
+
+
+       /*头部*/
+    #header {
+      background-color:$theme-color ;
+      .user-name span{
+        color: #ffffff;
+      }
+      .header-nav li a {
+        &:hover {
+          color: #000000;
+        }
+        &.active {
+          color: #000000;
+        }
+      }
+    }
+
+
+ /*中间部分*/
+    #main{
+      /*==========头图==========*/
+      .main-image {
+        &.home-page{
+          background: url("../../image/#{$theme-name}-theme-main.jpg") no-repeat center;
+          
+          // background: url("../../image/darken-blue-theme-main.jpg") no-repeat center;
+        }
+        &.cate-page{
+          background: url("../../image/main-image9.jpg") no-repeat center;
+        }
+        &.tag-page{
+          background: url("../../image/main-image2.jpg") no-repeat center;
+        }
+        &.detail-page{
+          background: url("../../image/main-image5.jpg") no-repeat center;
+        }
+      }
+
+      .content-wrapper {
+
+
+
+        //========左边内容==========
+        .left-content {
+
+          //当前文章列表
+          .cur-article-list {
+            h3 {
+              color: $theme-color;
+            }
+          }
+
+          //当前文章详细内容
+          .article-detail-box .article-attach-info {
+          
+            .cur-article-tag-all{
+                h3 {
+                  color: $theme-color;
+                }
+            }
+            
+          }
+
+          //标签页和分类页
+          .tag-page-info h3, .cate-page-info h3 {
+            color: $theme-color;
+          }
+        }
+
+        //========文章表单==========
+        #write-article-form {
+         .article-info-form  .info-form-list {
+            &.basic-info-box > div {
+              input[type='text'].focus, textarea.focus {
+                border: 1px solid $theme-color;
+              }
+            }
+            //文章分类与标签
+            .article-cate-input, .article-tag-input {
+              span:hover {
+                color: $theme-color;
+              }
+              //文章标签
+              &.article-tag-input label.checked .icon-box {
+                background-color: $theme-color;
+                border: 3px solid $theme-color;
+              }
+              &.article-cate-input label.checked .icon-box {
+                border: 3px solid $theme-color;
+                &:before {
+                  background-color: $theme-color;
+
+                }
+              }
+            }
+          }
+          //提交按钮
+          .submit-btn input {
+            background-color: $theme-color;
+
+            h3{
+              border-bottom: 1px solid $theme-color;
+            }
+            &:hover {
+              background-color: darken($theme-color, 20%);
+            }
+          }
+        }
+      }
+
+      /*======右侧导航======*/
+      .right-sidebar{
+        h3{
+          border-bottom: 2px solid $theme-color;
+        }
+
+        /*分类和时间轴*/
+        .sort-list li a, .timeline-list li a{
+          &:hover,  &.active{
+            color:$theme-color ;
+          }
+        }
+      }
+
+    }
+    }
+
+
+   
+  }
+}

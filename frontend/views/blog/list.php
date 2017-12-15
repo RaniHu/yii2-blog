@@ -1,8 +1,10 @@
 <?php
 
+use frontend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
+AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
 
 ?>
 
@@ -15,20 +17,42 @@ use yii\helpers\Url;
         </div>
     <?php else: ?>
         <?php foreach ($articleList as $articleInfo): ?>
-            <a href="<?= Url::to(['blog/detail', 'id' => $articleInfo['id']]) ?>">
             <div class="cur-article-list">
-
-                <h3><?= Html::encode("{$articleInfo['article_title']}") ?></h3>
-                <div class="article-intro">
-                    <?= $articleInfo['article_intro'] ?>
+                <a href="<?= Url::to(['blog/detail', 'id' => $articleInfo['id']]) ?>">
+                    <!--文章标题-->
+                    <h3><?= Html::encode("{$articleInfo['article_title']}") ?></h3>
+                    <!--简介-->
+                    <div class="article-intro">
+                        <?= $articleInfo['article_intro'] ?>
+                    </div>
+                    <!--发布时间及分类-->
+                    <div class="other-info">
+                        <span class="article-time"><i
+                                    class="article-time-icon"></i> <?= $articleInfo['pub_date'] ?></span>
+                        <span class="article-sort"><i class="article-sort-icon"></i><?= $articleInfo['cates']['cate'] ?></span>
+                    </div>
+                </a>
+                <!--相关操作-->
+                <div class="article-operate">
+                    <span class="open-icon-box"><i class="open-icon"></i></span>
+                    <ul class="operate-menu">
+                        <li>
+                            <a href="<?= Url::to(['blog/update', 'id' => $articleInfo['id']]) ?>" data-method="post">编辑文章</a>
+                        </li>
+                        <li>
+                            <a>删除文章</a>
+                        </li>
+                    </ul>
+                    <!--确认弹框-->
+                    <div class="confirm-box">
+                        <p>确认要删除这篇文章吗？</p>
+                        <div class="confirm-btn">
+                            <a href="<?= Url::to(['blog/delete', 'id' => $articleInfo['id']]) ?>" data-method="post">确认</a>
+                            <a class="cancle-btn">取消</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="other-info">
-                    <span class="article-time"><i class="article-time-icon"></i> <?= $articleInfo['pub_date'] ?></span>
-                    <span class="article-sort"><i class="article-sort-icon"></i><?= $articleInfo['cates']['cate'] ?></span>
-                </div>
-
             </div>
-        </a>
         <?php endforeach; ?>
     <?php endif; ?>
 
