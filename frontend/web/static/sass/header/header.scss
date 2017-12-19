@@ -1,4 +1,6 @@
 @import "../blog/theme.scss";
+@import "../common/common_mixin.scss";
+
 
 //自定义字体
 @font-face {
@@ -46,6 +48,7 @@
       display: inline-block;
       vertical-align: middle;
       animation: 0.3s;
+      @include box-shadow(0 0 3px rgba(18, 20, 20, 0.3));
       a{
         cursor: pointer;
         width: 35px;

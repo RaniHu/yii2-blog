@@ -15,7 +15,7 @@ class AppAsset extends AssetBundle
     //全局css
     public $css = [
         'static/css/reset/reset.css',
-        'static/css/site/site.css',
+//        'static/css/site/site.css',
         'static/css/blog/blog.css',
     ];
 

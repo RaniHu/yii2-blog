@@ -4,7 +4,7 @@ var path = require('path');
 var merge = require('merge-stream');
 
 
-var folders = ['footer','header','blog','reset','sidebar'];
+var folders = ['footer','header','blog','reset','sidebar','site'];
 
 
 //定义一个sass任务（自定义任务名称）

@@ -1,0 +1,27 @@
+@import "../common/common_mixin.scss";
+
+#main{
+  background-color: #ffffff;
+}
+
+#login-wrapper{
+  background-color: #ffffff;
+
+  .site-login{
+    width: 450px;
+    margin: 40px auto;
+    @at-root
+    #login-form{
+      .form-group{
+        margin: 20px auto;
+      }
+    }
+  }
+
+}
+
+
+#footer{
+  position: fixed;
+  bottom:0;
+}

@@ -83,43 +83,33 @@ class BlogController extends Controller
      */
     public function actionTheme()
     {
+
+        /*判断是否为ajax请求*/
         if (Yii::$app->request->isAjax) {
-        $model=Theme::findOne(1);
-        $theme = Yii::app()->request->getParam('theme');
-        echo $theme;
-        $data= $model->getCurTheme();
-        $model->theme_name=$theme;
-         $model->save();
-         return $theme;
-        // if($model->save()){
-        //     echo CJSON::encode(array('val'=>$model->remark));//Yii 的方法将数组处理成json数据
-        // }
-       
-            // $model=new Theme;
-            // $data = Yii::$app->request->post('theme');        
-            // $model->theme_name=$data;
-            // $model->save();
-            // $response->format = \yii\web\Response::FORMAT_JSON;
-            //       return[
-            //     'theme':$data
-            // ]
+            $model = Theme::findOne(1);
+            $get = Yii::$app->request->get();
+            $themeName = $get['theme'];
 
-        
+            //保存主题值
+            if ($themeName) {
+                $model->theme_name = $themeName;
+                $model->save();
+            }
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+            //返回值给前端
+            if($model->save()){
+                return [
+                    'themeName' => $themeName,
+                    'code' => 100,
+                ];
+            }else{
+                return [
+                    'error' => '主题更新失败',
+                    'code' => 500,
+                ];
+            }
         }
-
-    
-        // $model=Theme::findOne(1);
-        // $model->theme_name=Yii::$app->request->post('theme_name');
-        //     $model->save();
-        //     return[
-        //         'theme':Yii::$app->request->post('theme_name')
-        //     ]
-
-        //     // $this->refresh();
-       
-
-
-
     }
 
     /**
@@ -140,11 +130,6 @@ class BlogController extends Controller
         //当前文章的所有标签
         $curArticleTags = $articleQuery->tags;
 
-//        $curArticleTags = ArticleTag::find()->with('tagsName')->where(['article_id'=>$articleId])->asArray()->all();
-//        foreach ($curArticleTags as $curArticleTag){
-//            $curTags =$curArticleTag['tagsName'][0];
-//            array_push($curTagsArr,$curTags);
-//        }
 
         return $this->render('detail', [
             'curArticle' => $articleQuery,
@@ -194,12 +179,6 @@ class BlogController extends Controller
         $curTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->where(['tag_id' => $tagId])->all();
         $allTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->orderBy('id')->all();
 
-//        print_r(Tag::findOne($tagId)->getTagArticles()->orderBy(['id' => SORT_DESC]));
-//        //当前标签对应的文章
-//        $curTagArticles = Tag::find()->with('tagArticles')->where(['id'=>$tagId])->all();
-//
-//        //所有标签对应的文章
-//        $allTagArticles=Tag::find()->with('tagArticles')->all();
 
         $res=array();
         //判断是否存在标签id
@@ -265,12 +244,12 @@ class BlogController extends Controller
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;       
+        Yii::$app->view->params['theme']=$curTheme;
         $post = Yii::$app->request->post();
 
 
         //获取用户输入的数据,验证并保存
-        if ($model->load($post) && isset($_POST['article_tag'])) {
+        if ($model->load($post)&& isset($_POST['article_tag'])) {
 
             if (!$model->create()) {
                 echo '文章表保存失败!';

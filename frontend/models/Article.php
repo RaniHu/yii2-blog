@@ -77,34 +77,6 @@ class Article extends \yii\db\ActiveRecord
     }
 
 
-    //创建完成之后事件方法
-    private function  _eventAfterCreate($data)
-    {
-        
-        //删除原先的关联关系
-        ArticleTag::deleteAll(['article_id'=>$data['id']]);
-
-        if( $_POST['article_tag']){
-            foreach( $_POST['article_tag'] as $key=>$val){
-                $tags[$key]['article_id']=$this->id;
-                $tags[$key]['tag_id']=$val;
-            }
-            //批量插入
-            $res=Yii::$app->db->createCommand()
-                ->batchInsert(ArticleTag::tableName(),['article_id','tag_id'],$tags)
-                ->execute();
-
-            if(!$res){
-                throw new Exception("关系表保存失败!");
-                
-            }
-        }
-
-      
-
-
-    }
-
 
     public function create()
     {
@@ -182,8 +154,6 @@ class Article extends \yii\db\ActiveRecord
                     return true;
                 }
             }
-
-
 
         } catch (\Exception $e) {
             $transaction->rollBack();

@@ -58,18 +58,18 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484
 
           //当前文章列表
           .cur-article-list {
-            h3 {
-              color: $theme-color;
+            @if ($theme-name!='default'){
+              h3 {
+                color: darken($theme-color,15%);
+              }
             }
           }
 
           //当前文章详细内容
           .article-detail-box .article-attach-info {
           
-            .cur-article-tag-all{
-                h3 {
+            .cur-article-tag-all ul li a:hover{
                   color: $theme-color;
-                }
             }
             
           }

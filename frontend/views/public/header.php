@@ -23,5 +23,6 @@ use yii\helpers\Url;
         <li><a href="<?= Url::to(['blog/cate']) ?>" class="cate">分类</a></li>
         <li><a href="<?= Url::to(['blog/tag']) ?>" class="tag">标签</a></li>
         <li><a href="<?= Url::to(['blog/create']) ?>" class="create">写文章</a></li>
+        <li><a href="<?= Url::to(['site/login']) ?>" class="login">登录</a></li>
     </ul>
 </div>

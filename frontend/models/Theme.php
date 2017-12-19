@@ -49,8 +49,8 @@ class Theme extends \yii\db\ActiveRecord
 
     {
 
-        return Theme::findOne(1);
-        # code...
+        $curTheme=Theme::findOne(1);
+        return $curTheme;
     }
 
 }

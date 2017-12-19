@@ -11,6 +11,8 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
+use frontend\models\Theme;
+
 use frontend\models\ContactForm;
 
 /**
@@ -19,7 +21,7 @@ use frontend\models\ContactForm;
 class SiteController extends Controller
 {
 
-    public $layout='origin';
+    public $layout='main';
 
     /**
      * @inheritdoc
@@ -75,6 +77,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;
         return $this->render('index');
     }
 
@@ -85,13 +89,14 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
+//        if (!Yii::$app->user->isGuest) {
+//            return $this->goHome();
+//        }
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+             $this->redirect(array('/blog/index'));
         } else {
             return $this->render('login', [
                 'model' => $model,
@@ -118,7 +123,10 @@ class SiteController extends Controller
      */
     public function actionContact()
     {
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;
         $model = new ContactForm();
+
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail(Yii::$app->params['adminEmail'])) {
                 Yii::$app->session->setFlash('success', 'Thank you for contacting us. We will respond to you as soon as possible.');
@@ -152,6 +160,8 @@ class SiteController extends Controller
     public function actionSignup()
     {
         $model = new SignupForm();
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {

@@ -3,7 +3,7 @@ $(function () {
 
         //头部导航栏操作
         headerNavHandle:function(){
-            var navList = $("#header ul a");
+            var navList = $("#header ul.header-nav li a");
             var curLocation=window.location.href.split("?")[0].split("/");
             var curPage=curLocation[curLocation.length-1];
             navList.each(function (index,item) {
@@ -15,23 +15,21 @@ $(function () {
         //主题切换操作
         themeHandle:function () {
             $("#header ul.theme-list li").click(function () {
-                debugger;
+                var _this=$(this);
+                var themeName = $(this).attr('class');
 
-                $(this).closest(".blog-container").attr('id',$(this).attr('class'));
-                var themeName = $(this).attr('class');//这个值可以得到，但是传不过去
-                var data={
-                    "theme":themeName
-                }
-
+                //发送请求
                 $.ajax({
-                    type     :'POST',
+                    type     :'GET',
                     dataType:"json",
-                    contentType: " application/json;charset=UTF-8",
-                    data: JSON.stringify(data),
+                    data:{"theme":themeName},
                     url  : 'http://192.168.80.80/yii2-blog/frontend/web/blog/theme',
-                    success:function(data){
-                        debugger;
-                        alert("aa");
+                    success:function(res){
+                        _this.closest(".blog-container").attr('id',res.themeName);
+
+                    },
+                    error:function (jqXHR) {
+                        alert("发生错误");
                     }
                 })
 
