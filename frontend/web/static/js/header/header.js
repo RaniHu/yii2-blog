@@ -35,9 +35,21 @@ $(function () {
 
             })
         },
+
+        //二级菜单事件
+        secondMenuHandle:function () {
+            $("#header .user-login-nav li a.user-name").click(function (e) {
+                e.stopPropagation();
+               $(this).siblings('.user-config-menu').fadeToggle(200);
+            });
+            $(document.body).click(function (e) {
+                $("#header .user-login-nav li .user-config-menu").fadeOut(200);
+            })
+        },
         init:function () {
             headeHandle.headerNavHandle();
             headeHandle.themeHandle();
+            headeHandle.secondMenuHandle();
         }
     }
     headeHandle.init();

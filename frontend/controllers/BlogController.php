@@ -56,7 +56,7 @@ class BlogController extends Controller
         $tagQuery = Tag::find()->all();
         $curTheme=Theme::findOne(1);
         Yii::$app->view->params['theme']=$curTheme;        
-        $articleSearchLists = Article::find()->with('cates')->andFilterWhere(['like', 'article_title', $searchText])->orderBy(['pub_date' => SORT_DESC])->asArray()->all();
+        $articleSearchLists = Article::find()->with('cates','author')->andFilterWhere(['like', 'article_title', $searchText])->orderBy(['pub_date' => SORT_DESC])->asArray()->all();
 
         $pagination = new Pagination([                                                    //分页器
             'defaultPageSize' => 3,
@@ -66,6 +66,7 @@ class BlogController extends Controller
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
+
 
 
         return $this->render('home', [
@@ -122,10 +123,10 @@ class BlogController extends Controller
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;       
+        Yii::$app->view->params['theme']=$curTheme;
 
-        //当前文章所属分类
-        $curArticleCate = cate::findOne($articleQuery['cate_id']);
+        //当前文章信息与所属分类
+        $curArticle = Article::find(['id' => $articleId])->with('cates','author')->asArray()->all();
 
         //当前文章的所有标签
         $curArticleTags = $articleQuery->tags;
@@ -135,7 +136,6 @@ class BlogController extends Controller
             'curArticle' => $articleQuery,
             'cates' => $cateQuery,
             'tags' => $tagQuery,
-            'curCate' => $curArticleCate,
             'curTag' => $curArticleTags
         ]);
     }

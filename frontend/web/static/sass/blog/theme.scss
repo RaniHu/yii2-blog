@@ -11,14 +11,13 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484
     //除默认主题外
     @if ($theme-name!='default'){
 
-
        /*头部*/
     #header {
       background-color:$theme-color ;
-      .user-name span{
+      .user-logo span{
         color: #ffffff;
       }
-      .header-nav li a {
+      .header-nav li a, .user-login-nav li a {
         &:hover {
           color: #000000;
         }
@@ -35,8 +34,6 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484
       .main-image {
         &.home-page{
           background: url("../../image/#{$theme-name}-theme-main.jpg") no-repeat center;
-          
-          // background: url("../../image/darken-blue-theme-main.jpg") no-repeat center;
         }
         &.cate-page{
           background: url("../../image/main-image9.jpg") no-repeat center;
@@ -60,7 +57,7 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484
           .cur-article-list {
             @if ($theme-name!='default'){
               h3 {
-                color: darken($theme-color,15%);
+                color: darken($theme-color, 10%);
               }
             }
           }

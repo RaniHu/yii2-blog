@@ -1,6 +1,8 @@
 @import "../blog/theme.scss";
 @import "../common/common_mixin.scss";
+@import "../common/common_define.scss";
 
+$headerH:55px;
 
 //自定义字体
 @font-face {
@@ -16,10 +18,10 @@
   min-width: 1200px;
   padding: 0 70px 0 100px;
   background-color: #29221f;
-  height: 55px;
-  line-height: 55px;
+  height: $headerH;
+  line-height: $headerH;
 
-  .user-name {
+  .user-logo {
     float: left;
     font-size: 26px;
     font-family: lovely_eunike_hans;
@@ -75,11 +77,13 @@
     }
   }
 
-  //头部菜单
-  .header-nav {
+  //头部菜单和登录导航
+  .header-nav,.user-login-nav {
     float: right;
     font-size: 0;
+
     li {
+      position: relative;
       display: inline-block;
       a {
         font-size: 14px;
@@ -88,12 +92,57 @@
         color: #fffef1;
         cursor: pointer;
         text-decoration: none;
+        @include transition(0.3s);
         &:hover{
           color: #0ABFBC;
         }
         &.active{
           color: #0ABFBC;
         }
+      }
+    }
+  }
+  //用户登录导航
+  .user-login-nav{
+    margin-left: 30px;
+
+    li a{
+      padding: 0 5px;
+    }
+
+    //用户设置菜单
+    .user-config-menu{
+      display: none;
+      position: absolute;
+      top: $headerH+10px;
+      left:-20px;
+      background-color: #ffffff;
+      border: 1px solid #e7eaf1;
+      z-index: 10000;
+      padding: 5px 0;
+      @include border-radius(5px);
+      @include box-shadow(0 5px 20px rgba(0,34,77,.1));
+      li{
+        display: block;
+        a{
+          width: 120px;
+          height: 35px;
+          line-height: 35px;
+          display: block;
+          color: #333;
+          text-align: center;
+          &:hover{
+            color: #999999;
+            background-color: #F4F8FB;
+          }
+        }
+      }
+      &:after{
+        content:'';
+        display: block;
+        top:-10px;
+        @extend %center-horizontally;
+        @include triangle-up(10px,#ffffff);
       }
     }
   }

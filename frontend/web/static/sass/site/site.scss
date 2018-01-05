@@ -1,23 +1,127 @@
 @import "../common/common_mixin.scss";
+@import "../reset/reset.scss";
 
-#main{
-  background-color: #ffffff;
+
+//盒子头部高度
+$box-header-height:70px;
+
+
+body {
+  background: url("../../image/login-bg.jpg") no-repeat center;
 }
 
-#login-wrapper{
-  background-color: #ffffff;
 
-  .site-login{
-    width: 450px;
-    margin: 40px auto;
-    @at-root
-    #login-form{
-      .form-group{
-        margin: 20px auto;
+//底部边框
+#login-box .box-header ul li .login-btn,#register-box .box-header ul li .register-btn{
+  border-bottom: 3px solid #5283FA;
+}
+
+//注册表单按钮样式
+#register-box #form-signup .confirm-btn{
+  margin: 30px auto;
+}
+
+
+
+/*===========登录盒子==========*/
+#login-box ,#register-box{
+  width: 650px;
+  margin: 80px auto;
+  overflow: hidden;
+  @include border-radius(2px);
+
+  /*===头部===*/
+  .box-header {
+    background: #0b1935;
+    height:$box-header-height;
+    line-height: $box-header-height;
+    ul.action-btn {
+      float: right;
+      font-size: 0;
+      li {
+        display: inline-block;
+        a {
+          display: block;
+          font-size: 14px;
+          color: #ffffff;
+          padding: 0 30px;
+          height: $box-header-height;
+          text-decoration: none;
+          cursor: pointer;
+          @include box-sizing(border-box);
+
+        }
       }
     }
   }
 
+  /*===中间===*/
+  .box-main {
+    background: #F4F8FB;
+    text-align: center;
+    padding: 30px;
+
+    h2 {
+      margin: 20px 0;
+      span {
+        &:first-child {
+          color: #A0A6B1;
+          margin-right: 10px;
+        }
+        &:last-child {
+          color: #85A3DC;
+        }
+      }
+    }
+  }
+    @at-root
+      /*表单*/
+    #login-form,#form-signup{
+      width: 400px;
+      margin: 0 auto;
+      /*表单中每一行*/
+      .form-block {
+        input[type='text'], input[type='password'] {
+          width: 100%;
+          height: 40px;
+          margin: 10px 0;
+          -webkit-box-shadow: 0 0 0px 1000px #F4F8FB inset;
+          border: 1px solid #dddddd !important;
+          padding: 5px 15px;
+          @include box-sizing(border-box);
+          @include border-radius(20px);
+        }
+        /*记住密码和忘记密码*/
+        &.pwd-action{
+          margin: 10px 0 40px 0;
+          input[type="radio"], input[type="checkbox"]{
+            margin: 0;
+          }
+          .remember-pwd{
+            float: left;
+          }
+          .forget-pwd{
+            float: right;
+          }
+        }
+      }
+      /*确认按钮*/
+      .confirm-btn{
+        display: block;
+        width: 170px;
+        height: 35px;
+        color: #ffffff;
+        background: #5485FE;
+        text-align: center;
+        margin: 10px auto;
+        @include border-radius(25px);
+        @include transition(0.3s);
+        &:hover{
+          background: darken(#5485FE,5%);
+
+        }
+      }
+    }
 }
 
 

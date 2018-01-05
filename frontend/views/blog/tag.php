@@ -5,12 +5,15 @@ use yii\helpers\Url;
 
 ?>
 
-<!--======头图======-->
+<div id="main">
+
+
+    <!--======头图======-->
 <div class="main-image tag-page">
 
 </div>
 
-<!--中间内容-->
+    <!--中间内容-->
 <div class="content-wrapper clearFix">
 
     <!--左侧标签分类-->
@@ -47,4 +50,6 @@ use yii\helpers\Url;
 
     <!--右侧菜单栏-->
     <?= $this->render('../public/sidebar.php', ['cates' => $cates, 'tags' => $tags]) ?>
+</div>
+
 </div>

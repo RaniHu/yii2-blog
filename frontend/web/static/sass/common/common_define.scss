@@ -30,9 +30,9 @@
 @mixin triangle-up($size, $color) {
     width: 0;
     height: 0;
-    border-left: pxToRem($size) solid transparent;
-    border-right: pxToRem($size) solid transparent;
-    border-bottom: pxToRem($size * 1.5) solid $color;
+    border-left: ($size) solid transparent;
+    border-right: ($size) solid transparent;
+    border-bottom: ($size * 1.5) solid $color;
 }
 
 
@@ -41,9 +41,9 @@
 @mixin triangle-down($size, $color) {
     width: 0;
     height: 0;
-    border-left: pxToRem($size) solid transparent;
-    border-right: pxToRem($size) solid transparent;
-    border-top: pxToRem($size * 1.5) solid $color;
+    border-left: ($size) solid transparent;
+    border-right: ($size) solid transparent;
+    border-top: ($size * 1.5) solid $color;
 }
 
 
@@ -52,9 +52,9 @@
 @mixin triangle-right($size, $color) {
     width: 0;
     height: 0;
-    border-left: pxToRem($size * 1.5) solid $color;
-    border-bottom: pxToRem($size) solid transparent;
-    border-top: pxToRem($size) solid transparent;
+    border-left: $size * 1.5 solid $color;
+    border-bottom: $size solid transparent;
+    border-top: $size solid transparent;
 }
 
 

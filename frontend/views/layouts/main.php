@@ -13,7 +13,7 @@ $controllerId = strtolower(Yii::$app->controller->id);
 //变量为0，不显示头部
 $is_show_header = 0;
 if (!in_array(strtolower($controllerId), [
-
+ 'site'
 ])) {
     $is_show_header = 1;
 }
@@ -21,7 +21,7 @@ if (!in_array(strtolower($controllerId), [
 //变量为0，不显示底部
 $is_show_footer = 0;
 if (!in_array(strtolower($controllerId), [
-
+    'site'
 ])) {
     $is_show_footer = 1;
 }
@@ -56,9 +56,7 @@ if (!in_array(strtolower($controllerId), [
 
 
     <!--======中间内容=====-->
-<div id="main">
     <?= $content ?>
-</div>
 
 
     <!--是否加载底部-->

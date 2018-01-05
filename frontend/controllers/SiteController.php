@@ -21,7 +21,8 @@ use frontend\models\ContactForm;
 class SiteController extends Controller
 {
 
-    public $layout='main';
+//    public $layout='origin';
+    public $enableCsrfValidation = false;
 
     /**
      * @inheritdoc
@@ -89,11 +90,13 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-//        if (!Yii::$app->user->isGuest) {
-//            return $this->goHome();
-//        }
         $curTheme=Theme::findOne(1);
         Yii::$app->view->params['theme']=$curTheme;
+
+//        if (!Yii::$app->user->isGuest) {
+//            return $this->render('login');
+//        }
+
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
              $this->redirect(array('/blog/index'));
@@ -113,7 +116,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->goHome();
+        $this->redirect(array('/blog/index'));
     }
 
     /**
@@ -165,7 +168,8 @@ class SiteController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if ($user = $model->signup()) {
                 if (Yii::$app->getUser()->login($user)) {
-                    return $this->goHome();
+                    $this->redirect(array('/blog/index'));
+
                 }
             }
         }
@@ -182,12 +186,14 @@ class SiteController extends Controller
      */
     public function actionRequestPasswordReset()
     {
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
                 Yii::$app->session->setFlash('success', 'Check your email for further instructions.');
 
-                return $this->goHome();
+//                return $this->goHome();
             } else {
                 Yii::$app->session->setFlash('error', 'Sorry, we are unable to reset password for the provided email address.');
             }
@@ -212,6 +218,9 @@ class SiteController extends Controller
         } catch (InvalidParamException $e) {
             throw new BadRequestHttpException($e->getMessage());
         }
+
+        $curTheme=Theme::findOne(1);
+        Yii::$app->view->params['theme']=$curTheme;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
             Yii::$app->session->setFlash('success', 'New password saved.');

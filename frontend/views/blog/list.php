@@ -27,9 +27,9 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
                     </div>
                     <!--发布时间及分类-->
                     <div class="other-info">
-                        <span class="article-time"><i
-                                    class="article-time-icon"></i> <?= $articleInfo['pub_date'] ?></span>
+                        <span class="article-author"><i class="article-author-icon"></i><?= $articleInfo['author']['username'] ?></span>
                         <span class="article-sort"><i class="article-sort-icon"></i><?= $articleInfo['cates']['cate'] ?></span>
+                        <span class="article-time"><i class="article-time-icon"></i> <?= $articleInfo['pub_date'] ?></span>
                     </div>
                 </a>
                 <!--相关操作-->

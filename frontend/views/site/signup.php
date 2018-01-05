@@ -2,34 +2,45 @@
 
 /* @var $this yii\web\View */
 /* @var $form yii\bootstrap\ActiveForm */
-/* @var $model \frontend\models\SignupForm */
+/* @var $model \common\models\LoginForm */
 
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use frontend\assets\AppAsset;
+use yii\helpers\Url;
 
-$this->title = 'Signup';
-$this->params['breadcrumbs'][] = $this->title;
+AppAsset::addCss($this, '@web/static/css/site/site.css');
+
 ?>
-<div class="site-signup">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div id="register-box">
+    <!--头部-->
+    <div class="box-header">
+        <ul class="action-btn">
+            <li><a href="<?= Url::to(['/site/signup']) ?>" class="register-btn">注册</a></li>
+            <li><a href="<?= Url::to(['/site/login']) ?>" class="login-btn">登录</a></li>
+        </ul>
+    </div>
+    <!--中间-->
+    <div class="box-main">
+        <h2><span>Welcome</span><span>back!</span></h2>
+        <form id="form-signup" method="post" role="form">
 
-    <p>Please fill out the following fields to signup:</p>
+            <!--用户名-->
+            <div class="form-block">
+                <input type="text" id="signupform-username" name="SignupForm[username]" autofocus="" placeholder="用户名">
+            </div>
 
-    <div class="row">
-        <div class="col-lg-5">
-            <?php $form = ActiveForm::begin(['id' => 'form-signup']); ?>
+            <!--邮箱-->
+            <div class="form-block">
+                <input type="text" id="signupform-email"  name="SignupForm[email]" placeholder="邮箱">
+            </div>
 
-                <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
+            <!--密码-->
+            <div class="form-block">
+                <input type="password" id="signupform-password" name="SignupForm[password]" placeholder="密码">
+            </div>
 
-                <?= $form->field($model, 'email') ?>
+            <!--确定-->
+            <button type="submit" class="confirm-btn" name="login-button">Enter ></button>
 
-                <?= $form->field($model, 'password')->passwordInput() ?>
-
-                <div class="form-group">
-                    <?= Html::submitButton('Signup', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
-                </div>
-
-            <?php ActiveForm::end(); ?>
-        </div>
+        </form>
     </div>
 </div>

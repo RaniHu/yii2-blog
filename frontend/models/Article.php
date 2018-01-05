@@ -2,6 +2,7 @@
 
 namespace frontend\models;
 
+use common\models\User;
 use Yii;
 
 
@@ -61,14 +62,20 @@ class Article extends \yii\db\ActiveRecord
         ];
     }
 
-    //获取每篇文章的分类
+
+    /**
+     * 获取每篇文章的分类
+     */
     public function getCates()
     {
         return $this->hasOne(Cate::className(), ['id' => 'cate_id']);
 
     }
 
-    //获取每篇文章的所有标签
+
+    /**
+     * 获取每篇文章的所有标签
+     */
     public function getTags()
     {
         return $this->hasMany(Tag::className(), ['id' => 'tag_id'])
@@ -76,8 +83,16 @@ class Article extends \yii\db\ActiveRecord
             ->asArray();
     }
 
+    //获取每篇文章的作者
+    public function getAuthor()
+    {
+        return $this->hasOne(User::className(),['id'=>'author_id']);
+    }
 
 
+    /**
+     * 创建文章
+     */
     public function create()
     {
 
@@ -121,6 +136,10 @@ class Article extends \yii\db\ActiveRecord
 
     }
 
+
+    /**
+     * 修改文章
+     */
     public function updateArticle($articleId)
     {
 

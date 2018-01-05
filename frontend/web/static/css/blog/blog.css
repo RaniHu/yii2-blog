@@ -216,11 +216,11 @@
   /*中间部分*/ }
   #theme-gray #header {
     background-color: #6F6F6F; }
-    #theme-gray #header .user-name span {
+    #theme-gray #header .user-logo span {
       color: #ffffff; }
-    #theme-gray #header .header-nav li a:hover {
+    #theme-gray #header .header-nav li a:hover, #theme-gray #header .user-login-nav li a:hover {
       color: #000000; }
-    #theme-gray #header .header-nav li a.active {
+    #theme-gray #header .header-nav li a.active, #theme-gray #header .user-login-nav li a.active {
       color: #000000; }
   #theme-gray #main {
     /*==========头图==========*/
@@ -234,7 +234,7 @@
     #theme-gray #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
     #theme-gray #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #494949; }
+      color: #565656; }
     #theme-gray #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
       color: #6F6F6F; }
     #theme-gray #main .content-wrapper .left-content .tag-page-info h3, #theme-gray #main .content-wrapper .left-content .cate-page-info h3 {
@@ -268,11 +268,11 @@
   /*中间部分*/ }
   #theme-blue #header {
     background-color: #4D8AD6; }
-    #theme-blue #header .user-name span {
+    #theme-blue #header .user-logo span {
       color: #ffffff; }
-    #theme-blue #header .header-nav li a:hover {
+    #theme-blue #header .header-nav li a:hover, #theme-blue #header .user-login-nav li a:hover {
       color: #000000; }
-    #theme-blue #header .header-nav li a.active {
+    #theme-blue #header .header-nav li a.active, #theme-blue #header .user-login-nav li a.active {
       color: #000000; }
   #theme-blue #main {
     /*==========头图==========*/
@@ -286,7 +286,7 @@
     #theme-blue #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
     #theme-blue #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #2864ae; }
+      color: #2d70c3; }
     #theme-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
       color: #4D8AD6; }
     #theme-blue #main .content-wrapper .left-content .tag-page-info h3, #theme-blue #main .content-wrapper .left-content .cate-page-info h3 {
@@ -320,11 +320,11 @@
   /*中间部分*/ }
   #theme-darken-blue #header {
     background-color: #484762; }
-    #theme-darken-blue #header .user-name span {
+    #theme-darken-blue #header .user-logo span {
       color: #ffffff; }
-    #theme-darken-blue #header .header-nav li a:hover {
+    #theme-darken-blue #header .header-nav li a:hover, #theme-darken-blue #header .user-login-nav li a:hover {
       color: #000000; }
-    #theme-darken-blue #header .header-nav li a.active {
+    #theme-darken-blue #header .header-nav li a.active, #theme-darken-blue #header .user-login-nav li a.active {
       color: #000000; }
   #theme-darken-blue #main {
     /*==========头图==========*/
@@ -338,7 +338,7 @@
     #theme-darken-blue #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
     #theme-darken-blue #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #272736; }
+      color: #323244; }
     #theme-darken-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
       color: #484762; }
     #theme-darken-blue #main .content-wrapper .left-content .tag-page-info h3, #theme-darken-blue #main .content-wrapper .left-content .cate-page-info h3 {
@@ -372,11 +372,11 @@
   /*中间部分*/ }
   #theme-red #header {
     background-color: #F67280; }
-    #theme-red #header .user-name span {
+    #theme-red #header .user-logo span {
       color: #ffffff; }
-    #theme-red #header .header-nav li a:hover {
+    #theme-red #header .header-nav li a:hover, #theme-red #header .user-login-nav li a:hover {
       color: #000000; }
-    #theme-red #header .header-nav li a.active {
+    #theme-red #header .header-nav li a.active, #theme-red #header .user-login-nav li a.active {
       color: #000000; }
   #theme-red #main {
     /*==========头图==========*/
@@ -390,7 +390,7 @@
     #theme-red #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
     #theme-red #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #f12a3f; }
+      color: #f34255; }
     #theme-red #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
       color: #F67280; }
     #theme-red #main .content-wrapper .left-content .tag-page-info h3, #theme-red #main .content-wrapper .left-content .cate-page-info h3 {
@@ -424,11 +424,11 @@
   /*中间部分*/ }
   #theme-darken-green #header {
     background-color: #539092; }
-    #theme-darken-green #header .user-name span {
+    #theme-darken-green #header .user-logo span {
       color: #ffffff; }
-    #theme-darken-green #header .header-nav li a:hover {
+    #theme-darken-green #header .header-nav li a:hover, #theme-darken-green #header .user-login-nav li a:hover {
       color: #000000; }
-    #theme-darken-green #header .header-nav li a.active {
+    #theme-darken-green #header .header-nav li a.active, #theme-darken-green #header .user-login-nav li a.active {
       color: #000000; }
   #theme-darken-green #main {
     /*==========头图==========*/
@@ -442,7 +442,7 @@
     #theme-darken-green #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
     #theme-darken-green #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #376061; }
+      color: #417071; }
     #theme-darken-green #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
       color: #539092; }
     #theme-darken-green #main .content-wrapper .left-content .tag-page-info h3, #theme-darken-green #main .content-wrapper .left-content .cate-page-info h3 {
@@ -476,11 +476,11 @@
   /*中间部分*/ }
   #theme-purple #header {
     background-color: #9B5D73; }
-    #theme-purple #header .user-name span {
+    #theme-purple #header .user-logo span {
       color: #ffffff; }
-    #theme-purple #header .header-nav li a:hover {
+    #theme-purple #header .header-nav li a:hover, #theme-purple #header .user-login-nav li a:hover {
       color: #000000; }
-    #theme-purple #header .header-nav li a.active {
+    #theme-purple #header .header-nav li a.active, #theme-purple #header .user-login-nav li a.active {
       color: #000000; }
   #theme-purple #main {
     /*==========头图==========*/
@@ -494,7 +494,7 @@
     #theme-purple #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
     #theme-purple #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #6b4050; }
+      color: #7b4a5b; }
     #theme-purple #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
       color: #9B5D73; }
     #theme-purple #main .content-wrapper .left-content .tag-page-info h3, #theme-purple #main .content-wrapper .left-content .cate-page-info h3 {
@@ -567,6 +567,11 @@
 .article-tag-icon {
   display: inline-block;
   background: url("../../image/article-tag.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.article-author-icon {
+  display: inline-block;
+  background: url("../../image/article-author.png") no-repeat center;
   background-size: 100% 100%; }
 
 #main {
@@ -671,7 +676,7 @@
           #main .content-wrapper .left-content .cur-article-list .other-info span, #main .content-wrapper .left-content .cur-article-list .other-info i {
             display: inline-block;
             vertical-align: bottom; }
-          #main .content-wrapper .left-content .cur-article-list .other-info .article-time-icon, #main .content-wrapper .left-content .cur-article-list .other-info .article-sort-icon {
+          #main .content-wrapper .left-content .cur-article-list .other-info .article-time-icon, #main .content-wrapper .left-content .cur-article-list .other-info .article-sort-icon, #main .content-wrapper .left-content .cur-article-list .other-info .article-author-icon {
             width: 20px;
             height: 20px;
             margin-right: 3px; }

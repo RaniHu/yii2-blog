@@ -3,7 +3,7 @@
 @import "theme.scss";
 
 /*背景图标*/
-$bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag;
+$bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag,article-author;
 @each $bg-icon-list in $bg-icon {
   .#{$bg-icon-list}-icon {
     display: inline-block;
@@ -120,7 +120,7 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
             vertical-align: bottom;
           }
           /*图标*/
-          .article-time-icon, .article-sort-icon {
+          .article-time-icon, .article-sort-icon,.article-author-icon {
             width: 20px;
             height: 20px;
             margin-right: 3px;
