@@ -70,7 +70,7 @@ MarkdowneditorAssets::register($this);
                     <div class="article-content-area">
                         <?php echo Markdowneditor::widget(['model' => $model, 'attribute' => 'article_content','name'=>'article_content']); ?>
                     </div>
-                    <div class="submit-btn">
+                    <div class="submit-btn form-submit-btn">
                         <input type="submit" value="确定">
                     </div>
 

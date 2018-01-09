@@ -111,6 +111,7 @@ class Article extends \yii\db\ActiveRecord
                 'pub_date' => date("Y-m-d H:i:s"),
                 'cate_id' => $_POST['article_cate'],
             ));
+            $model->author_id=Yii::$app->user->identity->id;
             $model->save();
             $articleId = $model->attributes['id'];
 

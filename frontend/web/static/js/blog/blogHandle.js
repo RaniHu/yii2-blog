@@ -1,6 +1,6 @@
 $(function () {
 
-    var formHandle = {
+    var BlogHandleFn = {
 
         //为当前选择的单选框添加checked        
         radioHandle: function () {
@@ -19,15 +19,6 @@ $(function () {
 
         },
 
-        //表单聚焦时样式
-        focusStyle:function () {
-            $("#write-article-form input,#write-article-form textarea").focus(function () {
-                $(this).addClass("focus");
-            });
-            $("#write-article-form input,#write-article-form textarea").blur(function () {
-                $(this).removeClass("focus");
-            })
-        },
 
         //文章编辑操作
         postEditHandle:function () {
@@ -65,13 +56,12 @@ $(function () {
 
 
         init: function () {
-            formHandle.radioHandle();
-            formHandle.checkboxHandle();
-            formHandle.focusStyle();
-            formHandle.postEditHandle();
+            BlogHandleFn.radioHandle();
+            BlogHandleFn.checkboxHandle();
+            BlogHandleFn.postEditHandle();
         }
 
     }
 
-    formHandle.init();
+    BlogHandleFn.init();
 })

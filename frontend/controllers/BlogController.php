@@ -5,6 +5,7 @@ namespace frontend\controllers;
 use frontend\models\Article;
 use frontend\models\ArticleTag;
 use frontend\models\Cate;
+use frontend\models\Comment;
 use frontend\models\SearchArticle;
 use frontend\models\Tag;
 use frontend\models\Theme;
@@ -101,13 +102,13 @@ class BlogController extends Controller
             //返回值给前端
             if($model->save()){
                 return [
-                    'themeName' => $themeName,
-                    'code' => 100,
+                    "themeName" => $themeName,
+                    "code" => 100,
                 ];
             }else{
                 return [
-                    'error' => '主题更新失败',
-                    'code' => 500,
+                    "error" => '主题更新失败',
+                    "code" => 500,
                 ];
             }
         }
@@ -122,6 +123,14 @@ class BlogController extends Controller
         $articleQuery = Article::findOne(['id' => $articleId]);                   //当前文章数据
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
+
+        //当前文章下的评论
+        $commentModel=new Comment();
+        $articleComments=$commentModel->getAllComments($articleId);
+        $commentNum=$commentModel->getCommentsNum($articleId);
+
+
+        //当前的主题
         $curTheme=Theme::findOne(1);
         Yii::$app->view->params['theme']=$curTheme;
 
@@ -136,7 +145,9 @@ class BlogController extends Controller
             'curArticle' => $articleQuery,
             'cates' => $cateQuery,
             'tags' => $tagQuery,
-            'curTag' => $curArticleTags
+            'curTag' => $curArticleTags,
+            'articleComments' => $articleComments,
+            'commentCount'=>$commentNum
         ]);
     }
 
@@ -149,7 +160,8 @@ class BlogController extends Controller
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;       
+        Yii::$app->view->params['theme'] = $curTheme;
+
 
         if($cateId){
 //            $cateArticles=Cate::findOne(['id' => $cateId])->cateArticles;
@@ -206,6 +218,34 @@ class BlogController extends Controller
 
 
     /**
+     *  评论操作
+     */
+    public function actionComment()
+    {
+
+        /*判断是否为ajax请求*/
+        if (Yii::$app->request->isAjax) {
+            $model = new Comment;
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+            //插入评论数据
+            if($model->createComment()){
+                return [
+                    "code" =>200,
+                ];
+            }else{
+                return [
+                    "error" => $model->errors,
+                    "code" => 500,
+                ];
+            }
+
+        }
+    }
+
+
+
+    /**
      * Lists all Article models.
      * @return mixed
      */
@@ -220,6 +260,7 @@ class BlogController extends Controller
         ]);
     }
 
+
     /**
      * Displays a single Article model.
      * @param integer $id
@@ -231,6 +272,7 @@ class BlogController extends Controller
         Yii::$app->view->params['theme']=$curTheme;       
         return $this->render('view');
     }
+
 
     /**
      * Creates a new Article model.
@@ -297,6 +339,7 @@ class BlogController extends Controller
             ]);
         }
     }
+
 
     /**
      * Deletes an existing Article model.

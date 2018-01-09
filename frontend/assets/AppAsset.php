@@ -21,6 +21,7 @@ class AppAsset extends AssetBundle
 
     //全局js
     public $js = [
+        'static/js/public/formHandle.js',
     ];
 
     //依赖关系

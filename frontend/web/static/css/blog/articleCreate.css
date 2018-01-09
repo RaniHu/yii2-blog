@@ -262,15 +262,7 @@
         color: #777777;
         font-size: 13px;
         border: 1px solid #ddd;
-        box-sizing: border-box;
-        -webkit-transition: border 0.3s;
-        -moz-transition: border 0.3s;
-        -ms-transiton: border 0.3s;
-        -o-transition: border 0.3s;
-        transition: border 0.3s; }
-        #write-article-form .article-info-form .info-form-list.basic-info-box > div input[type='text'].focus,
-        #write-article-form .article-info-form .info-form-list.basic-info-box > div textarea.focus {
-          border: 1px solid #0ABFBC; }
+        box-sizing: border-box; }
       #write-article-form .article-info-form .info-form-list.basic-info-box > div.article-title-input {
         margin-top: 12px; }
       #write-article-form .article-info-form .info-form-list.basic-info-box > div.article-intro-input {
