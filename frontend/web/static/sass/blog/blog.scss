@@ -3,7 +3,7 @@
 @import "theme.scss";
 
 /*背景图标*/
-$bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag,article-author;
+$bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag,article-author;
 @each $bg-icon-list in $bg-icon {
   .#{$bg-icon-list}-icon {
     display: inline-block;
@@ -284,7 +284,7 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
         }
       }
 
-      /*======文章评论与恢复======*/
+      /*======文章评论与回复======*/
       #article-comment-area {
         margin: 30px 0;
         padding: 20px 0;
@@ -301,14 +301,14 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
         }
 
         //写评论
-        .write-comment {
+        .write-comment-box,.write-reply-box {
           font-size: 0;
           textarea {
             font-size: 14px;
             width: 100%;
             height: 60px;
             padding: 5px 12px;
-            border: 1px solid #eeeeee;
+            border: 1px solid #ccc;
             margin-bottom: 10px;
             @include box-sizing(border-box);
             @include border-radius(6px);
@@ -322,7 +322,6 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
               padding: 6px 18px;
               @include border-radius(3px);
               &:last-child{
-                border: 1px solid #666666;
                 margin-left: 20px ;
               }
 
@@ -330,24 +329,92 @@ $bg-icon: article-notSearch,article-notfound,article-detail-tag, article-time, a
           }
         }
 
-        //其他用户评论
+        //===其他用户评论===
         .other-comments {
           margin: 30px auto;
+          //==评论列表
           .comment-list {
-            margin: 18px auto;
+            margin: 25px auto;
+            //用户名
             h4 {
               color: #333333;
               font-weight: bold;
               font-size: 18px;
             }
+            //评论内容
             .comment-contents {
               font-size: 15px;
               color: #333333;
               margin: 10px 0;
             }
-            .comment-date {
-              font-size: 13px;
+            .other-info{
               color: #777777;
+
+              //评论日期
+              .comment-date{
+                float: left;
+                font-size: 13px;
+              }
+              //回复评论菜单
+              .reply-comment-nav{
+                float: right;
+                font-size: 0;
+                li{
+                  display: inline-block;
+                  font-size: 13px;
+                  margin: 0 15px;
+                  cursor: pointer;
+                  i{
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: bottom;
+                  }
+                  span{
+                    vertical-align: bottom;
+                    padding-left: 5px;
+                  }
+                }
+              }
+            }
+            //回复框
+            .write-reply-box{
+              display: none;
+              margin-top: 8px;
+            }
+
+            //==回复列表盒子==
+            .reply-list-box{
+              border-left: 2px solid #999;
+              padding: 0 15px;
+              margin: 12px 0;
+              @include box-sizing(border-box);
+              .reply-list{
+                padding: 12px 0;
+                border-bottom: 1px dashed #CCCCCC;
+                a,span{
+                  display: inline-block;
+                  vertical-align: middle;
+                }
+                &:first-child{
+                  padding-top: 0;
+                }
+                .reply-user-name{
+                  color: #00a0e9;
+                  cursor: pointer;
+                }
+                .reply-content{
+
+                }
+                .reply-date{
+                  color: #777777;
+                  font-size: 12px;
+                }
+                .reply-btn{
+                  cursor: pointer;
+                  font-size: 12px;
+                  color: #777777;
+                }
+              }
             }
           }
         }

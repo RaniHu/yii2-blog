@@ -3,7 +3,6 @@
 namespace frontend\models;
 
 use common\models\User;
-use frontend\models\Reply;
 use Yii;
 
 
@@ -18,14 +17,14 @@ use Yii;
  * @property integer $tag_id
  * @property integer $cate_id
  */
-class Comment extends \yii\db\ActiveRecord
+class Reply extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return 'comment';
+        return 'reply';
     }
 
     /**
@@ -34,7 +33,7 @@ class Comment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['article_id', 'user_id', 'content'], 'required'],
+            [[ 'user_id', 'content'], 'required'],
             [['content'], 'string'],
         ];
     }
@@ -46,37 +45,37 @@ class Comment extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'article_id' => '文章id',
-            'user_id' => '评论用户id',
-            'content' => '评论内容',
-            'date' => '评论时间',
+            'comment_id' => '评论id',
+            'reply_id' => '回复id',
+            'user_id' => '回复用户id',
+            'content' => '回复内容',
+            'date' => '回复时间',
         ];
     }
 
 
-    //获取某篇文章下的评论条数
-    public function getCommentsNum($articleId)
+    //获取某条评论下的回复条数
+    public function getReplyNum($commentId)
     {
-        return Comment::find()->where(['article_id' => $articleId])->count();
+        return Reply::find()->where(['comment_id' => $commentId])->count();
     }
 
-    //获取每篇文章下的评论内容
-    public function getAllComments($articleId)
+    //获取每条评论下的所有回复内容
+    public function getAllReply($commentId)
     {
-        return Comment::find()->select(['comment.user_id','comment.id','comment.content', 'comment.date'])->with('user')->where(['article_id' => $articleId])->asArray()->all();
-    }
-
-
-
-    //获取每条评论下的回复内容
-    public function getReply()
-    {
-        return $this->hasMany(Reply::className(), ['comment_id' => 'id'])
-            ->asArray();
+        return  Reply::find()->select(['reply.id','reply.user_id','comment_id','content', 'date'])->with('user')->where(['comment_id' => $commentId])->asArray()->all();
     }
 
 
-    //评论与作者的一对一关系
+    //根据主键获取某条回复的相关信息
+    public function getReplyByKey($id)
+    {
+        return Reply::find()->select(['reply.id','user_id','content', 'date'])->joinWith('user')->where(['reply.id'=>$id])->asArray()->all();
+    }
+
+
+
+    //获取回复者的信息
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id'])
@@ -85,21 +84,20 @@ class Comment extends \yii\db\ActiveRecord
     }
 
     //创建评论
-    public function createComment()
+    public function createReply()
     {
         //开启事务
         $transaction = Yii::$app->db->beginTransaction();
         try {
-            $model = new Comment();
+            $model = new reply();
             $request = Yii::$app->request->post();
-            $commContent = $request['commentContents'];
-            $articleId = intval($request['articleId']);
-
+            $replyContent = $request['replyContents'];
+            $commentId = intval($request['commentId']);
 
             //保存评论
-            $model->article_id = $articleId;
+            $model->comment_id = $commentId;
             $model->user_id = Yii::$app->user->identity->id;
-            $model->content = $commContent;
+            $model->content = $replyContent;
             $model->date = date("Y-m-d H:i:s");
             $model->save();
 
@@ -107,8 +105,9 @@ class Comment extends \yii\db\ActiveRecord
             if ($model->save()) {
                 $transaction->commit();
                 $id=$model->attributes['id'];
-                $commentData=Yii::$app->db->createCommand('select comment.id, content, date, username from comment inner join user  on comment.user_id=user.id where comment.id='.$id)->queryOne();
-                $commentCount=$model->getCommentsNum($articleId);
+//                $commentData=Yii::$app->db->createCommand("select reply.id , content, date, username from reply inner join user  on reply.user_id=user.id where reply.id=".$id)->queryOne();
+                $commentData=$model->getReplyByKey($id);
+                $commentCount=$model->getReplyNum($commentId);
                 $commentInfo['data']=$commentData;
                 $commentInfo['count']=$commentCount;
                 return $commentInfo;

@@ -1,8 +1,56 @@
 @charset "UTF-8";
 /*===============主题样式设置===============*/
+#theme-default #main .content-wrapper .left-content input[type='text'].focus, #theme-default #main .content-wrapper .left-content textarea.focus {
+  border: 1px solid #0ABFBC;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -ms-transiton: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s; }
+
+#theme-default #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+  background-color: #0ABFBC;
+  border: 1px solid #0ABFBC;
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transiton: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  #theme-default #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+    background-color: #078f8c; }
+
+#theme-default #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+  color: #0defec; }
+
+#theme-default #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+  color: #0ABFBC; }
+
 #theme-gray {
   /*头部*/
   /*中间部分*/ }
+  #theme-gray #main .content-wrapper .left-content input[type='text'].focus, #theme-gray #main .content-wrapper .left-content textarea.focus {
+    border: 1px solid #6F6F6F;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-gray #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+    background-color: #6F6F6F;
+    border: 1px solid #6F6F6F;
+    color: #ffffff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transiton: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #theme-gray #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+      background-color: #565656; }
+  #theme-gray #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+    color: #898989; }
+  #theme-gray #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+    color: #6F6F6F; }
   #theme-gray #header {
     background-color: #6F6F6F; }
     #theme-gray #header .user-logo span {
@@ -22,13 +70,6 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-gray #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-gray #main .content-wrapper .left-content input[type='text'].focus, #theme-gray #main .content-wrapper .left-content textarea.focus {
-      border: 1px solid #6F6F6F;
-      -webkit-transition: border 0.3s;
-      -moz-transition: border 0.3s;
-      -ms-transiton: border 0.3s;
-      -o-transition: border 0.3s;
-      transition: border 0.3s; }
     #theme-gray #main .content-wrapper .left-content .cur-article-list h3 {
       color: #565656; }
     #theme-gray #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
@@ -60,6 +101,28 @@
 #theme-blue {
   /*头部*/
   /*中间部分*/ }
+  #theme-blue #main .content-wrapper .left-content input[type='text'].focus, #theme-blue #main .content-wrapper .left-content textarea.focus {
+    border: 1px solid #4D8AD6;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-blue #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+    background-color: #4D8AD6;
+    border: 1px solid #4D8AD6;
+    color: #ffffff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transiton: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #theme-blue #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+      background-color: #2d70c3; }
+  #theme-blue #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+    color: #76a5e0; }
+  #theme-blue #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+    color: #4D8AD6; }
   #theme-blue #header {
     background-color: #4D8AD6; }
     #theme-blue #header .user-logo span {
@@ -79,13 +142,6 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-blue #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-blue #main .content-wrapper .left-content input[type='text'].focus, #theme-blue #main .content-wrapper .left-content textarea.focus {
-      border: 1px solid #4D8AD6;
-      -webkit-transition: border 0.3s;
-      -moz-transition: border 0.3s;
-      -ms-transiton: border 0.3s;
-      -o-transition: border 0.3s;
-      transition: border 0.3s; }
     #theme-blue #main .content-wrapper .left-content .cur-article-list h3 {
       color: #2d70c3; }
     #theme-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
@@ -117,6 +173,28 @@
 #theme-darken-blue {
   /*头部*/
   /*中间部分*/ }
+  #theme-darken-blue #main .content-wrapper .left-content input[type='text'].focus, #theme-darken-blue #main .content-wrapper .left-content textarea.focus {
+    border: 1px solid #484762;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-darken-blue #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+    background-color: #484762;
+    border: 1px solid #484762;
+    color: #ffffff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transiton: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #theme-darken-blue #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+      background-color: #323244; }
+  #theme-darken-blue #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+    color: #5e5c80; }
+  #theme-darken-blue #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+    color: #484762; }
   #theme-darken-blue #header {
     background-color: #484762; }
     #theme-darken-blue #header .user-logo span {
@@ -136,13 +214,6 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-darken-blue #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-darken-blue #main .content-wrapper .left-content input[type='text'].focus, #theme-darken-blue #main .content-wrapper .left-content textarea.focus {
-      border: 1px solid #484762;
-      -webkit-transition: border 0.3s;
-      -moz-transition: border 0.3s;
-      -ms-transiton: border 0.3s;
-      -o-transition: border 0.3s;
-      transition: border 0.3s; }
     #theme-darken-blue #main .content-wrapper .left-content .cur-article-list h3 {
       color: #323244; }
     #theme-darken-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
@@ -174,6 +245,28 @@
 #theme-red {
   /*头部*/
   /*中间部分*/ }
+  #theme-red #main .content-wrapper .left-content input[type='text'].focus, #theme-red #main .content-wrapper .left-content textarea.focus {
+    border: 1px solid #F67280;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-red #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+    background-color: #F67280;
+    border: 1px solid #F67280;
+    color: #ffffff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transiton: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #theme-red #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+      background-color: #f34255; }
+  #theme-red #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+    color: #f9a2ab; }
+  #theme-red #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+    color: #F67280; }
   #theme-red #header {
     background-color: #F67280; }
     #theme-red #header .user-logo span {
@@ -193,13 +286,6 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-red #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-red #main .content-wrapper .left-content input[type='text'].focus, #theme-red #main .content-wrapper .left-content textarea.focus {
-      border: 1px solid #F67280;
-      -webkit-transition: border 0.3s;
-      -moz-transition: border 0.3s;
-      -ms-transiton: border 0.3s;
-      -o-transition: border 0.3s;
-      transition: border 0.3s; }
     #theme-red #main .content-wrapper .left-content .cur-article-list h3 {
       color: #f34255; }
     #theme-red #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
@@ -231,6 +317,28 @@
 #theme-darken-green {
   /*头部*/
   /*中间部分*/ }
+  #theme-darken-green #main .content-wrapper .left-content input[type='text'].focus, #theme-darken-green #main .content-wrapper .left-content textarea.focus {
+    border: 1px solid #539092;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-darken-green #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+    background-color: #539092;
+    border: 1px solid #539092;
+    color: #ffffff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transiton: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #theme-darken-green #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+      background-color: #417071; }
+  #theme-darken-green #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+    color: #6caaac; }
+  #theme-darken-green #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+    color: #539092; }
   #theme-darken-green #header {
     background-color: #539092; }
     #theme-darken-green #header .user-logo span {
@@ -250,13 +358,6 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-darken-green #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-darken-green #main .content-wrapper .left-content input[type='text'].focus, #theme-darken-green #main .content-wrapper .left-content textarea.focus {
-      border: 1px solid #539092;
-      -webkit-transition: border 0.3s;
-      -moz-transition: border 0.3s;
-      -ms-transiton: border 0.3s;
-      -o-transition: border 0.3s;
-      transition: border 0.3s; }
     #theme-darken-green #main .content-wrapper .left-content .cur-article-list h3 {
       color: #417071; }
     #theme-darken-green #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
@@ -288,6 +389,28 @@
 #theme-purple {
   /*头部*/
   /*中间部分*/ }
+  #theme-purple #main .content-wrapper .left-content input[type='text'].focus, #theme-purple #main .content-wrapper .left-content textarea.focus {
+    border: 1px solid #9B5D73;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-purple #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child {
+    background-color: #9B5D73;
+    border: 1px solid #9B5D73;
+    color: #ffffff;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transiton: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    #theme-purple #main .content-wrapper .left-content #article-comment-area .comment-btn a:last-child:hover {
+      background-color: #7b4a5b; }
+  #theme-purple #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .other-info .reply-comment li:hover {
+    color: #b07b8e; }
+  #theme-purple #main .content-wrapper .left-content #article-comment-area .other-comments .comment-list .reply-btn:hover {
+    color: #9B5D73; }
   #theme-purple #header {
     background-color: #9B5D73; }
     #theme-purple #header .user-logo span {
@@ -307,13 +430,6 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-purple #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-purple #main .content-wrapper .left-content input[type='text'].focus, #theme-purple #main .content-wrapper .left-content textarea.focus {
-      border: 1px solid #9B5D73;
-      -webkit-transition: border 0.3s;
-      -moz-transition: border 0.3s;
-      -ms-transiton: border 0.3s;
-      -o-transition: border 0.3s;
-      transition: border 0.3s; }
     #theme-purple #main .content-wrapper .left-content .cur-article-list h3 {
       color: #7b4a5b; }
     #theme-purple #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {

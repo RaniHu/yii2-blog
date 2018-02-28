@@ -8,7 +8,41 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484
 @each $theme-name, $theme-color in $theme-color-name {
   #theme-#{$theme-name}{
 
-    //除默认主题外
+    //======包括默认主题======
+    #main .content-wrapper .left-content {
+
+      //表单聚焦样式
+      input[type='text'].focus, textarea.focus {
+        border: 1px solid $theme-color;
+        @include transition(border 0.3s);
+      }
+
+      #article-comment-area {
+        //评论按钮
+        .comment-btn a:last-child {
+          background-color: $theme-color;
+          border: 1px solid $theme-color;
+          color: #ffffff;
+          @include transition(0.5s);
+          &:hover {
+            background-color: darken($theme-color, 10%);
+          }
+        }
+        //回复
+        .other-comments .comment-list{
+          .other-info .reply-comment {
+            li:hover {
+              color: lighten($theme-color, 10%);
+            }
+          }
+          .reply-btn:hover{
+            color: $theme-color;
+          }
+        }
+      }
+    }
+
+    //=====除默认主题外=====
     @if ($theme-name!='default'){
 
        /*头部*/
@@ -51,13 +85,6 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484
 
         //========左边内容==========
         .left-content {
-
-          //表单聚焦样式
-          input[type='text'].focus, textarea.focus {
-            border: 1px solid $theme-color;
-            @include transition(border 0.3s);
-          }
-
 
           //当前文章列表
           .cur-article-list {

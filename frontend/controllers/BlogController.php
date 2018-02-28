@@ -6,6 +6,7 @@ use frontend\models\Article;
 use frontend\models\ArticleTag;
 use frontend\models\Cate;
 use frontend\models\Comment;
+use frontend\models\Reply;
 use frontend\models\SearchArticle;
 use frontend\models\Tag;
 use frontend\models\Theme;
@@ -14,6 +15,8 @@ use yii\data\Pagination;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+
+//use yii\web\User;
 
 /**
  * BlogController implements the CRUD actions for Article model.
@@ -124,10 +127,38 @@ class BlogController extends Controller
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
 
-        //当前文章下的评论
+        //当前文章下的评论及数量
         $commentModel=new Comment();
         $articleComments=$commentModel->getAllComments($articleId);
         $commentNum=$commentModel->getCommentsNum($articleId);
+
+        //评论及回复
+        $replyModel = new Reply();
+        $replyInfo = array();
+        $allReply = array();
+
+        //遍历文章下的评论
+        foreach ($articleComments as $key => $comments) {
+            $replies = $replyModel->getAllReply($comments['id']);
+            //遍历评论下的回复
+            if($replies){
+                foreach ($replies as $k => $reply) {
+                    $replyInfo[$reply['comment_id']][] = $reply;
+                }
+                foreach (array_keys($replyInfo) as $replyInfos) {
+                    if ($replyInfos == $comments['id']) {
+                        $comments['reply'] = $replyInfo[$replyInfos];
+                        $allReply[]=$comments;
+                    }
+                }
+            }else{
+                $comments['reply']=array();
+                $allReply[]=$comments;
+            }
+
+        }
+
+
 
 
         //当前的主题
@@ -140,13 +171,12 @@ class BlogController extends Controller
         //当前文章的所有标签
         $curArticleTags = $articleQuery->tags;
 
-
         return $this->render('detail', [
             'curArticle' => $articleQuery,
             'cates' => $cateQuery,
             'tags' => $tagQuery,
             'curTag' => $curArticleTags,
-            'articleComments' => $articleComments,
+            'curCommentReply' => $allReply,
             'commentCount'=>$commentNum
         ]);
     }
@@ -228,15 +258,45 @@ class BlogController extends Controller
             $model = new Comment;
             \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-            //插入评论数据
-            if($model->createComment()){
+            //返回评论数据
+            $commentData = $model->createComment();
+            if ($commentData) {
                 return [
-                    "code" =>200,
+                    "status" => 200,
+                    "curComment" => $commentData
                 ];
             }else{
                 return [
+                    "status" => 500,
                     "error" => $model->errors,
-                    "code" => 500,
+                ];
+            }
+
+        }
+    }
+
+    /**
+     *  回复操作
+     */
+    public function actionReply()
+    {
+
+        /*判断是否为ajax请求*/
+        if (Yii::$app->request->isAjax) {
+            $model = new Reply;
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+            //返回回复数据
+            $replyData = $model->createReply();
+            if ($replyData) {
+                return [
+                    "status" => 200,
+                    "curComment" => $replyData
+                ];
+            } else {
+                return [
+                    "status" => 500,
+                    "error" => $model->errors,
                 ];
             }
 
