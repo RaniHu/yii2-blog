@@ -186,4 +186,10 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+
+    public function getUserInfoById()
+    {
+        return static::find()->select(['username','icon','email', 'created_at','sign'])->where(['id'=>Yii::$app->user->identity->id])->asArray()->one();
+    }
 }

@@ -2,8 +2,8 @@
 @import "../common/common_define.scss";
 @import "theme.scss";
 
-/*背景图标*/
-$bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag,article-author;
+//===================背景图标===============
+$bg-icon: add-btn, close-btn, article-reply, article-like, article-notSearch, article-notfound, article-detail-tag, article-time, article-search, article-sort, article-timeline, article-cate, article-tag, article-author;
 @each $bg-icon-list in $bg-icon {
   .#{$bg-icon-list}-icon {
     display: inline-block;
@@ -17,7 +17,8 @@ $bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-
 #main {
   min-width: 1200px;
   background-color: #f7f7f7;
-  /*头图*/
+  font-family: '微软雅黑';
+  /*================头图===============*/
   .main-image {
     height: 400px;
     width: 100%;
@@ -37,12 +38,169 @@ $bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-
 
   }
 
-  /*中间内容*/
+  /*================中间内容==============*/
   .content-wrapper {
     width: 980px;
     margin: 0 auto;
     padding: 40px 0;
-    /*====左边内容====*/
+
+    /*==========用户设置页========*/
+    @at-root
+    #user-config-box {
+      width: 450px;
+      margin: 0 auto;
+      text-align: center;
+      h1 {
+        margin: 20px 0 40px 0;
+      }
+
+      /*用户信息*/
+      ul {
+        margin-bottom: 60px;
+        li {
+          text-align: left;
+          margin: 25px 0;
+          span, input {
+            vertical-align: middle;
+          }
+          > span {
+            display: inline-block;
+            width: 65px;
+          }
+          b{
+            color: #e51717;
+          }
+          input {
+            width: 320px;
+            height: 33px;
+            padding: 6px 5px 6px 15px;
+            border:1px solid #cdcdcd;
+            @include transition(border 0.3s);
+            @include border-radius(15px);
+          }
+          .user-cur-icon {
+            img {
+              width: 100px;
+              height: 100px;
+              border: none;
+              @include border-radius(50%);
+            }
+          }
+        }
+      }
+    }
+    /*头像设置*/
+    #icon-config-box {
+      width: 680px;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      margin-left: -325px;
+      background: #ffffff;
+      display: none;
+      z-index: 1000;
+      @include border-radius(10px);
+      label{
+        margin-bottom: 0;
+      }
+      .config-title {
+        height: 46px;
+        line-height: 46px;
+        padding-left: 10px;
+        border-bottom: 1px solid #dddddd;
+        @include box-sizing(border-box);
+        span {
+          font-size: 16px;
+        }
+        .close-btn-icon {
+          width: 20px;
+          height: 20px;
+          float: right;
+          margin: 13px 13px 0 0;
+          cursor: pointer;
+        }
+      }
+      .upload-main {
+        padding: 30px 0 30px 30px;
+        @include box-sizing(border-box);
+
+        //上传头像
+        .upload-icon {
+          padding: 8px 0;
+          button {
+            padding: 6px 15px;
+            font-size: 14px;
+            @include border-radius(5px);
+
+            .avatar-name{
+              font-size: 14px;
+            }
+          }
+        }
+        //头像显示区域
+        .icon-show-area {
+          float: left;
+          width: 68%;
+          height: 300px;
+          border: 2px solid #dddddd;
+          text-align: center;
+          @include box-sizing(border-box);
+          p {
+            margin-top: 120px;
+            font-size: 16px;
+          }
+        }
+        //预览头像区域
+        .preview-icon-area {
+          float: left;
+          text-align: center;
+          width: 32%;
+          @include box-sizing(border-box);
+
+          .previewImg {
+            margin: 20px auto;
+            border: 1px solid #dddddd;
+            overflow: hidden;
+            @include border-radius(50%);
+            img {
+              width: 100%;
+            }
+          }
+          .preview-icon-large {
+            width: 120px;
+            height: 120px;
+          }
+          .preview-icon-small {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+      //剪裁按钮
+      .icon-tailoring-content {
+        font-size: 0;
+        margin: 0 30px 30px 30px;
+
+        .sort-item {
+          display: inline-block;
+          margin-left: 6px;
+          overflow: hidden;
+          @include border-radius(5px);
+
+        }
+        .l-btn {
+          font-size: 14px;
+        }
+        .sureCut {
+          float: right;
+          width: 110px;
+          margin-right: 20px;
+          @include border-radius(5px);
+        }
+      }
+    }
+
+    /*==========左边内容========*/
     .left-content {
       float: left;
       width: 75%;
@@ -75,7 +233,7 @@ $bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-
 
       }
 
-      /*=====当前文章列表=====*/
+      /*=====首页=====*/
       .cur-article-list {
         position: relative;
         background-color: #ffffff;
@@ -212,7 +370,7 @@ $bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-
         }
       }
 
-      /*=====当前文章详细内容=====*/
+      /*=====文章详情页=====*/
       .article-detail-box{
 
         //文章标题
@@ -284,7 +442,7 @@ $bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-
         }
       }
 
-      /*======文章评论与回复======*/
+      /*文章评论与回复*/
       #article-comment-area {
         margin: 30px 0;
         padding: 20px 0;
@@ -460,7 +618,7 @@ $bg-icon: article-reply,article-like,article-notSearch,article-notfound,article-
         }
       }
 
-    }
+  }
    
   }
 

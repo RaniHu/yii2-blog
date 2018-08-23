@@ -23,7 +23,7 @@ $(function () {
                     type     :'GET',
                     dataType:"json",
                     data:{"theme":themeName},
-                    url  : 'http://192.168.80.80/yii2-blog/frontend/web/blog/theme',
+                    url  : 'http://www.huranblog.com/blog/theme',
                     success:function(res){
                         _this.closest(".blog-container").attr('id',res.themeName);
 

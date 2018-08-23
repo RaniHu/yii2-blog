@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/frontend/models/Article.php" line="78" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="71041aea-e1a6-42b0-a121-6314a817c3ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/image/article-like.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/image/article-reply.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/Reply.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/web/static/image/lamp-interior-book.jpg" afterPath="" />
+    <list default="true" id="e1ce0587-977c-49b7-9a30-00b591a84739" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/fonts/icomoon.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/fonts/icomoon.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/fonts/icomoon.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/image/add-btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/image/close-btn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/image/default-user-icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/models/ConfigForm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/views/blog/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/css/lib/cropper.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/fonts/fonts-style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/fonts/icomoon.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/js/blog/uploadIcon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/web/static/js/lib/cropper.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/build/Release/obj.target/binding.node" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/build/Release/obj.target/binding.node" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/m4/.gitkeep" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/src/libsass/m4/.gitkeep" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/vendor/linux-x64-48/binding.node" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/node-sass/vendor/linux-x64-48/binding.node" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ijackua/yii2-lepture-markdown-editor-widget" afterPath="$PROJECT_DIR$/vendor/ijackua/yii2-lepture-markdown-editor-widget" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/yii2-blog.iml" afterPath="$PROJECT_DIR$/.idea/yii2-blog.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/LoginForm.php" afterPath="$PROJECT_DIR$/common/models/LoginForm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/common/models/User.php" afterPath="$PROJECT_DIR$/common/models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/config/main-local.php" afterPath="$PROJECT_DIR$/frontend/config/main-local.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/controllers/BlogController.php" afterPath="$PROJECT_DIR$/frontend/controllers/BlogController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/Comment.php" afterPath="$PROJECT_DIR$/frontend/models/Comment.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/blog/detail.php" afterPath="$PROJECT_DIR$/frontend/views/blog/detail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/.gitignore" afterPath="$PROJECT_DIR$/frontend/web/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/models/Article.php" afterPath="$PROJECT_DIR$/frontend/models/Article.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/blog/create.php" afterPath="$PROJECT_DIR$/frontend/views/blog/create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/blog/home.php" afterPath="$PROJECT_DIR$/frontend/views/blog/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/blog/index.php" afterPath="$PROJECT_DIR$/frontend/views/blog/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/public/header.php" afterPath="$PROJECT_DIR$/frontend/views/public/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/views/site/login.php" afterPath="$PROJECT_DIR$/frontend/views/site/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-install" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-install" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-publish" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/in-publish" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/mkdirp" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/.bin/mkdirp" />
@@ -312,15 +327,21 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/uuid/bin/uuid" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/uuid/bin/uuid" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/which/bin/which" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/which/bin/which" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/gulp/node_modules/wrap-ansi/index.js" afterPath="$PROJECT_DIR$/frontend/web/gulp/node_modules/wrap-ansi/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/css/blog/articleCreate.css" afterPath="$PROJECT_DIR$/frontend/web/static/css/blog/articleCreate.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/css/blog/blog.css" afterPath="$PROJECT_DIR$/frontend/web/static/css/blog/blog.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/css/blog/theme.css" afterPath="$PROJECT_DIR$/frontend/web/static/css/blog/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/css/header/header.css" afterPath="$PROJECT_DIR$/frontend/web/static/css/header/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js" afterPath="$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/js/header/header.js" afterPath="$PROJECT_DIR$/frontend/web/static/js/header/header.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js" afterPath="$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/blog.css" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/blog.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/theme.css" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/blog/theme.scss" afterPath="$PROJECT_DIR$/frontend/web/static/sass/blog/theme.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/common/common_define.css" afterPath="$PROJECT_DIR$/frontend/web/static/sass/common/common_define.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss" afterPath="$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/web/static/sass/header/header.css" afterPath="$PROJECT_DIR$/frontend/web/static/sass/header/header.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii" afterPath="$PROJECT_DIR$/yii" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yii_test" afterPath="$PROJECT_DIR$/yii_test" />
@@ -332,106 +353,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="yii2-blog" />
-  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7947443">
+    <splitter split-orientation="horizontal" split-proportion="0.5583215">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="blog.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss">
+          <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/views/blog/config.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2522">
-                  <caret line="300" column="9" lean-forward="false" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
+                <state relative-caret-position="325">
+                  <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="32" />
                   <folding>
-                    <element signature="e#1844#5428#0" expanded="false" />
-                    <element signature="e#5484#7073#0" expanded="false" />
-                    <element signature="e#8356#8465#0" expanded="false" />
-                    <element signature="e#8515#8621#0" expanded="false" />
-                    <element signature="e#8645#9414#0" expanded="false" />
-                    <element signature="e#9461#9536#0" expanded="false" />
-                    <element signature="e#9590#10529#0" expanded="false" />
+                    <element signature="n#style#0;n#input#0;n#label#0;n#button#2;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="theme.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/theme.scss">
+          <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="624">
-                  <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/models/Comment.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2418">
-                  <caret line="95" column="55" lean-forward="false" selection-start-line="95" selection-start-column="55" selection-end-line="95" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#35#58#0#PHP" expanded="true" />
-                    <marker date="1517833147349" expanded="true" signature="2573:2690" ph="select conte... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Reply.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/models/Reply.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1794">
-                  <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="33" />
-                  <folding>
-                    <element signature="e#35#58#0#PHP" expanded="true" />
-                    <marker date="1516734167000" expanded="true" signature="2597:2707" ph="select \'rep... comment" />
-                    <marker date="1516734167000" expanded="true" signature="2597:2725" ph="select \'rep... " />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="blogHandle.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="61">
-                  <caret line="113" column="50" lean-forward="true" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/web/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="26">
-                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="formHandle.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-                  <folding>
-                    <marker date="1516699330372" expanded="true" signature="366:538" ph="{...}" />
-                    <marker date="1516699330372" expanded="true" signature="436:525" ph="{...}" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AppAsset.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/assets/AppAsset.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="364">
-                  <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+                <state relative-caret-position="338">
+                  <caret line="35" column="68" lean-forward="false" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
                   <folding />
                 </state>
               </provider>
@@ -440,21 +382,76 @@
           <file leaf-file-name="BlogController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3146">
-                  <caret line="121" column="7" lean-forward="false" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+                <state relative-caret-position="234">
+                  <caret line="343" column="44" lean-forward="false" selection-start-line="343" selection-start-column="40" selection-end-line="343" selection-end-column="50" />
                   <folding>
-                    <element signature="e#40#68#0#PHP" expanded="true" />
-                    <element signature="e#4880#5597#0#PHP" expanded="false" />
+                    <element signature="e#40#63#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/views/public/header.php">
+          <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/views/blog/view.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#7#28#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Comment.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/models/Comment.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1175">
+                  <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+                  <folding>
+                    <marker date="1530047325710" expanded="true" signature="2573:2690" ph="select comme... " />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Reply.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/models/Reply.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1071">
+                  <caret line="105" column="39" lean-forward="false" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/common/models/User.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="772">
+                  <caret line="192" column="131" lean-forward="false" selection-start-line="192" selection-start-column="102" selection-end-line="192" selection-end-column="131" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ConfigForm.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/frontend/models/ConfigForm.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="335">
+                  <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#35#58#0#PHP" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Article.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/models/Article.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -464,45 +461,113 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+          <file leaf-file-name="blog.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="52">
-                  <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                <state relative-caret-position="260">
+                  <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+                  <folding>
+                    <element signature="e#4919#4984#0" expanded="false" />
+                    <element signature="e#5034#5426#0" expanded="false" />
+                    <element signature="e#5475#9059#0" expanded="false" />
+                    <element signature="e#9112#10701#0" expanded="false" />
+                    <element signature="e#10749#14175#0" expanded="false" />
+                    <element signature="e#14238#14274#0" expanded="false" />
+                    <element signature="e#14317#15189#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="common_define.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="954">
+                  <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LoginForm.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
+          <file leaf-file-name="common_mixin.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/common/common_mixin.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="858">
-                  <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+                <state relative-caret-position="936">
+                  <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="blogHandle.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1511">
+                  <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="uploadIcon.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/uploadIcon.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="325">
+                  <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="48" />
                   <folding>
-                    <element signature="e#32#40#0#PHP" expanded="true" />
+                    <element signature="e#370#901#0" expanded="false" />
+                    <element signature="e#976#1066#0" expanded="false" />
+                    <element signature="e#1134#1721#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="detail.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/frontend/views/blog/detail.php">
+          <file leaf-file-name="fonts-style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/fonts/fonts-style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="793">
-                  <caret line="83" column="64" lean-forward="false" selection-start-line="83" selection-start-column="64" selection-end-line="83" selection-end-column="64" />
-                  <folding>
-                    <element signature="e#7#36#0#PHP" expanded="true" />
-                  </folding>
+                <state relative-caret-position="130">
+                  <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="list.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/frontend/views/blog/list.php">
+          <file leaf-file-name="theme.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/theme.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="468">
-                  <caret line="20" column="79" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="79" />
+                <state relative-caret-position="442">
+                  <caret line="41" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="header.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="formHandle.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="338">
+                  <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="35" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sidebar.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/frontend/web/static/js/sidebar/sidebar.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="494">
+                  <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -512,49 +577,39 @@
       </split-second>
     </splitter>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DETAIL</find>
-      <find>$articles</find>
-      <find>user-logo</find>
-      <find>getAuthor</find>
-      <find>Author</find>
-      <find>foc</find>
-      <find>$</find>
-      <find>frontend\models\Yii</find>
-      <find>cates</find>
-      <find>Yii</find>
-      <find>tags</find>
+      <find>微软雅黑</find>
+      <find>upload-icon</find>
+      <find>close-btn-icon</find>
+      <find>config</find>
+      <find>By</find>
+      <find>ID</find>
+      <find>getUserInfoById</find>
+      <find>label</find>
+      <find>chooseImg</find>
+      <find>isCh</find>
+      <find>name</find>
+      <find>create</find>
+      <find>final-img</find>
+      <find>view</find>
+      <find>avatar</find>
+      <find>sub-btn</find>
+      <find>icon-tailoring-content</find>
+      <find>post</find>
+      <find>load</find>
+      <find>load()</find>
+      <find>save()</find>
+      <find>userInfo</find>
+      <find>submit-btn</find>
+      <find>submitForm</find>
+      <find>danger-border</find>
+      <find>user-config-box</find>
       <find>focus</find>
-      <find>cur-article</find>
-      <find>Asia</find>
-      <find>replyAjax</find>
-      <find>send-btn</find>
-      <find>Reply</find>
-      <find>getUser</find>
-      <find>write-reply-boxwrite-reply-box</find>
-      <find>getCommentsNum</find>
-      <find>getAllComments</find>
-      <find>curTagArticles</find>
-      <find>getAllReply</find>
-      <find>\n</find>
-      <find>reply-btn</find>
-      <find>reply-comment-nav</find>
-      <find>other-comments</find>
-      <find>write-reply-box</find>
-      <find>reply-comment</find>
-      <find>getReplyByKey</find>
+      <find>border</find>
+      <find>icon</find>
+      <find>render</find>
     </findStrings>
-    <replaceStrings>
-      <replace>reply-comment-nav</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -562,61 +617,47 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.css" />
-        <option value="$PROJECT_DIR$/frontend/web/static/js/blog/articleCreate.js" />
-        <option value="$PROJECT_DIR$/.jscsrc" />
-        <option value="$PROJECT_DIR$/frontend/config/main.php" />
-        <option value="$PROJECT_DIR$/common/config/main.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$USER_HOME$/AppData/Local/Temp/【秋季新品】女针织衫款镂空荷叶边毛衣薄线衫.url" />
-        <option value="$PROJECT_DIR$/frontend/models/cate.php" />
-        <option value="$PROJECT_DIR$/frontend/models/Cate.php" />
-        <option value="$PROJECT_DIR$/frontend/models/Tag.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/js/blog/formHandle.js" />
-        <option value="$PROJECT_DIR$/frontend/models/ArticleTag.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/sidebar/sidebar.scss" />
-        <option value="$PROJECT_DIR$/frontend/models/Theme.php" />
-        <option value="$PROJECT_DIR$/frontend/web/gulp/gulpfile.js" />
-        <option value="$PROJECT_DIR$/frontend/web/static/js/site/site.scss" />
-        <option value="$PROJECT_DIR$/frontend/views/site/contact.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/logins.php" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/cate.php" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/home.php" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/tag.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/reset/reset.scss" />
-        <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
-        <option value="$PROJECT_DIR$/frontend/config/main-local.php" />
-        <option value="$PROJECT_DIR$/frontend/views/site/signup.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/site/site.scss" />
-        <option value="$PROJECT_DIR$/frontend/config/.gitignore" />
-        <option value="$PROJECT_DIR$/common/config/.gitignore" />
-        <option value="$PROJECT_DIR$/frontend/views/site/login.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/_form.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/header/header.scss" />
-        <option value="$PROJECT_DIR$/frontend/views/site/requestPasswordResetToken.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/SiteController.php" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/list.php" />
-        <option value="$PROJECT_DIR$/frontend/views/public/header.php" />
-        <option value="$PROJECT_DIR$/frontend/models/Article.php" />
-        <option value="$PROJECT_DIR$/frontend/assets/AppAsset.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" />
+        <option value="$PROJECT_DIR$/common/config/main-local.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/frontend/views/blog/create.php" />
+        <option value="$PROJECT_DIR$/frontend/models/Article.php" />
+        <option value="$PROJECT_DIR$/frontend/views/blog/index.php" />
+        <option value="$PROJECT_DIR$/frontend/views/blog/home.php" />
+        <option value="$PROJECT_DIR$/frontend/views/site/login.php" />
+        <option value="$PROJECT_DIR$/frontend/views/blog/userConfig.php" />
+        <option value="$PROJECT_DIR$/frontend/views/public/header.php" />
         <option value="$PROJECT_DIR$/frontend/web/static/js/header/header.js" />
+        <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss" />
+        <option value="$PROJECT_DIR$/frontend/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/frontend/web/static/js/lib/cropper.js" />
+        <option value="$PROJECT_DIR$/frontend/web/static/css/lib/cropper.css" />
+        <option value="$PROJECT_DIR$/frontend/web/static/fonts/fonts-style.css" />
+        <option value="$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss" />
+        <option value="$PROJECT_DIR$/common/models/User.php" />
+        <option value="$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js" />
+        <option value="$PROJECT_DIR$/common/models/configForm.php" />
+        <option value="$PROJECT_DIR$/frontend/models/LoginForm.php" />
+        <option value="$PROJECT_DIR$/frontend/models/configForm.php" />
+        <option value="$PROJECT_DIR$/common/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js" />
-        <option value="$PROJECT_DIR$/frontend/models/Reply.php" />
-        <option value="$PROJECT_DIR$/frontend/controllers/BlogController.php" />
-        <option value="$PROJECT_DIR$/frontend/models/Comment.php" />
         <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/theme.scss" />
         <option value="$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss" />
-        <option value="$PROJECT_DIR$/frontend/views/blog/detail.php" />
-        <option value="$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js" />
-        <option value="$PROJECT_DIR$/frontend/web/.gitignore" />
+        <option value="$PROJECT_DIR$/frontend/views/blog/config.php" />
+        <option value="$PROJECT_DIR$/frontend/models/ConfigForm.php" />
+        <option value="$PROJECT_DIR$/frontend/web/static/js/blog/uploadIcon.js" />
+        <option value="$PROJECT_DIR$/frontend/controllers/BlogController.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -646,7 +687,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -654,43 +694,40 @@
               <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="yii2-blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="yii2-blog" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.jscs" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path" value="D:/node/node" />
+    <property name="last_opened_file_path" value="Z:/banggo" />
+    <property name="SearchEverywhereHistoryKey" value="回复&#9;null&#9;null" />
     <property name="node.js.path.for.package.jscs" value="project" />
+    <property name="nodejs_interpreter_path" value="D:/node/node" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.selected.package.jscs" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\models" />
-      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web\static\image" />
-      <recent name="Z:\opt\lampp\htdocs\yii2-blog\backend\web" />
-      <recent name="Z:\opt\lampp\htdocs\yii2-blog" />
-      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\views\site" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web\static\fonts" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web\static\image" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web\static\css\lib" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\web\static\js\lib" />
+      <recent name="Z:\opt\lampp\htdocs\yii2-blog\frontend\views\blog" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -708,73 +745,69 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="71041aea-e1a6-42b0-a121-6314a817c3ab" name="Default" comment="" />
-      <created>1510220022233</created>
+      <changelist id="e1ce0587-977c-49b7-9a30-00b591a84739" name="Default" comment="" />
+      <created>1530254675055</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1510220022233</updated>
-      <workItem from="1510220025996" duration="125000" />
-      <workItem from="1510220153487" duration="1157000" />
-      <workItem from="1510277466170" duration="4133000" />
-      <workItem from="1510553970608" duration="7043000" />
-      <workItem from="1510708520253" duration="1215000" />
-      <workItem from="1510717796753" duration="5651000" />
-      <workItem from="1510800120352" duration="3915000" />
-      <workItem from="1511227081534" duration="1420000" />
-      <workItem from="1511486159107" duration="40409000" />
-      <workItem from="1512112622365" duration="3520000" />
-      <workItem from="1512356948320" duration="20278000" />
-      <workItem from="1512438400143" duration="1426000" />
-      <workItem from="1512529642703" duration="11806000" />
-      <workItem from="1512800434042" duration="2376000" />
-      <workItem from="1512955115166" duration="42414000" />
-      <workItem from="1513214864794" duration="4269000" />
-      <workItem from="1513300895636" duration="6595000" />
-      <workItem from="1513559847204" duration="22797000" />
-      <workItem from="1513734062875" duration="21616000" />
-      <workItem from="1514183708839" duration="12732000" />
-      <workItem from="1514269418134" duration="10555000" />
-      <workItem from="1514337757214" duration="14158000" />
-      <workItem from="1514941688791" duration="14000" />
-      <workItem from="1514944859699" duration="608000" />
-      <workItem from="1514946452515" duration="653000" />
-      <workItem from="1515489260146" duration="3499000" />
-      <workItem from="1515547623630" duration="36832000" />
-      <workItem from="1515983244710" duration="36188000" />
-      <workItem from="1516690876696" duration="35328000" />
-      <workItem from="1517818994528" duration="15430000" />
-      <workItem from="1519784283412" duration="1603000" />
+      <updated>1530254675055</updated>
+      <workItem from="1530254679098" duration="749000" />
+      <workItem from="1530255472127" duration="6674000" />
+      <workItem from="1533282532326" duration="4637000" />
+      <workItem from="1533793342037" duration="5103000" />
+      <workItem from="1534128776723" duration="68254000" />
+      <workItem from="1534728760713" duration="33271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="369765000" />
+    <option name="totallyTimeSpent" value="118688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-440" width="1616" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18830334" sideWeight="0.49621212" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19280206" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25578406" sideWeight="0.5037879" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19473007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -786,255 +819,245 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/frontend/models/Tag.php</url>
-          <line>4</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/frontend/models/Tag.php</url>
-          <line>37</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/frontend/views/blog/create.php</url>
-          <line>42</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/frontend/views/layouts/main.php</url>
-          <line>35</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/common/models/LoginForm.php</url>
+          <url>file://$PROJECT_DIR$/frontend/models/SignupForm.php</url>
           <line>3</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/frontend/controllers/BlogController.php</url>
-          <line>181</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/list.php">
+    <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="79" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="79" />
+        <state relative-caret-position="8944">
+          <caret line="356" column="32" lean-forward="false" selection-start-line="356" selection-start-column="32" selection-end-line="356" selection-end-column="32" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="30" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/detail.php">
+    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="61" column="71" lean-forward="false" selection-start-line="61" selection-start-column="71" selection-end-line="61" selection-end-column="71" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="962">
+          <caret line="37" column="10" lean-forward="false" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/params.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/db/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="793">
+          <caret line="589" column="53" lean-forward="false" selection-start-line="589" selection-start-column="53" selection-end-line="589" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../etc/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="1268" column="32" lean-forward="false" selection-start-line="1268" selection-start-column="32" selection-end-line="1268" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/public/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="32" column="48" lean-forward="false" selection-start-line="32" selection-start-column="48" selection-end-line="32" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/models/Theme.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-606">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/models/Tag.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-866">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/views/public/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3276">
-          <caret line="329" column="11" lean-forward="true" selection-start-line="329" selection-start-column="11" selection-end-line="329" selection-end-column="11" />
-          <folding>
-            <element signature="e#1844#5428#0" expanded="false" />
-            <element signature="e#5484#7073#0" expanded="false" />
-            <element signature="e#8356#8465#0" expanded="false" />
-            <element signature="e#8515#8621#0" expanded="false" />
-            <element signature="e#8645#9414#0" expanded="false" />
-            <element signature="e#9461#9536#0" expanded="false" />
-            <element signature="e#9590#10529#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/Comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1430">
-          <caret line="56" column="34" lean-forward="false" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="34" />
-          <folding>
-            <element signature="e#35#58#0#PHP" expanded="true" />
-            <marker date="1517833147349" expanded="true" signature="2573:2690" ph="select conte... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="60" column="28" lean-forward="false" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1516699330372" expanded="true" signature="366:538" ph="{...}" />
-            <marker date="1516699330372" expanded="true" signature="436:525" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/AppAsset.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
+    <entry file="file://$PROJECT_DIR$/frontend/views/site/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2002">
-          <caret line="78" column="27" lean-forward="false" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="27" />
+        <state relative-caret-position="104">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding>
-            <element signature="e#35#58#0#PHP" expanded="true" />
+            <element signature="e#123#152#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/css/lib/cropper.min.css" />
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/lib/cropper.min.js" />
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/lib/cropper.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3458">
-          <caret line="133" column="36" lean-forward="true" selection-start-line="133" selection-start-column="36" selection-end-line="133" selection-end-column="36" />
+        <state relative-caret-position="234">
+          <caret line="9" column="32041" lean-forward="false" selection-start-line="9" selection-start-column="32041" selection-end-line="9" selection-end-column="32041" />
           <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-            <element signature="e#4880#5597#0#PHP" expanded="false" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1898">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="48" column="46" lean-forward="false" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state relative-caret-position="824">
+          <caret line="196" column="3" lean-forward="false" selection-start-line="196" selection-start-column="3" selection-end-line="196" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/css/reset/reset.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding>
-            <element signature="e#32#40#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/SignupForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="79" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1274">
-          <caret line="49" column="36" lean-forward="false" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="34" column="36" lean-forward="false" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/articleCreate.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1898">
-          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/header/header.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="80" column="27" lean-forward="false" selection-start-line="80" selection-start-column="27" selection-end-line="80" selection-end-column="27" />
+        <state relative-caret-position="1105">
+          <caret line="138" column="7" lean-forward="true" selection-start-line="138" selection-start-column="7" selection-end-line="138" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/list.php">
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/fonts/fonts-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="79" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="79" />
+        <state relative-caret-position="130">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/SignupForm.php">
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/css/lib/cropper.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="208">
+          <caret line="8" column="2981" lean-forward="false" selection-start-line="8" selection-start-column="2978" selection-end-line="8" selection-end-column="2981" />
+          <folding>
+            <marker date="1534083205124" expanded="true" signature="0:14" ph="/*...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/js/header/header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="26" column="42" lean-forward="false" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/sidebar/sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,221 +1069,178 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/image/lamp-interior-book.jpg" />
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/cate.php">
+    <entry file="file://$PROJECT_DIR$/frontend/models/SignupForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="33" column="7" lean-forward="false" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        <state relative-caret-position="494">
+          <caret line="43" column="28" lean-forward="false" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
           <folding>
-            <element signature="e#32#40#0#PHP" expanded="true" />
+            <element signature="e#34#53#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/create.php">
+    <entry file="file://$PROJECT_DIR$/common/models/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="772">
+          <caret line="192" column="131" lean-forward="false" selection-start-line="192" selection-start-column="102" selection-end-line="192" selection-end-column="131" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/main-local.php">
+    <entry file="file://$PROJECT_DIR$/frontend/models/Reply.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1071">
+          <caret line="105" column="39" lean-forward="false" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/main.php">
+    <entry file="file://$PROJECT_DIR$/frontend/models/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/config/params-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/main-local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/params.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/config/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../etc/php.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="1039" column="18" lean-forward="false" selection-start-line="1039" selection-start-column="14" selection-end-line="1039" selection-end-column="18" />
+        <state relative-caret-position="1175">
+          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding>
+            <marker date="1530047325710" expanded="true" signature="2573:2690" ph="select comme... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/models/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2834">
-          <caret line="110" column="50" lean-forward="false" selection-start-line="110" selection-start-column="50" selection-end-line="110" selection-end-column="50" />
-          <folding>
-            <element signature="e#35#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/public/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="102">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/AppAsset.php">
+    <entry file="file://$PROJECT_DIR$/common/models/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        <state relative-caret-position="130">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#32#40#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/uploads/userIcon/20180816/1534431925.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="35" column="68" lean-forward="false" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="35" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1511">
+          <caret line="103" column="13" lean-forward="false" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/common/common_mixin.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/common/common_define.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="139" column="0" lean-forward="false" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/theme.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        <state relative-caret-position="442">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/web/static/sass/blog/blog.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2522">
-          <caret line="300" column="9" lean-forward="false" selection-start-line="300" selection-start-column="9" selection-end-line="300" selection-end-column="9" />
+        <state relative-caret-position="260">
+          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
           <folding>
-            <element signature="e#1844#5428#0" expanded="false" />
-            <element signature="e#5484#7073#0" expanded="false" />
-            <element signature="e#8356#8465#0" expanded="false" />
-            <element signature="e#8515#8621#0" expanded="false" />
-            <element signature="e#8645#9414#0" expanded="false" />
-            <element signature="e#9461#9536#0" expanded="false" />
-            <element signature="e#9590#10529#0" expanded="false" />
+            <element signature="e#4919#4984#0" expanded="false" />
+            <element signature="e#5034#5426#0" expanded="false" />
+            <element signature="e#5475#9059#0" expanded="false" />
+            <element signature="e#9112#10701#0" expanded="false" />
+            <element signature="e#10749#14175#0" expanded="false" />
+            <element signature="e#14238#14274#0" expanded="false" />
+            <element signature="e#14317#15189#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/views/blog/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="16" column="32" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#label#0;n#button#2;n#div#3;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/uploadIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="142" column="48" lean-forward="false" selection-start-line="142" selection-start-column="25" selection-end-line="142" selection-end-column="48" />
+          <folding>
+            <element signature="e#370#901#0" expanded="false" />
+            <element signature="e#976#1066#0" expanded="false" />
+            <element signature="e#1134#1721#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/controllers/BlogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3146">
-          <caret line="121" column="7" lean-forward="false" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-            <element signature="e#4880#5597#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/public/formHandle.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <caret line="343" column="44" lean-forward="false" selection-start-line="343" selection-start-column="40" selection-end-line="343" selection-end-column="50" />
           <folding>
-            <marker date="1516699330372" expanded="true" signature="366:538" ph="{...}" />
-            <marker date="1516699330372" expanded="true" signature="436:525" ph="{...}" />
+            <element signature="e#40#63#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/Comment.php">
+    <entry file="file://$PROJECT_DIR$/frontend/models/ConfigForm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2418">
-          <caret line="95" column="55" lean-forward="false" selection-start-line="95" selection-start-column="55" selection-end-line="95" selection-end-column="55" />
-          <folding>
-            <element signature="e#35#58#0#PHP" expanded="true" />
-            <marker date="1517833147349" expanded="true" signature="2573:2690" ph="select conte... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/models/Reply.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1794">
-          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="33" />
+        <state relative-caret-position="335">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#35#58#0#PHP" expanded="true" />
-            <marker date="1516734167000" expanded="true" signature="2597:2707" ph="select \'rep... comment" />
-            <marker date="1516734167000" expanded="true" signature="2597:2725" ph="select \'rep... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/views/blog/detail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="793">
-          <caret line="83" column="64" lean-forward="false" selection-start-line="83" selection-start-column="64" selection-end-line="83" selection-end-column="64" />
-          <folding>
-            <element signature="e#7#36#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/static/js/blog/blogHandle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="113" column="50" lean-forward="true" selection-start-line="113" selection-start-column="50" selection-end-line="113" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/web/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

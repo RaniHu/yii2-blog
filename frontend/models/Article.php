@@ -108,6 +108,7 @@ class Article extends \yii\db\ActiveRecord
             $model->setAttributes(array(
                 'article_title' => $_POST['article_title'],
                 'article_intro' => $_POST['article_intro'],
+                'article_content' => $_POST['article_content'],
                 'pub_date' => date("Y-m-d H:i:s"),
                 'cate_id' => $_POST['article_cate'],
             ));
@@ -131,6 +132,7 @@ class Article extends \yii\db\ActiveRecord
             }
 
         } catch (\Exception $e) {
+            echo '新增失败！';
             $transaction->rollBack();
             return false;
         }
@@ -154,6 +156,7 @@ class Article extends \yii\db\ActiveRecord
             //修改文章表
             $model->article_title=$_POST['article_title'];
             $model->article_intro=$_POST['article_intro'];
+            $model->article_content=$_POST['article_content'];
             $model->cate_id=$_POST['article_cate'];
             $model->save();
 

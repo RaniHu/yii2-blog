@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "803344ffd761d5a1386a930dc6d74270",
+    "content-hash": "350a916f94c150cab6961039f289dbda",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -3175,7 +3175,7 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "ijackua/yii2-lepture-markdown-editor-widget": 20
     },

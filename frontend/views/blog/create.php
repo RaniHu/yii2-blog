@@ -1,12 +1,12 @@
 <?php
 
 use frontend\assets\AppAsset;
-use ijackua\lepture\Markdowneditor;
-use ijackua\lepture\MarkdowneditorAssets;
+//use ijackua\lepture\Markdowneditor;
+//use ijackua\lepture\MarkdowneditorAssets;
 
 AppAsset::addCss($this, '@web/static/css/blog/articleCreate.css');
 AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
-MarkdowneditorAssets::register($this);
+//MarkdowneditorAssets::register($this);
 
 ?>
 
@@ -68,7 +68,8 @@ MarkdowneditorAssets::register($this);
 
                     <!--文章正文-->
                     <div class="article-content-area">
-                        <?php echo Markdowneditor::widget(['model' => $model, 'attribute' => 'article_content','name'=>'article_content']); ?>
+                        <textarea placeholder="请输入文章正文" name="article_content"></textarea>
+<!--                        --><?php //echo Markdowneditor::widget(['model' => $model, 'attribute' => 'article_content','name'=>'article_content']); ?>
                     </div>
                     <div class="submit-btn form-submit-btn">
                         <input type="submit" value="确定">

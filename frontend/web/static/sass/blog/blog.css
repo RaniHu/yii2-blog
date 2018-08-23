@@ -22,12 +22,13 @@
 
 /*=====遮罩层=====*/
 #mask {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 10000;
+  z-index: 999;
   background-color: rgba(0, 0, 0, 0.5); }
 
 .flex {
@@ -211,8 +212,50 @@
   -webkit-animation-delay: 0.65s; }
 
 /*===============主题样式设置===============*/
-#theme-default #main .content-wrapper .left-content input[type='text'].focus, #theme-default #main .content-wrapper .left-content textarea.focus {
+#theme-default #main .content-wrapper .l-btn {
+  padding: 8px 12px;
+  color: #ffffff;
+  background-color: #0bd7d4;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transiton: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  #theme-default #main .content-wrapper .l-btn:hover {
+    background-color: #09a7a4; }
+
+#theme-default #main .content-wrapper .submit-btn {
+  text-align: center;
+  margin-top: 30px; }
+  #theme-default #main .content-wrapper .submit-btn button {
+    width: 120px;
+    height: 35px;
+    background-color: #0ABFBC;
+    -moz-border-radius: 5px;
+    /* Firefox */
+    -webkit-border-radius: 5px;
+    /* Safari 和 Chrome */
+    border-radius: 5px;
+    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+    color: #ffffff;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transiton: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+    #theme-default #main .content-wrapper .submit-btn button:hover {
+      background-color: #09a7a4; }
+
+#theme-default #main .content-wrapper input[type='text'].focus, #theme-default #main .content-wrapper textarea.focus {
   border: 1px solid #0ABFBC;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -ms-transiton: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s; }
+
+#theme-default #main .content-wrapper input[type='text'].danger-border {
+  border: 1px solid #e51717;
   -webkit-transition: border 0.3s;
   -moz-transition: border 0.3s;
   -ms-transiton: border 0.3s;
@@ -240,8 +283,47 @@
 #theme-gray {
   /*头部*/
   /*中间部分*/ }
-  #theme-gray #main .content-wrapper .left-content input[type='text'].focus, #theme-gray #main .content-wrapper .left-content textarea.focus {
+  #theme-gray #main .content-wrapper .l-btn {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #7c7c7c;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transiton: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    #theme-gray #main .content-wrapper .l-btn:hover {
+      background-color: #626262; }
+  #theme-gray #main .content-wrapper .submit-btn {
+    text-align: center;
+    margin-top: 30px; }
+    #theme-gray #main .content-wrapper .submit-btn button {
+      width: 120px;
+      height: 35px;
+      background-color: #6F6F6F;
+      -moz-border-radius: 5px;
+      /* Firefox */
+      -webkit-border-radius: 5px;
+      /* Safari 和 Chrome */
+      border-radius: 5px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      color: #ffffff;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transiton: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      #theme-gray #main .content-wrapper .submit-btn button:hover {
+        background-color: #626262; }
+  #theme-gray #main .content-wrapper input[type='text'].focus, #theme-gray #main .content-wrapper textarea.focus {
     border: 1px solid #6F6F6F;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-gray #main .content-wrapper input[type='text'].danger-border {
+    border: 1px solid #e51717;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -ms-transiton: border 0.3s;
@@ -271,7 +353,6 @@
     #theme-gray #header .header-nav li a.active, #theme-gray #header .user-login-nav li a.active {
       color: #000000; }
   #theme-gray #main {
-    /*==========头图==========*/
     /*======右侧导航======*/ }
     #theme-gray #main .main-image.home-page {
       background: url("../../image/gray-theme-main.jpg") no-repeat center; }
@@ -281,27 +362,30 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-gray #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-gray #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #565656; }
-    #theme-gray #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
-      color: #6F6F6F; }
-    #theme-gray #main .content-wrapper .left-content .tag-page-info h3, #theme-gray #main .content-wrapper .left-content .cate-page-info h3 {
-      color: #6F6F6F; }
-    #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
-      color: #6F6F6F; }
-    #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
-      background-color: #6F6F6F;
-      border: 3px solid #6F6F6F; }
-    #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
-      border: 3px solid #6F6F6F; }
-      #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+    #theme-gray #main .content-wrapper {
+      /*左边内容*/
+      /*文章表单*/ }
+      #theme-gray #main .content-wrapper .left-content .cur-article-list h3 {
+        color: #565656; }
+      #theme-gray #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+        color: #6F6F6F; }
+      #theme-gray #main .content-wrapper .left-content .tag-page-info h3, #theme-gray #main .content-wrapper .left-content .cate-page-info h3 {
+        color: #6F6F6F; }
+      #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+        color: #6F6F6F; }
+      #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
+        background-color: #6F6F6F;
+        border: 3px solid #6F6F6F; }
+      #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
+        border: 3px solid #6F6F6F; }
+        #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-gray #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+          background-color: #6F6F6F; }
+      #theme-gray #main .content-wrapper #write-article-form .submit-btn input {
         background-color: #6F6F6F; }
-    #theme-gray #main .content-wrapper #write-article-form .submit-btn input {
-      background-color: #6F6F6F; }
-      #theme-gray #main .content-wrapper #write-article-form .submit-btn input h3 {
-        border-bottom: 1px solid #6F6F6F; }
-      #theme-gray #main .content-wrapper #write-article-form .submit-btn input:hover {
-        background-color: #3c3c3c; }
+        #theme-gray #main .content-wrapper #write-article-form .submit-btn input h3 {
+          border-bottom: 1px solid #6F6F6F; }
+        #theme-gray #main .content-wrapper #write-article-form .submit-btn input:hover {
+          background-color: #3c3c3c; }
     #theme-gray #main .right-sidebar {
       /*分类和时间轴*/ }
       #theme-gray #main .right-sidebar h3 {
@@ -312,8 +396,47 @@
 #theme-blue {
   /*头部*/
   /*中间部分*/ }
-  #theme-blue #main .content-wrapper .left-content input[type='text'].focus, #theme-blue #main .content-wrapper .left-content textarea.focus {
+  #theme-blue #main .content-wrapper .l-btn {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #6298db;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transiton: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    #theme-blue #main .content-wrapper .l-btn:hover {
+      background-color: #387cd1; }
+  #theme-blue #main .content-wrapper .submit-btn {
+    text-align: center;
+    margin-top: 30px; }
+    #theme-blue #main .content-wrapper .submit-btn button {
+      width: 120px;
+      height: 35px;
+      background-color: #4D8AD6;
+      -moz-border-radius: 5px;
+      /* Firefox */
+      -webkit-border-radius: 5px;
+      /* Safari 和 Chrome */
+      border-radius: 5px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      color: #ffffff;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transiton: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      #theme-blue #main .content-wrapper .submit-btn button:hover {
+        background-color: #387cd1; }
+  #theme-blue #main .content-wrapper input[type='text'].focus, #theme-blue #main .content-wrapper textarea.focus {
     border: 1px solid #4D8AD6;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-blue #main .content-wrapper input[type='text'].danger-border {
+    border: 1px solid #e51717;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -ms-transiton: border 0.3s;
@@ -343,7 +466,6 @@
     #theme-blue #header .header-nav li a.active, #theme-blue #header .user-login-nav li a.active {
       color: #000000; }
   #theme-blue #main {
-    /*==========头图==========*/
     /*======右侧导航======*/ }
     #theme-blue #main .main-image.home-page {
       background: url("../../image/blue-theme-main.jpg") no-repeat center; }
@@ -353,27 +475,30 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-blue #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-blue #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #2d70c3; }
-    #theme-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
-      color: #4D8AD6; }
-    #theme-blue #main .content-wrapper .left-content .tag-page-info h3, #theme-blue #main .content-wrapper .left-content .cate-page-info h3 {
-      color: #4D8AD6; }
-    #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
-      color: #4D8AD6; }
-    #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
-      background-color: #4D8AD6;
-      border: 3px solid #4D8AD6; }
-    #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
-      border: 3px solid #4D8AD6; }
-      #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+    #theme-blue #main .content-wrapper {
+      /*左边内容*/
+      /*文章表单*/ }
+      #theme-blue #main .content-wrapper .left-content .cur-article-list h3 {
+        color: #2d70c3; }
+      #theme-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+        color: #4D8AD6; }
+      #theme-blue #main .content-wrapper .left-content .tag-page-info h3, #theme-blue #main .content-wrapper .left-content .cate-page-info h3 {
+        color: #4D8AD6; }
+      #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+        color: #4D8AD6; }
+      #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
+        background-color: #4D8AD6;
+        border: 3px solid #4D8AD6; }
+      #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
+        border: 3px solid #4D8AD6; }
+        #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+          background-color: #4D8AD6; }
+      #theme-blue #main .content-wrapper #write-article-form .submit-btn input {
         background-color: #4D8AD6; }
-    #theme-blue #main .content-wrapper #write-article-form .submit-btn input {
-      background-color: #4D8AD6; }
-      #theme-blue #main .content-wrapper #write-article-form .submit-btn input h3 {
-        border-bottom: 1px solid #4D8AD6; }
-      #theme-blue #main .content-wrapper #write-article-form .submit-btn input:hover {
-        background-color: #23589a; }
+        #theme-blue #main .content-wrapper #write-article-form .submit-btn input h3 {
+          border-bottom: 1px solid #4D8AD6; }
+        #theme-blue #main .content-wrapper #write-article-form .submit-btn input:hover {
+          background-color: #23589a; }
     #theme-blue #main .right-sidebar {
       /*分类和时间轴*/ }
       #theme-blue #main .right-sidebar h3 {
@@ -384,8 +509,47 @@
 #theme-darken-blue {
   /*头部*/
   /*中间部分*/ }
-  #theme-darken-blue #main .content-wrapper .left-content input[type='text'].focus, #theme-darken-blue #main .content-wrapper .left-content textarea.focus {
+  #theme-darken-blue #main .content-wrapper .l-btn {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #535271;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transiton: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    #theme-darken-blue #main .content-wrapper .l-btn:hover {
+      background-color: #3d3c53; }
+  #theme-darken-blue #main .content-wrapper .submit-btn {
+    text-align: center;
+    margin-top: 30px; }
+    #theme-darken-blue #main .content-wrapper .submit-btn button {
+      width: 120px;
+      height: 35px;
+      background-color: #484762;
+      -moz-border-radius: 5px;
+      /* Firefox */
+      -webkit-border-radius: 5px;
+      /* Safari 和 Chrome */
+      border-radius: 5px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      color: #ffffff;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transiton: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      #theme-darken-blue #main .content-wrapper .submit-btn button:hover {
+        background-color: #3d3c53; }
+  #theme-darken-blue #main .content-wrapper input[type='text'].focus, #theme-darken-blue #main .content-wrapper textarea.focus {
     border: 1px solid #484762;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-darken-blue #main .content-wrapper input[type='text'].danger-border {
+    border: 1px solid #e51717;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -ms-transiton: border 0.3s;
@@ -415,7 +579,6 @@
     #theme-darken-blue #header .header-nav li a.active, #theme-darken-blue #header .user-login-nav li a.active {
       color: #000000; }
   #theme-darken-blue #main {
-    /*==========头图==========*/
     /*======右侧导航======*/ }
     #theme-darken-blue #main .main-image.home-page {
       background: url("../../image/darken-blue-theme-main.jpg") no-repeat center; }
@@ -425,27 +588,30 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-darken-blue #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-darken-blue #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #323244; }
-    #theme-darken-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
-      color: #484762; }
-    #theme-darken-blue #main .content-wrapper .left-content .tag-page-info h3, #theme-darken-blue #main .content-wrapper .left-content .cate-page-info h3 {
-      color: #484762; }
-    #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
-      color: #484762; }
-    #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
-      background-color: #484762;
-      border: 3px solid #484762; }
-    #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
-      border: 3px solid #484762; }
-      #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+    #theme-darken-blue #main .content-wrapper {
+      /*左边内容*/
+      /*文章表单*/ }
+      #theme-darken-blue #main .content-wrapper .left-content .cur-article-list h3 {
+        color: #323244; }
+      #theme-darken-blue #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+        color: #484762; }
+      #theme-darken-blue #main .content-wrapper .left-content .tag-page-info h3, #theme-darken-blue #main .content-wrapper .left-content .cate-page-info h3 {
+        color: #484762; }
+      #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+        color: #484762; }
+      #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
+        background-color: #484762;
+        border: 3px solid #484762; }
+      #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
+        border: 3px solid #484762; }
+        #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-darken-blue #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+          background-color: #484762; }
+      #theme-darken-blue #main .content-wrapper #write-article-form .submit-btn input {
         background-color: #484762; }
-    #theme-darken-blue #main .content-wrapper #write-article-form .submit-btn input {
-      background-color: #484762; }
-      #theme-darken-blue #main .content-wrapper #write-article-form .submit-btn input h3 {
-        border-bottom: 1px solid #484762; }
-      #theme-darken-blue #main .content-wrapper #write-article-form .submit-btn input:hover {
-        background-color: #1d1c27; }
+        #theme-darken-blue #main .content-wrapper #write-article-form .submit-btn input h3 {
+          border-bottom: 1px solid #484762; }
+        #theme-darken-blue #main .content-wrapper #write-article-form .submit-btn input:hover {
+          background-color: #1d1c27; }
     #theme-darken-blue #main .right-sidebar {
       /*分类和时间轴*/ }
       #theme-darken-blue #main .right-sidebar h3 {
@@ -456,8 +622,47 @@
 #theme-red {
   /*头部*/
   /*中间部分*/ }
-  #theme-red #main .content-wrapper .left-content input[type='text'].focus, #theme-red #main .content-wrapper .left-content textarea.focus {
+  #theme-red #main .content-wrapper .l-btn {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #f88a96;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transiton: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    #theme-red #main .content-wrapper .l-btn:hover {
+      background-color: #f45a6a; }
+  #theme-red #main .content-wrapper .submit-btn {
+    text-align: center;
+    margin-top: 30px; }
+    #theme-red #main .content-wrapper .submit-btn button {
+      width: 120px;
+      height: 35px;
+      background-color: #F67280;
+      -moz-border-radius: 5px;
+      /* Firefox */
+      -webkit-border-radius: 5px;
+      /* Safari 和 Chrome */
+      border-radius: 5px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      color: #ffffff;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transiton: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      #theme-red #main .content-wrapper .submit-btn button:hover {
+        background-color: #f45a6a; }
+  #theme-red #main .content-wrapper input[type='text'].focus, #theme-red #main .content-wrapper textarea.focus {
     border: 1px solid #F67280;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-red #main .content-wrapper input[type='text'].danger-border {
+    border: 1px solid #e51717;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -ms-transiton: border 0.3s;
@@ -487,7 +692,6 @@
     #theme-red #header .header-nav li a.active, #theme-red #header .user-login-nav li a.active {
       color: #000000; }
   #theme-red #main {
-    /*==========头图==========*/
     /*======右侧导航======*/ }
     #theme-red #main .main-image.home-page {
       background: url("../../image/red-theme-main.jpg") no-repeat center; }
@@ -497,27 +701,30 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-red #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-red #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #f34255; }
-    #theme-red #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
-      color: #F67280; }
-    #theme-red #main .content-wrapper .left-content .tag-page-info h3, #theme-red #main .content-wrapper .left-content .cate-page-info h3 {
-      color: #F67280; }
-    #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
-      color: #F67280; }
-    #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
-      background-color: #F67280;
-      border: 3px solid #F67280; }
-    #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
-      border: 3px solid #F67280; }
-      #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+    #theme-red #main .content-wrapper {
+      /*左边内容*/
+      /*文章表单*/ }
+      #theme-red #main .content-wrapper .left-content .cur-article-list h3 {
+        color: #f34255; }
+      #theme-red #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+        color: #F67280; }
+      #theme-red #main .content-wrapper .left-content .tag-page-info h3, #theme-red #main .content-wrapper .left-content .cate-page-info h3 {
+        color: #F67280; }
+      #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+        color: #F67280; }
+      #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
+        background-color: #F67280;
+        border: 3px solid #F67280; }
+      #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
+        border: 3px solid #F67280; }
+        #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-red #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+          background-color: #F67280; }
+      #theme-red #main .content-wrapper #write-article-form .submit-btn input {
         background-color: #F67280; }
-    #theme-red #main .content-wrapper #write-article-form .submit-btn input {
-      background-color: #F67280; }
-      #theme-red #main .content-wrapper #write-article-form .submit-btn input h3 {
-        border-bottom: 1px solid #F67280; }
-      #theme-red #main .content-wrapper #write-article-form .submit-btn input:hover {
-        background-color: #f0122a; }
+        #theme-red #main .content-wrapper #write-article-form .submit-btn input h3 {
+          border-bottom: 1px solid #F67280; }
+        #theme-red #main .content-wrapper #write-article-form .submit-btn input:hover {
+          background-color: #f0122a; }
     #theme-red #main .right-sidebar {
       /*分类和时间轴*/ }
       #theme-red #main .right-sidebar h3 {
@@ -528,8 +735,47 @@
 #theme-darken-green {
   /*头部*/
   /*中间部分*/ }
-  #theme-darken-green #main .content-wrapper .left-content input[type='text'].focus, #theme-darken-green #main .content-wrapper .left-content textarea.focus {
+  #theme-darken-green #main .content-wrapper .l-btn {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #5ca0a2;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transiton: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    #theme-darken-green #main .content-wrapper .l-btn:hover {
+      background-color: #4a8082; }
+  #theme-darken-green #main .content-wrapper .submit-btn {
+    text-align: center;
+    margin-top: 30px; }
+    #theme-darken-green #main .content-wrapper .submit-btn button {
+      width: 120px;
+      height: 35px;
+      background-color: #539092;
+      -moz-border-radius: 5px;
+      /* Firefox */
+      -webkit-border-radius: 5px;
+      /* Safari 和 Chrome */
+      border-radius: 5px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      color: #ffffff;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transiton: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      #theme-darken-green #main .content-wrapper .submit-btn button:hover {
+        background-color: #4a8082; }
+  #theme-darken-green #main .content-wrapper input[type='text'].focus, #theme-darken-green #main .content-wrapper textarea.focus {
     border: 1px solid #539092;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-darken-green #main .content-wrapper input[type='text'].danger-border {
+    border: 1px solid #e51717;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -ms-transiton: border 0.3s;
@@ -559,7 +805,6 @@
     #theme-darken-green #header .header-nav li a.active, #theme-darken-green #header .user-login-nav li a.active {
       color: #000000; }
   #theme-darken-green #main {
-    /*==========头图==========*/
     /*======右侧导航======*/ }
     #theme-darken-green #main .main-image.home-page {
       background: url("../../image/darken-green-theme-main.jpg") no-repeat center; }
@@ -569,27 +814,30 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-darken-green #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-darken-green #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #417071; }
-    #theme-darken-green #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
-      color: #539092; }
-    #theme-darken-green #main .content-wrapper .left-content .tag-page-info h3, #theme-darken-green #main .content-wrapper .left-content .cate-page-info h3 {
-      color: #539092; }
-    #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
-      color: #539092; }
-    #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
-      background-color: #539092;
-      border: 3px solid #539092; }
-    #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
-      border: 3px solid #539092; }
-      #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+    #theme-darken-green #main .content-wrapper {
+      /*左边内容*/
+      /*文章表单*/ }
+      #theme-darken-green #main .content-wrapper .left-content .cur-article-list h3 {
+        color: #417071; }
+      #theme-darken-green #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+        color: #539092; }
+      #theme-darken-green #main .content-wrapper .left-content .tag-page-info h3, #theme-darken-green #main .content-wrapper .left-content .cate-page-info h3 {
+        color: #539092; }
+      #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+        color: #539092; }
+      #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
+        background-color: #539092;
+        border: 3px solid #539092; }
+      #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
+        border: 3px solid #539092; }
+        #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-darken-green #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+          background-color: #539092; }
+      #theme-darken-green #main .content-wrapper #write-article-form .submit-btn input {
         background-color: #539092; }
-    #theme-darken-green #main .content-wrapper #write-article-form .submit-btn input {
-      background-color: #539092; }
-      #theme-darken-green #main .content-wrapper #write-article-form .submit-btn input h3 {
-        border-bottom: 1px solid #539092; }
-      #theme-darken-green #main .content-wrapper #write-article-form .submit-btn input:hover {
-        background-color: #2e5051; }
+        #theme-darken-green #main .content-wrapper #write-article-form .submit-btn input h3 {
+          border-bottom: 1px solid #539092; }
+        #theme-darken-green #main .content-wrapper #write-article-form .submit-btn input:hover {
+          background-color: #2e5051; }
     #theme-darken-green #main .right-sidebar {
       /*分类和时间轴*/ }
       #theme-darken-green #main .right-sidebar h3 {
@@ -600,8 +848,47 @@
 #theme-purple {
   /*头部*/
   /*中间部分*/ }
-  #theme-purple #main .content-wrapper .left-content input[type='text'].focus, #theme-purple #main .content-wrapper .left-content textarea.focus {
+  #theme-purple #main .content-wrapper .l-btn {
+    padding: 8px 12px;
+    color: #ffffff;
+    background-color: #a66b80;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transiton: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    #theme-purple #main .content-wrapper .l-btn:hover {
+      background-color: #8b5367; }
+  #theme-purple #main .content-wrapper .submit-btn {
+    text-align: center;
+    margin-top: 30px; }
+    #theme-purple #main .content-wrapper .submit-btn button {
+      width: 120px;
+      height: 35px;
+      background-color: #9B5D73;
+      -moz-border-radius: 5px;
+      /* Firefox */
+      -webkit-border-radius: 5px;
+      /* Safari 和 Chrome */
+      border-radius: 5px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      color: #ffffff;
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -ms-transiton: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      #theme-purple #main .content-wrapper .submit-btn button:hover {
+        background-color: #8b5367; }
+  #theme-purple #main .content-wrapper input[type='text'].focus, #theme-purple #main .content-wrapper textarea.focus {
     border: 1px solid #9B5D73;
+    -webkit-transition: border 0.3s;
+    -moz-transition: border 0.3s;
+    -ms-transiton: border 0.3s;
+    -o-transition: border 0.3s;
+    transition: border 0.3s; }
+  #theme-purple #main .content-wrapper input[type='text'].danger-border {
+    border: 1px solid #e51717;
     -webkit-transition: border 0.3s;
     -moz-transition: border 0.3s;
     -ms-transiton: border 0.3s;
@@ -631,7 +918,6 @@
     #theme-purple #header .header-nav li a.active, #theme-purple #header .user-login-nav li a.active {
       color: #000000; }
   #theme-purple #main {
-    /*==========头图==========*/
     /*======右侧导航======*/ }
     #theme-purple #main .main-image.home-page {
       background: url("../../image/purple-theme-main.jpg") no-repeat center; }
@@ -641,27 +927,30 @@
       background: url("../../image/main-image2.jpg") no-repeat center; }
     #theme-purple #main .main-image.detail-page {
       background: url("../../image/main-image5.jpg") no-repeat center; }
-    #theme-purple #main .content-wrapper .left-content .cur-article-list h3 {
-      color: #7b4a5b; }
-    #theme-purple #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
-      color: #9B5D73; }
-    #theme-purple #main .content-wrapper .left-content .tag-page-info h3, #theme-purple #main .content-wrapper .left-content .cate-page-info h3 {
-      color: #9B5D73; }
-    #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
-      color: #9B5D73; }
-    #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
-      background-color: #9B5D73;
-      border: 3px solid #9B5D73; }
-    #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
-      border: 3px solid #9B5D73; }
-      #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+    #theme-purple #main .content-wrapper {
+      /*左边内容*/
+      /*文章表单*/ }
+      #theme-purple #main .content-wrapper .left-content .cur-article-list h3 {
+        color: #7b4a5b; }
+      #theme-purple #main .content-wrapper .left-content .article-detail-box .article-attach-info .cur-article-tag-all ul li a:hover {
+        color: #9B5D73; }
+      #theme-purple #main .content-wrapper .left-content .tag-page-info h3, #theme-purple #main .content-wrapper .left-content .cate-page-info h3 {
+        color: #9B5D73; }
+      #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input span:hover, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input span:hover {
+        color: #9B5D73; }
+      #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-tag-input label.checked .icon-box, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-tag-input label.checked .icon-box {
+        background-color: #9B5D73;
+        border: 3px solid #9B5D73; }
+      #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box {
+        border: 3px solid #9B5D73; }
+        #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-cate-input.article-cate-input label.checked .icon-box:before, #theme-purple #main .content-wrapper #write-article-form .article-info-form .info-form-list .article-tag-input.article-cate-input label.checked .icon-box:before {
+          background-color: #9B5D73; }
+      #theme-purple #main .content-wrapper #write-article-form .submit-btn input {
         background-color: #9B5D73; }
-    #theme-purple #main .content-wrapper #write-article-form .submit-btn input {
-      background-color: #9B5D73; }
-      #theme-purple #main .content-wrapper #write-article-form .submit-btn input h3 {
-        border-bottom: 1px solid #9B5D73; }
-      #theme-purple #main .content-wrapper #write-article-form .submit-btn input:hover {
-        background-color: #5b3744; }
+        #theme-purple #main .content-wrapper #write-article-form .submit-btn input h3 {
+          border-bottom: 1px solid #9B5D73; }
+        #theme-purple #main .content-wrapper #write-article-form .submit-btn input:hover {
+          background-color: #5b3744; }
     #theme-purple #main .right-sidebar {
       /*分类和时间轴*/ }
       #theme-purple #main .right-sidebar h3 {
@@ -669,7 +958,16 @@
       #theme-purple #main .right-sidebar .sort-list li a:hover, #theme-purple #main .right-sidebar .sort-list li a.active, #theme-purple #main .right-sidebar .timeline-list li a:hover, #theme-purple #main .right-sidebar .timeline-list li a.active {
         color: #9B5D73; }
 
-/*背景图标*/
+.add-btn-icon {
+  display: inline-block;
+  background: url("../../image/add-btn.png") no-repeat center;
+  background-size: 100% 100%; }
+
+.close-btn-icon {
+  display: inline-block;
+  background: url("../../image/close-btn.png") no-repeat center;
+  background-size: 100% 100%; }
+
 .article-reply-icon {
   display: inline-block;
   background: url("../../image/article-reply.png") no-repeat center;
@@ -733,8 +1031,9 @@
 #main {
   min-width: 1200px;
   background-color: #f7f7f7;
-  /*头图*/
-  /*中间内容*/ }
+  font-family: '微软雅黑';
+  /*================头图===============*/
+  /*================中间内容==============*/ }
   #main .main-image {
     height: 400px;
     width: 100%;
@@ -751,7 +1050,175 @@
     width: 980px;
     margin: 0 auto;
     padding: 40px 0;
-    /*====左边内容====*/ }
+    /*==========用户设置页========*/
+    /*头像设置*/
+    /*==========左边内容========*/ }
+    #user-config-box {
+      width: 450px;
+      margin: 0 auto;
+      text-align: center;
+      /*用户信息*/ }
+      #user-config-box h1 {
+        margin: 20px 0 40px 0; }
+      #user-config-box ul {
+        margin-bottom: 60px; }
+        #user-config-box ul li {
+          text-align: left;
+          margin: 25px 0; }
+          #user-config-box ul li span, #user-config-box ul li input {
+            vertical-align: middle; }
+          #user-config-box ul li > span {
+            display: inline-block;
+            width: 65px; }
+          #user-config-box ul li b {
+            color: #e51717; }
+          #user-config-box ul li input {
+            width: 320px;
+            height: 33px;
+            padding: 6px 5px 6px 15px;
+            border: 1px solid #cdcdcd;
+            -webkit-transition: border 0.3s;
+            -moz-transition: border 0.3s;
+            -ms-transiton: border 0.3s;
+            -o-transition: border 0.3s;
+            transition: border 0.3s;
+            -moz-border-radius: 15px;
+            /* Firefox */
+            -webkit-border-radius: 15px;
+            /* Safari 和 Chrome */
+            border-radius: 15px;
+            /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+          #user-config-box ul li .user-cur-icon img {
+            width: 100px;
+            height: 100px;
+            border: none;
+            -moz-border-radius: 50%;
+            /* Firefox */
+            -webkit-border-radius: 50%;
+            /* Safari 和 Chrome */
+            border-radius: 50%;
+            /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+    #main .content-wrapper #icon-config-box {
+      width: 680px;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      margin-left: -325px;
+      background: #ffffff;
+      display: none;
+      z-index: 1000;
+      -moz-border-radius: 10px;
+      /* Firefox */
+      -webkit-border-radius: 10px;
+      /* Safari 和 Chrome */
+      border-radius: 10px;
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+      #main .content-wrapper #icon-config-box label {
+        margin-bottom: 0; }
+      #main .content-wrapper #icon-config-box .config-title {
+        height: 46px;
+        line-height: 46px;
+        padding-left: 10px;
+        border-bottom: 1px solid #dddddd;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
+        #main .content-wrapper #icon-config-box .config-title span {
+          font-size: 16px; }
+        #main .content-wrapper #icon-config-box .config-title .close-btn-icon {
+          width: 20px;
+          height: 20px;
+          float: right;
+          margin: 13px 13px 0 0;
+          cursor: pointer; }
+      #main .content-wrapper #icon-config-box .upload-main {
+        padding: 30px 0 30px 30px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box; }
+        #main .content-wrapper #icon-config-box .upload-main .upload-icon {
+          padding: 8px 0; }
+          #main .content-wrapper #icon-config-box .upload-main .upload-icon button {
+            padding: 6px 15px;
+            font-size: 14px;
+            -moz-border-radius: 5px;
+            /* Firefox */
+            -webkit-border-radius: 5px;
+            /* Safari 和 Chrome */
+            border-radius: 5px;
+            /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+            #main .content-wrapper #icon-config-box .upload-main .upload-icon button .avatar-name {
+              font-size: 14px; }
+        #main .content-wrapper #icon-config-box .upload-main .icon-show-area {
+          float: left;
+          width: 68%;
+          height: 300px;
+          border: 2px solid #dddddd;
+          text-align: center;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box; }
+          #main .content-wrapper #icon-config-box .upload-main .icon-show-area p {
+            margin-top: 120px;
+            font-size: 16px; }
+        #main .content-wrapper #icon-config-box .upload-main .preview-icon-area {
+          float: left;
+          text-align: center;
+          width: 32%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          box-sizing: border-box; }
+          #main .content-wrapper #icon-config-box .upload-main .preview-icon-area .previewImg {
+            margin: 20px auto;
+            border: 1px solid #dddddd;
+            overflow: hidden;
+            -moz-border-radius: 50%;
+            /* Firefox */
+            -webkit-border-radius: 50%;
+            /* Safari 和 Chrome */
+            border-radius: 50%;
+            /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+            #main .content-wrapper #icon-config-box .upload-main .preview-icon-area .previewImg img {
+              width: 100%; }
+          #main .content-wrapper #icon-config-box .upload-main .preview-icon-area .preview-icon-large {
+            width: 120px;
+            height: 120px; }
+          #main .content-wrapper #icon-config-box .upload-main .preview-icon-area .preview-icon-small {
+            width: 80px;
+            height: 80px; }
+      #main .content-wrapper #icon-config-box .icon-tailoring-content {
+        font-size: 0;
+        margin: 0 30px 30px 30px; }
+        #main .content-wrapper #icon-config-box .icon-tailoring-content .sort-item {
+          display: inline-block;
+          margin-left: 6px;
+          overflow: hidden;
+          -moz-border-radius: 5px;
+          /* Firefox */
+          -webkit-border-radius: 5px;
+          /* Safari 和 Chrome */
+          border-radius: 5px;
+          /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+        #main .content-wrapper #icon-config-box .icon-tailoring-content .l-btn {
+          font-size: 14px; }
+        #main .content-wrapper #icon-config-box .icon-tailoring-content .sureCut {
+          float: right;
+          width: 110px;
+          margin-right: 20px;
+          -moz-border-radius: 5px;
+          /* Firefox */
+          -webkit-border-radius: 5px;
+          /* Safari 和 Chrome */
+          border-radius: 5px;
+          /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
     #main .content-wrapper .left-content {
       float: left;
       width: 75%;
@@ -761,9 +1228,9 @@
       -ms-box-sizing: border-box;
       -o-box-sizing: border-box;
       box-sizing: border-box;
-      /*=====当前文章列表=====*/
-      /*=====当前文章详细内容=====*/
-      /*======文章评论与回复======*/
+      /*=====首页=====*/
+      /*=====文章详情页=====*/
+      /*文章评论与回复*/
       /*=====标签页=====*/ }
       #main .content-wrapper .left-content a {
         text-decoration: none;

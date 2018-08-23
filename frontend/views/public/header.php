@@ -31,7 +31,7 @@ use yii\helpers\Url;
                 <!--用户设置菜单-->
                 <ul class="user-config-menu">
                     <li><a>我的文章</a></li>
-                    <li><a>设置</a></li>
+                    <li ><a href="<?= Url::to(['blog/config']) ?>">设置</a></li>
                     <li><a class="user-logout" href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a></li>
                 </ul>
             </li>

@@ -49,22 +49,5 @@ AppAsset::addCss($this, '@web/static/css/site/site.css');
 
         </form>
 
-        <!--        --><?php //$form = ActiveForm::begin(['id' => 'login-form']); ?>
-        <!---->
-        <!--                --><? //= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
-        <!---->
-        <!--                --><? //= $form->field($model, 'password')->passwordInput() ?>
-        <!---->
-        <!--                --><? //= $form->field($model, 'rememberMe')->checkbox() ?>
-        <!---->
-        <!--                <div style="color:#999;margin:1em 0">-->
-        <!--                   --><? //= Html::a('忘记密码?', ['site/request-password-reset']) ?><!--.-->
-        <!--                </div>-->
-        <!---->
-        <!--                <div class="form-group">-->
-        <!--                    --><? //= Html::submitButton('Login', ['class' => 'confirm-btn', 'name' => 'login-button']) ?>
-        <!--                </div>-->
-        <!---->
-        <!--        --><?php //ActiveForm::end(); ?>
     </div>
 </div>

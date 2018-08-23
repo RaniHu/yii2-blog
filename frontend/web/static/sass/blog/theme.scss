@@ -1,170 +1,198 @@
 @import "../common/common_mixin.scss";
 
 //主题色列表
-$theme-color-name: (default:#0ABFBC, gray:#6F6F6F,blue:#4D8AD6, darken-blue:#484762, red:#F67280,darken-green:#539092,purple:#9B5D73);
-
+$theme-color-name: (default:#0ABFBC, gray:#6F6F6F, blue:#4D8AD6, darken-blue:#484762, red:#F67280, darken-green:#539092, purple:#9B5D73);
 
 /*===============主题样式设置===============*/
 @each $theme-name, $theme-color in $theme-color-name {
-  #theme-#{$theme-name}{
+  #theme-#{$theme-name} {
 
-    //======包括默认主题======
-    #main .content-wrapper .left-content {
+    //========包括默认主题=======
+    #main .content-wrapper {
+
+      //通用按钮
+      .l-btn{
+        padding: 8px 12px;
+        color: #ffffff;
+        background-color: lighten($theme-color,5%);
+        @include transition(0.3s);
+        &:hover {
+          background-color: darken($theme-color,5%);
+        }
+      }
+
+      //提交按钮
+      .submit-btn {
+        text-align: center;
+        margin-top: 30px;
+        button {
+          width: 120px;
+          height: 35px;
+          background-color: $theme-color;
+          @include border-radius(5px);
+          color: #ffffff;
+          @include transition(0.4s);
+          &:hover {
+            background-color: darken($theme-color, 5%);
+          }
+        }
+      }
 
       //表单聚焦样式
       input[type='text'].focus, textarea.focus {
         border: 1px solid $theme-color;
         @include transition(border 0.3s);
       }
+      input[type='text'].danger-border{
+        border: 1px solid #e51717;
+        @include transition(border 0.3s);
+      }
 
-      #article-comment-area {
-        //评论按钮
-        .comment-btn a:last-child {
-          background-color: $theme-color;
-          border: 1px solid $theme-color;
+      .left-content {
+        #article-comment-area {
+          //评论按钮
+          .comment-btn a:last-child {
+            background-color: $theme-color;
+            border: 1px solid $theme-color;
+            color: #ffffff;
+            @include transition(0.5s);
+            &:hover {
+              background-color: darken($theme-color, 10%);
+            }
+          }
+          //回复
+          .other-comments .comment-list {
+            .other-info .reply-comment {
+              li:hover {
+                color: lighten($theme-color, 10%);
+              }
+            }
+            .reply-btn:hover {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+
+    }
+
+    //========除默认主题外=======
+    @if ($theme-name!='default') {
+
+      /*头部*/
+      #header {
+        background-color: $theme-color;
+        .user-logo span {
           color: #ffffff;
-          @include transition(0.5s);
+        }
+        .header-nav li a, .user-login-nav li a {
           &:hover {
-            background-color: darken($theme-color, 10%);
+            color: #000000;
           }
-        }
-        //回复
-        .other-comments .comment-list{
-          .other-info .reply-comment {
-            li:hover {
-              color: lighten($theme-color, 10%);
-            }
-          }
-          .reply-btn:hover{
-            color: $theme-color;
+          &.active {
+            color: #000000;
           }
         }
       }
-    }
 
-    //=====除默认主题外=====
-    @if ($theme-name!='default'){
-
-       /*头部*/
-    #header {
-      background-color:$theme-color ;
-      .user-logo span{
-        color: #ffffff;
-      }
-      .header-nav li a, .user-login-nav li a {
-        &:hover {
-          color: #000000;
-        }
-        &.active {
-          color: #000000;
-        }
-      }
-    }
-
-
- /*中间部分*/
-    #main{
-      /*==========头图==========*/
-      .main-image {
-        &.home-page{
-          background: url("../../image/#{$theme-name}-theme-main.jpg") no-repeat center;
-        }
-        &.cate-page{
-          background: url("../../image/main-image9.jpg") no-repeat center;
-        }
-        &.tag-page{
-          background: url("../../image/main-image2.jpg") no-repeat center;
-        }
-        &.detail-page{
-          background: url("../../image/main-image5.jpg") no-repeat center;
-        }
-      }
-
-      .content-wrapper {
-
-
-        //========左边内容==========
-        .left-content {
-
-          //当前文章列表
-          .cur-article-list {
-            @if ($theme-name!='default'){
-              h3 {
-                color: darken($theme-color, 10%);
-              }
-            }
+      /*中间部分*/
+      #main {
+        .main-image {
+          &.home-page {
+            background: url("../../image/#{$theme-name}-theme-main.jpg") no-repeat center;
           }
-
-          //当前文章详细内容
-          .article-detail-box .article-attach-info {
-          
-            .cur-article-tag-all ul li a:hover{
-                  color: $theme-color;
-            }
-            
+          &.cate-page {
+            background: url("../../image/main-image9.jpg") no-repeat center;
           }
-
-          //标签页和分类页
-          .tag-page-info h3, .cate-page-info h3 {
-            color: $theme-color;
+          &.tag-page {
+            background: url("../../image/main-image2.jpg") no-repeat center;
+          }
+          &.detail-page {
+            background: url("../../image/main-image5.jpg") no-repeat center;
           }
         }
 
-        //========文章表单==========
-        #write-article-form {
-         .article-info-form  .info-form-list {
+        .content-wrapper {
+          /*左边内容*/
+          .left-content {
 
-            //文章分类与标签
-            .article-cate-input, .article-tag-input {
-              span:hover {
-                color: $theme-color;
-              }
-              //文章标签
-              &.article-tag-input label.checked .icon-box {
-                background-color: $theme-color;
-                border: 3px solid $theme-color;
-              }
-              &.article-cate-input label.checked .icon-box {
-                border: 3px solid $theme-color;
-                &:before {
-                  background-color: $theme-color;
-
+            //当前文章列表
+            .cur-article-list {
+              @if ($theme-name!='default') {
+                h3 {
+                  color: darken($theme-color, 10%);
                 }
               }
             }
-          }
-          //提交按钮
-          .submit-btn input {
-            background-color: $theme-color;
 
-            h3{
-              border-bottom: 1px solid $theme-color;
+            //当前文章详细内容
+            .article-detail-box .article-attach-info {
+
+              .cur-article-tag-all ul li a:hover {
+                color: $theme-color;
+              }
+
             }
-            &:hover {
-              background-color: darken($theme-color, 20%);
+
+            //标签页和分类页
+            .tag-page-info h3, .cate-page-info h3 {
+              color: $theme-color;
+            }
+          }
+
+          /*文章表单*/
+          #write-article-form {
+            .article-info-form .info-form-list {
+
+              //文章分类与标签
+              .article-cate-input, .article-tag-input {
+                span:hover {
+                  color: $theme-color;
+                }
+                //文章标签
+                &.article-tag-input label.checked .icon-box {
+                  background-color: $theme-color;
+                  border: 3px solid $theme-color;
+                }
+                &.article-cate-input label.checked .icon-box {
+                  border: 3px solid $theme-color;
+                  &:before {
+                    background-color: $theme-color;
+
+                  }
+                }
+              }
+            }
+            //提交按钮
+            .submit-btn input {
+              background-color: $theme-color;
+
+              h3 {
+                border-bottom: 1px solid $theme-color;
+              }
+              &:hover {
+                background-color: darken($theme-color, 20%);
+              }
             }
           }
         }
-      }
 
-      /*======右侧导航======*/
-      .right-sidebar{
-        h3{
-          border-bottom: 2px solid $theme-color;
-        }
+        /*======右侧导航======*/
+        .right-sidebar {
+          h3 {
+            border-bottom: 2px solid $theme-color;
+          }
 
-        /*分类和时间轴*/
-        .sort-list li a, .timeline-list li a{
-          &:hover,  &.active{
-            color:$theme-color ;
+          /*分类和时间轴*/
+          .sort-list li a, .timeline-list li a {
+            &:hover, &.active {
+              color: $theme-color;
+            }
           }
         }
+
       }
-
-    }
     }
 
-
-   
   }
 }

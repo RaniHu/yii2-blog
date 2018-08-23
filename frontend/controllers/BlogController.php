@@ -2,10 +2,12 @@
 
 namespace frontend\controllers;
 
+use common\models\User;
 use frontend\models\Article;
 use frontend\models\ArticleTag;
 use frontend\models\Cate;
 use frontend\models\Comment;
+use frontend\models\ConfigForm;
 use frontend\models\Reply;
 use frontend\models\SearchArticle;
 use frontend\models\Tag;
@@ -15,7 +17,6 @@ use yii\data\Pagination;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-
 //use yii\web\User;
 
 /**
@@ -26,7 +27,6 @@ class BlogController extends Controller
 
 
     public $_lastError = "";
-
 
 
     /**
@@ -50,7 +50,7 @@ class BlogController extends Controller
      */
 
     public $enableCsrfValidation = false;
-     
+
     public function actionIndex()
 
     {
@@ -59,7 +59,7 @@ class BlogController extends Controller
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;        
+        Yii::$app->view->params['theme'] = $curTheme;
         $articleSearchLists = Article::find()->with('cates','author')->andFilterWhere(['like', 'article_title', $searchText])->orderBy(['pub_date' => SORT_DESC])->asArray()->all();
 
         $pagination = new Pagination([                                                    //分页器
@@ -70,7 +70,6 @@ class BlogController extends Controller
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-
 
 
         return $this->render('home', [
@@ -159,8 +158,6 @@ class BlogController extends Controller
         }
 
 
-
-
         //当前的主题
         $curTheme=Theme::findOne(1);
         Yii::$app->view->params['theme']=$curTheme;
@@ -215,7 +212,7 @@ class BlogController extends Controller
     {
         $tagId = Yii::$app->request->get('id');
         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;       
+        Yii::$app->view->params['theme'] = $curTheme;
 
         $curTagName = tag::findOne(['id' => $tagId]);
         $curTagArticles = ArticleTag::find()->with('tagArticle', 'tagsName')->where(['tag_id' => $tagId])->all();
@@ -232,10 +229,9 @@ class BlogController extends Controller
         $cateQuery = cate::find()->all();
         $tagQuery = tag::find()->all();
 
-        foreach ($curTagArticles as $key=>$curTagArticle){
+        foreach ($curTagArticles as $key => $curTagArticle) {
             $res[$curTagArticle['tag_id']][]=$curTagArticle;
         }
-
 
 
         return $this->render('tag', [
@@ -304,9 +300,9 @@ class BlogController extends Controller
     }
 
 
-
     /**
      * Lists all Article models.
+     * 搜索页
      * @return mixed
      */
     public function actionSearch()
@@ -329,17 +325,145 @@ class BlogController extends Controller
     public function actionView()
     {
         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;       
+        Yii::$app->view->params['theme'] = $curTheme;
         return $this->render('view');
     }
 
+
+
+     /**
+     *用户设置页
+     */
+    public function actionConfig()
+    {
+        $curTheme = Theme::findOne(1);
+        Yii::$app->view->params['theme'] = $curTheme;
+
+        //获取当前用户信息
+        $userModel = new User();
+        $userInfo = $userModel->getUserInfoById();
+
+        /*判断是否为ajax请求*/
+        if (Yii::$app->request->isAjax) {
+            $configModel = new ConfigForm();
+            $updateInfo = $configModel->updateInfo(Yii::$app->user->identity->id);
+            \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+            if ($updateInfo) {
+                return  [
+                    'status' => 200,
+                    '$msg' => "用户信息修改成功!",
+                    'a'=>$_POST['isChangeIcon']
+                ];
+            } else {
+                return [
+                    'status' => 500,
+                    'msg'=>"用户信息修改失败!",
+                    'error' => $configModel->errors,
+                ];
+            }
+        }
+        return $this->render('config', ['userInfo' => $userInfo]);
+    }
+
+
+    public function actionUpdateUserInfo()
+    {
+        $curTheme = Theme::findOne(1);
+        Yii::$app->view->params['theme'] = $curTheme;
+        $post = Yii::$app->request->post();
+
+        $configModel = new ConfigForm();
+        $fileUrl = $configModel->updateInfo(Yii::$app->user->identity->id);
+        if ($fileUrl) {
+            return $this->redirect('view', [
+                'status' => 200,
+                'userInfo' => $fileUrl
+            ]);
+        } else {
+            return [
+                'status' => 500,
+                'error' => $configModel->errors,
+            ];
+        }
+
+//        $fileUrl = $this->base64_image_convert($_POST['icon'], "uploads/userIcon/");
+//        if ($fileUrl) {
+//            $userModel->username = $_POST['username'];
+//            $userModel->email = $_POST['email'];
+//            $userModel->sign = $_POST['sign'];
+//            $userModel->icon = $fileUrl;
+//            $userModel->save();
+//            if($userModel->save()){
+//                return $this->redirect('view',[
+//                    "status" => 200,
+//                    "userInfo" => $userInfo
+//                ]);
+//
+//            }
+//        }
+
+        //返回回复数据
+//            $userInfo = $configModel->updateInfo(Yii::$app->user->identity->id);
+//        $fileUrl = $this->base64_image_convert($_POST['icon'], "uploads/userIcon/");
+//        if ($fileUrl) {
+//            return $this->redirect('view', [
+//                "status" => 200,
+//                "userInfo" => $fileUrl
+//            ]);
+//        } else {
+//            return $this->render('config', ['userInfo' => $userInfo]);
+//        }
+        /*  if (fileUrl) {
+              //修改文章表
+              $configModel->email = $_POST['email'];
+              $configModel->sign = $_POST['sign'];
+              $configModel->icon = $fileUrl;
+              $configModel->save();
+              if ($configModel->save()) {
+                  return $this->redirect('view',[
+                      "status" => 200,
+                      "userInfo" => $userInfo
+                  ]);
+
+              } else {
+                  return [
+                      "status" => 500,
+                      "error" => $userInfo->errors,
+                  ];
+              }
+          }*/
+
+    }
+
+    /* 
+    ** base64图片转换
+    */
+    public function base64_image_convert($base64_image, $path)
+    {
+        if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image, $result)) {
+            $type = $result[2];
+            $new_file = $path . date('Ymd', time()) . "/";
+            if (!file_exists($new_file)) {
+                mkdir($new_file, 0700);
+            }
+            $new_file = $new_file . time() . ".${type}";
+            if (file_put_contents($new_file, base64_decode(str_replace($result[1], '', $base64_image)))) {
+                return $new_file;
+            } else {
+                return false;
+            }
+
+        }
+
+    }
 
     /**
      * Creates a new Article model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-     
+
     public function actionCreate()
     {
         $model = new Article;
@@ -380,15 +504,13 @@ class BlogController extends Controller
         $model = $this->findModel($id);
         $cateQuery = Cate::find()->all();
         $tagQuery = Tag::find()->all();
-         $curTheme=Theme::findOne(1);
-        Yii::$app->view->params['theme']=$curTheme;   
+        $curTheme = Theme::findOne(1);
+        Yii::$app->view->params['theme'] = $curTheme;
 
         if ($model->load(Yii::$app->request->post()) && isset($_POST['article_tag'])) {
-            if(!$model->updateArticle($id))
-            {
+            if (!$model->updateArticle($id)) {
                 echo '文章表修改失败!';
-            }else
-            {
+            } else {
                 return $this->redirect(['index']);
             }
         } else {

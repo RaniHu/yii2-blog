@@ -22,7 +22,6 @@ $this->title = '我的博客';
     <?= $this->render('../public/sidebar.php', ['cates' => $cates, 'tags' => $tags]) ?>
 
     <!--分页器-->
-<!--    --><?//= LinkPager::widget(['pagination' => $pagination]) ?>
 </div>
 </div>
 

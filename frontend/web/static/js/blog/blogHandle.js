@@ -70,7 +70,7 @@ $(function () {
                     type: 'POST',
                     dataType: "json",
                     data: sendData,
-                    url: 'http://192.168.80.80/yii2-blog/frontend/web/blog/comment',
+                    url: 'http://www.huranblog.com/blog/comment',
                     success: function (res) {
                         if (res.status == 200) {
 
@@ -120,7 +120,7 @@ $(function () {
                     type: 'POST',
                     dataType: "json",
                     data: sendData,
-                    url: 'http://192.168.80.80/yii2-blog/frontend/web/blog/reply',
+                    url: 'http://www.huranblog.com/blog/reply',
                     success: function (res) {
                         if (res.status == 200) {
 
