@@ -1,6 +1,6 @@
 @import './common_mixin.scss';
 
-/*======展开小图标>======*/
+/*========展开小图标>=======*/
 
 @mixin openIcon($borderColor, $size) {
     content: '';
@@ -25,7 +25,7 @@
 }
 
 
-/*======向上小三角======*/
+/*========向上小三角======*/
 
 @mixin triangle-up($size, $color) {
     width: 0;
@@ -36,7 +36,7 @@
 }
 
 
-/*======向下小三角======*/
+/*========向下小三角======*/
 
 @mixin triangle-down($size, $color) {
     width: 0;
@@ -47,7 +47,7 @@
 }
 
 
-/*======向右小三角======*/
+/*========向右小三角======*/
 
 @mixin triangle-right($size, $color) {
     width: 0;
@@ -58,7 +58,7 @@
 }
 
 
-/*======在手机端滑动时更顺畅======*/
+/*========在手机端滑动时更顺畅======*/
 
 %overflow-scroll-mobile {
     overflow-y: scroll;
@@ -66,7 +66,7 @@
 }
 
 
-/*=====单行文本溢出省略号=====*/
+/*======单行文本溢出省略号=====*/
 
 %overflow-ellipsis-oneline {
     overflow: hidden;
@@ -75,7 +75,7 @@
 }
 
 
-/*=====多行文本溢出省略号=====*/
+/*======多行文本溢出省略号=====*/
 
 @mixin overflow-ellipsis-moreline($line-num, $visible-height) {
     overflow: hidden;
@@ -87,7 +87,7 @@
 }
 
 
-/*=====圆圈头像=====*/
+/*======圆圈头像======*/
 
 @mixin circle_icon($circle_icon_size) {
     width: $circle_icon_size;
@@ -96,7 +96,7 @@
 }
 
 
-/*=====水平垂直居中已知宽高======*/
+/*======水平垂直居中已知宽高======*/
 
 @mixin all-center-hasWH($width, $height) {
     position: absolute;
@@ -107,7 +107,7 @@
 }
 
 
-/*=====水平垂直居中=====*/
+/*======水平垂直居中=====*/
 
 %all-center {
     position: absolute;
@@ -118,7 +118,7 @@
 }
 
 
-/*=====水平居中=====*/
+/*======水平居中======*/
 
 %center-horizontally {
     position: absolute;
@@ -127,7 +127,7 @@
 }
 
 
-/*=====垂直居中=====*/
+/*======垂直居中======*/
 
 %vertical-center {
     position: absolute;
@@ -136,7 +136,51 @@
 }
 
 
-/*=====遮罩层=====*/
+
+
+/*======消息提示框======*/
+$message-style-list:(success: #e1f3d8,fail:#fde2e2,warning:#fdf6ec,message:#edf2fc);
+@each $msg-name,$msg-color in $message-style-list{
+    .msg-#{$msg-name} {
+        display: none;
+        position: relative;
+        width: 330px;
+        height: 40px;
+        font-size: 0;
+        line-height: 40px;
+        padding: 0 10px;
+        background: darken($msg-color,3%);
+        border:1px solid darken($msg-color,10%);
+        margin: 10px auto;
+        @include border-radius(4px);
+        .msg-content{
+            display: inline-block;
+            font-size: 14px;
+            text-align: left;
+            color: darken($msg-color,35%);
+            padding:0 6px 0 6px;
+            vertical-align: middle;
+            &.center{
+                text-align: center;
+            }
+        }
+        .msg-icon{
+            vertical-align:middle;
+            font-size: 22px;
+            color: darken($msg-color,40%);
+        }
+        .icon-close-btn{
+            cursor: pointer;
+            font-size: 12px;
+            right:10px;
+            color: darken($msg-color,40%);
+            @extend %vertical-center;
+        }
+    }
+}
+
+
+/*======遮罩层======*/
 
 #mask {
     display: none;
@@ -149,7 +193,7 @@
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-//弹性盒子外层
+//======弹性盒子外层======
 .flex {
     position: relative;
     width: 100%;

@@ -188,7 +188,8 @@ class User extends ActiveRecord implements IdentityInterface
     }
 
 
-    public function getUserInfoById()
+
+    public function getCurUserInfo()
     {
         return static::find()->select(['username','icon','email', 'created_at','sign'])->where(['id'=>Yii::$app->user->identity->id])->asArray()->one();
     }

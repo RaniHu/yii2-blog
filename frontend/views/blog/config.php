@@ -7,20 +7,19 @@ AppAsset::addCss($this, '@web/static/fonts/fonts-style.css');
 AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
 AppAsset::addScript($this, '@web/static/js/lib/cropper.js');
 AppAsset::addScript($this, '@web/static/js/blog/uploadIcon.js');
+AppAsset::addScript($this, '@web/static/js/public/msgBox.js');
 
 ?>
 <div id="main">
 
     <!--内容-->
     <div class="content-wrapper clearFix">
-
+        <h1>用户设置</h1>
         <div id="user-config-box">
-            <h1>用户设置</h1>
             <ul>
                 <li>
                     <span>用户名</span>
-                    <input  type="text" readonly  name="username" value=<?= $userInfo['username'] ?>>
-                    <b>*</b>
+                    <span class="username"><?= $userInfo['username'] ?></span>
                 </li>
                 <li>
                     <span>邮箱</span>
@@ -29,18 +28,16 @@ AppAsset::addScript($this, '@web/static/js/blog/uploadIcon.js');
                 </li>
                 <li>
                     <span>签名</span>
-                    <input type="text" name="sign" id="sign" value=<?= $userInfo['sign']?>/>
+                    <input type="text" name="sign" id="sign" value=<?= $userInfo['sign'] ?>>
                 </li>
                 <li>
                     <span>头像</span>
-                    <span class="user-cur-icon">
                         <?php if ($userInfo['icon']) : ?>
-                            <img id="final-img" src=<?=  '../../'.$userInfo['icon'] ?>>
+                            <img class="user-cur-icon" id="final-img" src=<?= '../../' . $userInfo['icon'] ?>>
                         <?php else: ?>
-                            <img id="final-img" src="../../static/image/default-user-icon.png">
+                            <img class="user-cur-icon" id="final-img" src="../../static/image/default-user-icon.png">
                         <?php endif ?>
                         <input name="icon" id="icon" type="text" hidden>
-                    </span>
                 </li>
             </ul>
             <div class="submit-btn">

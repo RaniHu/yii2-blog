@@ -1,17 +1,17 @@
 @charset "UTF-8";
-/*======展开小图标>======*/
-/*======向上小三角======*/
-/*======向下小三角======*/
-/*======向右小三角======*/
-/*======在手机端滑动时更顺畅======*/
-/*=====单行文本溢出省略号=====*/
-/*=====多行文本溢出省略号=====*/
-/*=====圆圈头像=====*/
-/*=====水平垂直居中已知宽高======*/
-/*=====水平垂直居中=====*/
-/*=====水平居中=====*/
-/*=====垂直居中=====*/
-.loading-text span {
+/*========展开小图标>=======*/
+/*========向上小三角======*/
+/*========向下小三角======*/
+/*========向右小三角======*/
+/*========在手机端滑动时更顺畅======*/
+/*======单行文本溢出省略号=====*/
+/*======多行文本溢出省略号=====*/
+/*======圆圈头像======*/
+/*======水平垂直居中已知宽高======*/
+/*======水平垂直居中=====*/
+/*======水平居中======*/
+/*======垂直居中======*/
+.msg-success .icon-close-btn, .msg-fail .icon-close-btn, .msg-warning .icon-close-btn, .msg-message .icon-close-btn, .loading-text span {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -20,7 +20,152 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/*=====遮罩层=====*/
+/*======消息提示框======*/
+.msg-success {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #d8efcc;
+  border: 1px solid #c3e7b1;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-success .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #78c950;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-success .msg-content.center {
+      text-align: center; }
+  .msg-success .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #69c33c; }
+  .msg-success .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #69c33c; }
+
+.msg-fail {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #fcd4d4;
+  border: 1px solid #fab2b2;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-fail .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #f13b3b;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-fail .msg-content.center {
+      text-align: center; }
+  .msg-fail .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #f02323; }
+  .msg-fail .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #f02323; }
+
+.msg-warning {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #fcefde;
+  border: 1px solid #f8e0be;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-warning .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #ecaa4b;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-warning .msg-content.center {
+      text-align: center; }
+  .msg-warning .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #ea9f33; }
+  .msg-warning .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #ea9f33; }
+
+.msg-message {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #e0e9fa;
+  border: 1px solid #c1d2f5;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-message .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #5484e3;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-message .msg-content.center {
+      text-align: center; }
+  .msg-message .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #3e74df; }
+  .msg-message .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #3e74df; }
+
+/*======遮罩层======*/
 #mask {
   display: none;
   position: fixed;

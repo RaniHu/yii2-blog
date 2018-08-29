@@ -54,6 +54,7 @@ class BlogController extends Controller
     public function actionIndex()
 
     {
+        $model=new User();
         $searchText=Yii::$app->request->get('searchText');                         //搜索
         $query = Article::find();
         $cateQuery = Cate::find()->all();
@@ -70,7 +71,6 @@ class BlogController extends Controller
             ->offset($pagination->offset)
             ->limit($pagination->limit)
             ->all();
-
 
         return $this->render('home', [
             'cates' => $cateQuery,
@@ -341,7 +341,7 @@ class BlogController extends Controller
 
         //获取当前用户信息
         $userModel = new User();
-        $userInfo = $userModel->getUserInfoById();
+        $userInfo = $userModel->getCurUserInfo();
 
         /*判断是否为ajax请求*/
         if (Yii::$app->request->isAjax) {
@@ -352,7 +352,7 @@ class BlogController extends Controller
             if ($updateInfo) {
                 return  [
                     'status' => 200,
-                    '$msg' => "用户信息修改成功!",
+                    'msg' => "用户信息修改成功!",
                     'a'=>$_POST['isChangeIcon']
                 ];
             } else {
@@ -386,54 +386,6 @@ class BlogController extends Controller
                 'error' => $configModel->errors,
             ];
         }
-
-//        $fileUrl = $this->base64_image_convert($_POST['icon'], "uploads/userIcon/");
-//        if ($fileUrl) {
-//            $userModel->username = $_POST['username'];
-//            $userModel->email = $_POST['email'];
-//            $userModel->sign = $_POST['sign'];
-//            $userModel->icon = $fileUrl;
-//            $userModel->save();
-//            if($userModel->save()){
-//                return $this->redirect('view',[
-//                    "status" => 200,
-//                    "userInfo" => $userInfo
-//                ]);
-//
-//            }
-//        }
-
-        //返回回复数据
-//            $userInfo = $configModel->updateInfo(Yii::$app->user->identity->id);
-//        $fileUrl = $this->base64_image_convert($_POST['icon'], "uploads/userIcon/");
-//        if ($fileUrl) {
-//            return $this->redirect('view', [
-//                "status" => 200,
-//                "userInfo" => $fileUrl
-//            ]);
-//        } else {
-//            return $this->render('config', ['userInfo' => $userInfo]);
-//        }
-        /*  if (fileUrl) {
-              //修改文章表
-              $configModel->email = $_POST['email'];
-              $configModel->sign = $_POST['sign'];
-              $configModel->icon = $fileUrl;
-              $configModel->save();
-              if ($configModel->save()) {
-                  return $this->redirect('view',[
-                      "status" => 200,
-                      "userInfo" => $userInfo
-                  ]);
-
-              } else {
-                  return [
-                      "status" => 500,
-                      "error" => $userInfo->errors,
-                  ];
-              }
-          }*/
-
     }
 
     /* 

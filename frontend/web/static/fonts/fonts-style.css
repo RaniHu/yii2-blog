@@ -23,6 +23,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-fail:before {
+  content: "\e900";
+}
+.icon-warning:before {
+  content: "\e902";
+}
+.icon-message:before {
+  content: "\e903";
+}
+.icon-success:before {
+  content: "\e904";
+}
 .icon-folder:before {
   content: "\e92f";
 }
@@ -65,4 +77,24 @@
 .icon-scaleX:before {
   content: "\ea45";
 }
-
+.icon-love:before {
+  content: "\e604";
+}
+.icon-delete:before {
+  content: "\e60b";
+}
+.icon-close-btn:before {
+  content: "\e611";
+}
+.icon-filter:before {
+  content: "\e612";
+}
+.icon-star:before {
+  content: "\e619";
+}
+.icon-prize:before {
+  content: "\e61a";
+}
+.icon-sort:before {
+  content: "\e626";
+}

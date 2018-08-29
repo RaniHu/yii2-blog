@@ -12,9 +12,9 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F, blue:#4D8AD6, darken-blue:#48
 
       //通用按钮
       .l-btn{
-        padding: 8px 12px;
+        padding: 9px 12px;
         color: #ffffff;
-        background-color: lighten($theme-color,5%);
+        background-color: $theme-color;
         @include transition(0.3s);
         &:hover {
           background-color: darken($theme-color,5%);
@@ -24,17 +24,10 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F, blue:#4D8AD6, darken-blue:#48
       //提交按钮
       .submit-btn {
         text-align: center;
-        margin-top: 30px;
-        button {
-          width: 120px;
-          height: 35px;
-          background-color: $theme-color;
+        margin-top: 25px;
+        button{
+          width: 130px;
           @include border-radius(5px);
-          color: #ffffff;
-          @include transition(0.4s);
-          &:hover {
-            background-color: darken($theme-color, 5%);
-          }
         }
       }
 

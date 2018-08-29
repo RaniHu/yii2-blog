@@ -69,10 +69,9 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
                     <!--文章正文-->
                     <div class="article-content-area">
                         <textarea placeholder="请输入文章正文" name="article_content"></textarea>
-<!--                        --><?php //echo Markdowneditor::widget(['model' => $model, 'attribute' => 'article_content','name'=>'article_content']); ?>
                     </div>
                     <div class="submit-btn form-submit-btn">
-                        <input type="submit" value="确定">
+                        <button type="button" value="确定" class="l-btn">确定</button>
                     </div>
 
                 </form>

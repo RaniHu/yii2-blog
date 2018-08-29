@@ -1,17 +1,17 @@
 @charset "UTF-8";
-/*======展开小图标>======*/
-/*======向上小三角======*/
-/*======向下小三角======*/
-/*======向右小三角======*/
-/*======在手机端滑动时更顺畅======*/
-/*=====单行文本溢出省略号=====*/
-/*=====多行文本溢出省略号=====*/
-/*=====圆圈头像=====*/
-/*=====水平垂直居中已知宽高======*/
-/*=====水平垂直居中=====*/
-/*=====水平居中=====*/
-/*=====垂直居中=====*/
-.loading-text span {
+/*========展开小图标>=======*/
+/*========向上小三角======*/
+/*========向下小三角======*/
+/*========向右小三角======*/
+/*========在手机端滑动时更顺畅======*/
+/*======单行文本溢出省略号=====*/
+/*======多行文本溢出省略号=====*/
+/*======圆圈头像======*/
+/*======水平垂直居中已知宽高======*/
+/*======水平垂直居中=====*/
+/*======水平居中======*/
+/*======垂直居中======*/
+.msg-success .icon-close-btn, .msg-fail .icon-close-btn, .msg-warning .icon-close-btn, .msg-message .icon-close-btn, .loading-text span {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -20,7 +20,152 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-/*=====遮罩层=====*/
+/*======消息提示框======*/
+.msg-success {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #d8efcc;
+  border: 1px solid #c3e7b1;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-success .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #78c950;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-success .msg-content.center {
+      text-align: center; }
+  .msg-success .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #69c33c; }
+  .msg-success .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #69c33c; }
+
+.msg-fail {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #fcd4d4;
+  border: 1px solid #fab2b2;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-fail .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #f13b3b;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-fail .msg-content.center {
+      text-align: center; }
+  .msg-fail .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #f02323; }
+  .msg-fail .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #f02323; }
+
+.msg-warning {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #fcefde;
+  border: 1px solid #f8e0be;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-warning .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #ecaa4b;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-warning .msg-content.center {
+      text-align: center; }
+  .msg-warning .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #ea9f33; }
+  .msg-warning .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #ea9f33; }
+
+.msg-message {
+  display: none;
+  position: relative;
+  width: 330px;
+  height: 40px;
+  font-size: 0;
+  line-height: 40px;
+  padding: 0 10px;
+  background: #e0e9fa;
+  border: 1px solid #c1d2f5;
+  margin: 10px auto;
+  -moz-border-radius: 4px;
+  /* Firefox */
+  -webkit-border-radius: 4px;
+  /* Safari 和 Chrome */
+  border-radius: 4px;
+  /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+  .msg-message .msg-content {
+    display: inline-block;
+    font-size: 14px;
+    text-align: left;
+    color: #5484e3;
+    padding: 0 6px 0 6px;
+    vertical-align: middle; }
+    .msg-message .msg-content.center {
+      text-align: center; }
+  .msg-message .msg-icon {
+    vertical-align: middle;
+    font-size: 22px;
+    color: #3e74df; }
+  .msg-message .icon-close-btn {
+    cursor: pointer;
+    font-size: 12px;
+    right: 10px;
+    color: #3e74df; }
+
+/*======遮罩层======*/
 #mask {
   display: none;
   position: fixed;
@@ -213,9 +358,9 @@
 
 /*===============主题样式设置===============*/
 #theme-default #main .content-wrapper .l-btn {
-  padding: 8px 12px;
+  padding: 9px 12px;
   color: #ffffff;
-  background-color: #0bd7d4;
+  background-color: #0ABFBC;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -ms-transiton: 0.3s;
@@ -226,25 +371,15 @@
 
 #theme-default #main .content-wrapper .submit-btn {
   text-align: center;
-  margin-top: 30px; }
+  margin-top: 25px; }
   #theme-default #main .content-wrapper .submit-btn button {
-    width: 120px;
-    height: 35px;
-    background-color: #0ABFBC;
+    width: 130px;
     -moz-border-radius: 5px;
     /* Firefox */
     -webkit-border-radius: 5px;
     /* Safari 和 Chrome */
     border-radius: 5px;
-    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-    color: #ffffff;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -ms-transiton: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s; }
-    #theme-default #main .content-wrapper .submit-btn button:hover {
-      background-color: #09a7a4; }
+    /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
 
 #theme-default #main .content-wrapper input[type='text'].focus, #theme-default #main .content-wrapper textarea.focus {
   border: 1px solid #0ABFBC;
@@ -284,9 +419,9 @@
   /*头部*/
   /*中间部分*/ }
   #theme-gray #main .content-wrapper .l-btn {
-    padding: 8px 12px;
+    padding: 9px 12px;
     color: #ffffff;
-    background-color: #7c7c7c;
+    background-color: #6F6F6F;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transiton: 0.3s;
@@ -296,25 +431,15 @@
       background-color: #626262; }
   #theme-gray #main .content-wrapper .submit-btn {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 25px; }
     #theme-gray #main .content-wrapper .submit-btn button {
-      width: 120px;
-      height: 35px;
-      background-color: #6F6F6F;
+      width: 130px;
       -moz-border-radius: 5px;
       /* Firefox */
       -webkit-border-radius: 5px;
       /* Safari 和 Chrome */
       border-radius: 5px;
-      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      color: #ffffff;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -ms-transiton: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      #theme-gray #main .content-wrapper .submit-btn button:hover {
-        background-color: #626262; }
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
   #theme-gray #main .content-wrapper input[type='text'].focus, #theme-gray #main .content-wrapper textarea.focus {
     border: 1px solid #6F6F6F;
     -webkit-transition: border 0.3s;
@@ -397,9 +522,9 @@
   /*头部*/
   /*中间部分*/ }
   #theme-blue #main .content-wrapper .l-btn {
-    padding: 8px 12px;
+    padding: 9px 12px;
     color: #ffffff;
-    background-color: #6298db;
+    background-color: #4D8AD6;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transiton: 0.3s;
@@ -409,25 +534,15 @@
       background-color: #387cd1; }
   #theme-blue #main .content-wrapper .submit-btn {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 25px; }
     #theme-blue #main .content-wrapper .submit-btn button {
-      width: 120px;
-      height: 35px;
-      background-color: #4D8AD6;
+      width: 130px;
       -moz-border-radius: 5px;
       /* Firefox */
       -webkit-border-radius: 5px;
       /* Safari 和 Chrome */
       border-radius: 5px;
-      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      color: #ffffff;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -ms-transiton: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      #theme-blue #main .content-wrapper .submit-btn button:hover {
-        background-color: #387cd1; }
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
   #theme-blue #main .content-wrapper input[type='text'].focus, #theme-blue #main .content-wrapper textarea.focus {
     border: 1px solid #4D8AD6;
     -webkit-transition: border 0.3s;
@@ -510,9 +625,9 @@
   /*头部*/
   /*中间部分*/ }
   #theme-darken-blue #main .content-wrapper .l-btn {
-    padding: 8px 12px;
+    padding: 9px 12px;
     color: #ffffff;
-    background-color: #535271;
+    background-color: #484762;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transiton: 0.3s;
@@ -522,25 +637,15 @@
       background-color: #3d3c53; }
   #theme-darken-blue #main .content-wrapper .submit-btn {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 25px; }
     #theme-darken-blue #main .content-wrapper .submit-btn button {
-      width: 120px;
-      height: 35px;
-      background-color: #484762;
+      width: 130px;
       -moz-border-radius: 5px;
       /* Firefox */
       -webkit-border-radius: 5px;
       /* Safari 和 Chrome */
       border-radius: 5px;
-      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      color: #ffffff;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -ms-transiton: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      #theme-darken-blue #main .content-wrapper .submit-btn button:hover {
-        background-color: #3d3c53; }
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
   #theme-darken-blue #main .content-wrapper input[type='text'].focus, #theme-darken-blue #main .content-wrapper textarea.focus {
     border: 1px solid #484762;
     -webkit-transition: border 0.3s;
@@ -623,9 +728,9 @@
   /*头部*/
   /*中间部分*/ }
   #theme-red #main .content-wrapper .l-btn {
-    padding: 8px 12px;
+    padding: 9px 12px;
     color: #ffffff;
-    background-color: #f88a96;
+    background-color: #F67280;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transiton: 0.3s;
@@ -635,25 +740,15 @@
       background-color: #f45a6a; }
   #theme-red #main .content-wrapper .submit-btn {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 25px; }
     #theme-red #main .content-wrapper .submit-btn button {
-      width: 120px;
-      height: 35px;
-      background-color: #F67280;
+      width: 130px;
       -moz-border-radius: 5px;
       /* Firefox */
       -webkit-border-radius: 5px;
       /* Safari 和 Chrome */
       border-radius: 5px;
-      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      color: #ffffff;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -ms-transiton: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      #theme-red #main .content-wrapper .submit-btn button:hover {
-        background-color: #f45a6a; }
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
   #theme-red #main .content-wrapper input[type='text'].focus, #theme-red #main .content-wrapper textarea.focus {
     border: 1px solid #F67280;
     -webkit-transition: border 0.3s;
@@ -736,9 +831,9 @@
   /*头部*/
   /*中间部分*/ }
   #theme-darken-green #main .content-wrapper .l-btn {
-    padding: 8px 12px;
+    padding: 9px 12px;
     color: #ffffff;
-    background-color: #5ca0a2;
+    background-color: #539092;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transiton: 0.3s;
@@ -748,25 +843,15 @@
       background-color: #4a8082; }
   #theme-darken-green #main .content-wrapper .submit-btn {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 25px; }
     #theme-darken-green #main .content-wrapper .submit-btn button {
-      width: 120px;
-      height: 35px;
-      background-color: #539092;
+      width: 130px;
       -moz-border-radius: 5px;
       /* Firefox */
       -webkit-border-radius: 5px;
       /* Safari 和 Chrome */
       border-radius: 5px;
-      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      color: #ffffff;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -ms-transiton: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      #theme-darken-green #main .content-wrapper .submit-btn button:hover {
-        background-color: #4a8082; }
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
   #theme-darken-green #main .content-wrapper input[type='text'].focus, #theme-darken-green #main .content-wrapper textarea.focus {
     border: 1px solid #539092;
     -webkit-transition: border 0.3s;
@@ -849,9 +934,9 @@
   /*头部*/
   /*中间部分*/ }
   #theme-purple #main .content-wrapper .l-btn {
-    padding: 8px 12px;
+    padding: 9px 12px;
     color: #ffffff;
-    background-color: #a66b80;
+    background-color: #9B5D73;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transiton: 0.3s;
@@ -861,25 +946,15 @@
       background-color: #8b5367; }
   #theme-purple #main .content-wrapper .submit-btn {
     text-align: center;
-    margin-top: 30px; }
+    margin-top: 25px; }
     #theme-purple #main .content-wrapper .submit-btn button {
-      width: 120px;
-      height: 35px;
-      background-color: #9B5D73;
+      width: 130px;
       -moz-border-radius: 5px;
       /* Firefox */
       -webkit-border-radius: 5px;
       /* Safari 和 Chrome */
       border-radius: 5px;
-      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
-      color: #ffffff;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -ms-transiton: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      #theme-purple #main .content-wrapper .submit-btn button:hover {
-        background-color: #8b5367; }
+      /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
   #theme-purple #main .content-wrapper input[type='text'].focus, #theme-purple #main .content-wrapper textarea.focus {
     border: 1px solid #9B5D73;
     -webkit-transition: border 0.3s;
@@ -1053,29 +1128,39 @@
     /*==========用户设置页========*/
     /*头像设置*/
     /*==========左边内容========*/ }
+    #main .content-wrapper h1 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 70px; }
     #user-config-box {
+      position: relative;
       width: 450px;
       margin: 0 auto;
-      text-align: center;
+      /*消息提示框*/
       /*用户信息*/ }
-      #user-config-box h1 {
-        margin: 20px 0 40px 0; }
+      #user-config-box .msg-box {
+        position: absolute;
+        top: -60px;
+        left: 40px; }
       #user-config-box ul {
-        margin-bottom: 60px; }
+        margin-bottom: 50px; }
         #user-config-box ul li {
           text-align: left;
           margin: 25px 0; }
+          #user-config-box ul li .username {
+            font-size: 18px;
+            font-weight: bold; }
           #user-config-box ul li span, #user-config-box ul li input {
             vertical-align: middle; }
-          #user-config-box ul li > span {
+          #user-config-box ul li span:first-child {
             display: inline-block;
             width: 65px; }
           #user-config-box ul li b {
             color: #e51717; }
           #user-config-box ul li input {
             width: 320px;
-            height: 33px;
-            padding: 6px 5px 6px 15px;
+            height: 35px;
+            padding: 6px 10px 6px 15px;
             border: 1px solid #cdcdcd;
             -webkit-transition: border 0.3s;
             -moz-transition: border 0.3s;
@@ -1088,7 +1173,7 @@
             /* Safari 和 Chrome */
             border-radius: 15px;
             /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
-          #user-config-box ul li .user-cur-icon img {
+          #user-config-box ul li .user-cur-icon {
             width: 100px;
             height: 100px;
             border: none;
@@ -1101,7 +1186,7 @@
     #main .content-wrapper #icon-config-box {
       width: 680px;
       position: absolute;
-      top: 120px;
+      top: -80px;
       left: 50%;
       margin-left: -325px;
       background: #ffffff;
@@ -1252,25 +1337,23 @@
       #main .content-wrapper .left-content .cur-article-list {
         position: relative;
         background-color: #ffffff;
-        padding: 20px 55px 20px 25px;
+        padding: 18px 55px 18px 15px;
         text-align: left;
         margin-bottom: 25px;
         cursor: pointer;
         transition: 0.5s;
         text-align: justify;
-        -moz-border-radius: 6px;
+        -moz-border-radius: 3px;
         /* Firefox */
-        -webkit-border-radius: 6px;
+        -webkit-border-radius: 3px;
         /* Safari 和 Chrome */
-        border-radius: 6px;
+        border-radius: 3px;
         /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
         -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-        /*文章标题*/
-        /*文章介绍*/
         /*其他信息*/
         /*文章操作*/ }
         #main .content-wrapper .left-content .cur-article-list > a {
@@ -1281,16 +1364,40 @@
           -ms-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
           -o-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); }
-        #main .content-wrapper .left-content .cur-article-list h3 {
-          color: #0ac4c1;
-          font-size: 20px; }
-        #main .content-wrapper .left-content .cur-article-list .article-intro {
-          font-size: 13px;
-          color: #666666;
-          line-height: 22px;
-          margin: 15px 0 10px 0; }
-          #main .content-wrapper .left-content .cur-article-list .article-intro:hover {
-            cursor: pointer; }
+        #main .content-wrapper .left-content .cur-article-list .list-left {
+          float: left; }
+          #main .content-wrapper .left-content .cur-article-list .list-left img {
+            width: 50px;
+            height: 50px;
+            -moz-border-radius: 50%;
+            /* Firefox */
+            -webkit-border-radius: 50%;
+            /* Safari 和 Chrome */
+            border-radius: 50%;
+            /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */ }
+        #main .content-wrapper .left-content .cur-article-list .list-right {
+          margin-left: 65px;
+          /*文章标题*/
+          /*文章介绍*/ }
+          #main .content-wrapper .left-content .cur-article-list .list-right h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+            padding-top: 8px; }
+          #main .content-wrapper .left-content .cur-article-list .list-right h3 {
+            color: #0ac4c1;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 7px 0; }
+          #main .content-wrapper .left-content .cur-article-list .list-right .article-pub-time {
+            font-size: 12px;
+            color: #888; }
+          #main .content-wrapper .left-content .cur-article-list .list-right .article-intro {
+            font-size: 13px;
+            color: #555;
+            line-height: 22px; }
+            #main .content-wrapper .left-content .cur-article-list .list-right .article-intro:hover {
+              cursor: pointer; }
         #main .content-wrapper .left-content .cur-article-list .other-info {
           font-size: 12px;
           color: #999;

@@ -2,6 +2,7 @@
 
 use frontend\assets\AppAsset;
 use yii\helpers\Html;
+use frontend\widgets\header\HeaderWidget;
 
 ?>
 
@@ -51,7 +52,7 @@ if (!in_array(strtolower($controllerId), [
 
     <!--是否加载头部-->
 <?php if ($is_show_header): ?>
-    <?= $this->renderFile('../views/public/header.php') ?>
+    <?= HeaderWidget::widget();?>
 <?php endif; ?>
 
 

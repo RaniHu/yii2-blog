@@ -17,19 +17,30 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
         </div>
     <?php else: ?>
         <?php foreach ($articleList as $articleInfo): ?>
-            <div class="cur-article-list">
+            <div class="cur-article-list clearfix">
                 <a href="<?= Url::to(['blog/detail', 'id' => $articleInfo['id']]) ?>">
-                    <!--文章标题-->
-                    <h3><?= Html::encode("{$articleInfo['article_title']}") ?></h3>
-                    <!--简介-->
-                    <div class="article-intro">
-                        <?= $articleInfo['article_intro'] ?>
+                    <div class="list-left">
+                        <img class="user-icon" src=<?= '../../' . $articleInfo['author']['icon'] ?>>
                     </div>
-                    <!--发布时间及分类-->
-                    <div class="other-info">
-                        <span class="article-author"><i class="article-author-icon"></i><?= $articleInfo['author']['username'] ?></span>
-                        <span class="article-sort"><i class="article-sort-icon"></i><?= $articleInfo['cates']['cate'] ?></span>
-                        <span class="article-time"><i class="article-time-icon"></i> <?= $articleInfo['pub_date'] ?></span>
+                    <div class="list-right">
+
+                        <!--作者-->
+                        <h4><?=$articleInfo['author']['username']?></h4>
+
+                        <div class="other-info">
+                            <span class="article-pub-time"><?= $articleInfo['pub_date'] ?></span>
+<!--                            <span class="article-sort"><i class=""></i>--><?//= $articleInfo['cates']['cate'] ?><!--</span>-->
+                        </div>
+
+                        <!--文章标题-->
+                        <h3><?= Html::encode("{$articleInfo['article_title']}") ?></h3>
+
+                        <!--简介-->
+                        <div class="article-intro">
+                            <?= $articleInfo['article_intro'] ?>
+                        </div>
+                        <!--发布时间及分类-->
+
                     </div>
                 </a>
                 <!--相关操作-->

@@ -155,7 +155,26 @@ $(function () {
                         data: {"email": email, "sign": sign, "icon": icon,"isChangeIcon":isChangeIcon},
                         success: function (result) {
                             if(result.status==200){
-                                
+                                $.msgBox({
+                                    element:'#user-config-box',
+                                    type:'success',
+                                    content:result.msg,
+                                    showCloseBtn:true,
+                                    showIcon:true,
+                                    position:'left',
+                                    autoClose:false
+                                });
+                            }
+                            if(result.status==500){
+                             $.msgBox({
+                                 element:'#user-config-box',
+                                 type:'fail',
+                                 content:result.msg,
+                                 showCloseBtn:true,
+                                 showIcon:true,
+                                 position:'left',
+                                 autoClose:false
+                              })
                             }
                         },
                         error: function (XMLHttpRequest, textStatus, errorThrown) {
