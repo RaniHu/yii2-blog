@@ -79,7 +79,7 @@ class Reply extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id'])
-            ->select(['id','username'])
+            ->select(['id','username','icon'])
             ->asArray();
     }
 
@@ -93,29 +93,36 @@ class Reply extends \yii\db\ActiveRecord
             $request = Yii::$app->request->post();
             $replyContent = $request['replyContents'];
             $commentId = intval($request['commentId']);
+            $replyId =intval($request['replyId']);
 
+            $data['a']=$replyContent;
+            $data['b']=commentId;
+            $data['n']=$replyId;
+            
+            return $data;
             //保存评论
-            $model->comment_id = $commentId;
-            $model->user_id = Yii::$app->user->identity->id;
-            $model->content = $replyContent;
-            $model->date = date("Y-m-d H:i:s");
-            $model->save();
+//             $model->comment_id = $commentId;
+//             $model->reply_id = replyId;            
+//             $model->user_id = Yii::$app->user->identity->id;
+//             $model->content = $replyContent;
+//             $model->date = date("Y-m-d H:i:s");
+//             $model->save();
 
-            //事务成功
-            if ($model->save()) {
-                $transaction->commit();
-                $id=$model->attributes['id'];
-//                $commentData=Yii::$app->db->createCommand("select reply.id , content, date, username from reply inner join user  on reply.user_id=user.id where reply.id=".$id)->queryOne();
-                $commentData=$model->getReplyByKey($id);
-                $commentCount=$model->getReplyNum($commentId);
-                $commentInfo['data']=$commentData;
-                $commentInfo['count']=$commentCount;
-                return $commentInfo;
-            }
+//             //事务成功
+//             if ($model->save()) {
+//                 $transaction->commit();
+//                 $id=$model->attributes['id'];
+// //                $commentData=Yii::$app->db->createCommand("select reply.id , content, date, username from reply inner join user  on reply.user_id=user.id where reply.id=".$id)->queryOne();
+//                 $commentData=$model->getReplyByKey($id);
+//                 $commentCount=$model->getReplyNum($commentId);
+//                 $commentInfo['data']=$commentData;
+//                 $commentInfo['count']=$commentCount;
+//                 return $commentInfo;
+//             }
         } catch (\Exception $e) {
             $transaction->rollBack();
             Yii::$app->session->setFlash('error',$e->getMessage());
-            return false;
+            echo "回复失败!";
         }
 
     }

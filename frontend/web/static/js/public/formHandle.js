@@ -1,10 +1,10 @@
 var formHandleFn = {
     //表单聚焦时样式
     focusStyle: function () {
-        $("input,textarea").focus(function () {
+        $("input,textarea").on("focus",function () {
             $(this).addClass("focus");
         });
-        $("input,textarea").blur(function () {
+        $("input,textarea").on("blur",function () {
             $(this).removeClass("focus");
         })
     },

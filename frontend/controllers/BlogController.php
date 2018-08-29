@@ -158,6 +158,8 @@ class BlogController extends Controller
         }
 
 
+
+
         //当前的主题
         $curTheme=Theme::findOne(1);
         Yii::$app->view->params['theme']=$curTheme;
@@ -283,18 +285,32 @@ class BlogController extends Controller
             \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
             //返回回复数据
-            $replyData = $model->createReply();
-            if ($replyData) {
-                return [
-                    "status" => 200,
-                    "curComment" => $replyData
-                ];
-            } else {
-                return [
-                    "status" => 500,
-                    "error" => $model->errors,
-                ];
-            }
+            // $replyData = $model->createReply();
+            $request = Yii::$app->request->post();
+            $replyContent = $request['replyContents'];
+            $commentId =$request['commentId'];
+            $replyId =$request['replyId'];
+
+            $data['a']=$replyContent;
+            $data['b']= intval(commentId);
+            $data['n']=intval($replyId);
+            return [
+                "status" => 200,
+                "curComment" => $data
+            ];
+
+            // if ($data) {
+            //     return [
+            //         "status" => 200,
+            //         "curComment" => $request
+            //     ];
+            // } else {
+            //     return [
+            //         "status" => 500,
+            //         "a"=>$replyData,
+            //         "error" => $model->errors,
+            //     ];
+            // }
 
         }
     }

@@ -32,11 +32,11 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F, blue:#4D8AD6, darken-blue:#48
       }
 
       //表单聚焦样式
-      input[type='text'].focus, textarea.focus {
+      input.focus, textarea.focus {
         border: 1px solid $theme-color;
         @include transition(border 0.3s);
       }
-      input[type='text'].danger-border{
+      input.danger-border{
         border: 1px solid #e51717;
         @include transition(border 0.3s);
       }
@@ -51,6 +51,12 @@ $theme-color-name: (default:#0ABFBC, gray:#6F6F6F, blue:#4D8AD6, darken-blue:#48
             @include transition(0.5s);
             &:hover {
               background-color: darken($theme-color, 10%);
+            }
+          }
+          .write-comment-box,.write-reply-box{
+            .comment-texts.focus{
+              @include transition(border 0.3s);
+              border: 1px solid $theme-color;
             }
           }
           //回复

@@ -493,16 +493,23 @@ $bg-icon: add-btn, close-btn, article-reply, article-like, article-notSearch, ar
 
         //写评论
         .write-comment-box,.write-reply-box {
+          position: relative;
           font-size: 0;
-          textarea {
+          .msg-box {
+            top:-35px;
+            @extend %center-horizontally;
+          }
+          .comment-texts {
             font-size: 14px;
             width: 100%;
-            height: 60px;
-            padding: 5px 12px;
+            height: 38px;
+            padding: 3px 10px;
             border: 1px solid #ccc;
             margin-bottom: 10px;
+            @include transition(border 0.3s);
             @include box-sizing(border-box);
-            @include border-radius(6px);
+            @include border-radius(3px);
+          
           }
           .comment-btn {
             text-align: right;
@@ -530,7 +537,11 @@ $bg-icon: add-btn, close-btn, article-reply, article-like, article-notSearch, ar
             h4 {
               color: #333333;
               font-weight: bold;
-              font-size: 18px;
+              font-size: 16px;
+              img{
+                margin-right: 3px;
+                @include block_icon(30px);
+              }
             }
             //评论内容
             .comment-contents {
@@ -569,8 +580,14 @@ $bg-icon: add-btn, close-btn, article-reply, article-like, article-notSearch, ar
             }
             //回复框
             .write-reply-box{
+              position: relative;
               display: none;
               margin-top: 8px;
+              .msg-box {
+                
+                top:-35px;
+                @extend %center-horizontally;
+              }
             }
 
             //==回复列表盒子==

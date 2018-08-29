@@ -57,6 +57,9 @@ class ConfigForm extends Model
         }
     }
 
+    /* 
+     *转换base64格式图片
+     */
     public function base64_image_convert($base64_image, $path)
     {
         if (preg_match('/^(data:\s*image\/(\w+);base64,)/', $base64_image, $result)) {

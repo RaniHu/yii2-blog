@@ -80,7 +80,7 @@ class Comment extends \yii\db\ActiveRecord
     public function getUser()
     {
         return $this->hasOne(User::className(), ['id' => 'user_id'])
-            ->select(['id','username'])
+            ->select(['id','username','icon'])
             ->asArray();
     }
 

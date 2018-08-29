@@ -2,7 +2,8 @@
 
 use frontend\assets\AppAsset;
 use yii\helpers\Url;
-
+AppAsset::addCss($this, '@web/static/fonts/fonts-style.css');
+AppAsset::addScript($this, '@web/static/js/public/msgBox.js');
 AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
 
 ?>
@@ -51,9 +52,8 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
                 <!--写评论-->
                 <div class="write-comment-box  write-box">
                     <form method="get" method="post">
-                        <textarea class="comment-texts" placeholder="写下你的评论" name="comment-contents"></textarea>
+                        <input  class="comment-texts" placeholder="写下你的评论" name="comment-contents">
                         <div class="comment-btn">
-                            <a class="cancle-btn">取消</a>
                             <?php if (Yii::$app->user->isGuest) : ?>
                                 <a class="form-submit-btn send-btn" href="<?= Url::to(['/site/login']) ?>">评论</a>
                             <?php else: ?>
@@ -68,7 +68,10 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
                     <?php foreach ($curCommentReply as $comments) : ?>
                         <!--评论列表-->
                         <div class="comment-list" data-id="<?= $comments['id'] ?>">
-                        <h4><?= $comments['user']['username']?></h4>
+                        <h4>
+                            <img src=<?='../../'.$comments['user']['icon']?>>
+                            <?= $comments['user']['username']?>
+                        </h4>
                         <p class="comment-contents"><?= $comments['content']?></p>
                             <div class="other-info clearFix">
                                 <p class="comment-date"><?= $comments['date'] ?></p>
@@ -77,11 +80,25 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
                                     <li class="reply-like"><i class="article-like-icon"></i><span>赞</span></li>
                                 </ul>
                             </div>
+                            <!--回复框-->
+                            <div class="write-reply-box write-box">
+                                <input class="comment-texts" placeholder="写下你的回复" name="comment-contents">
+                                <div class="comment-btn">
+                                    <a class="cancle-btn">取消</a>
+                                    <?php if (Yii::$app->user->isGuest) : ?>
+                                        <a class="form-submit-btn send-btn"
+                                           href="<?= Url::to(['/site/login']) ?>">回复</a>
+                                    <?php else: ?>
+                                        <a class="form-submit-btn send-btn has-login">回复</a>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+
                             <!--某评论下的回复列表-->
                             <div class="reply-list-box">
                                 <?php if ($comments['reply']) : ?>
                                     <?php foreach ($comments['reply'] as $reply) : ?>
-                                        <div class="reply-list">
+                                        <div class="reply-list" data-id=<?=$reply['id']?>>
                                             <p>
                                                 <a class="reply-user-name"><?= $reply['user']['username'] ?>：</a>
                                                 <span class="reply-content"><?= $reply['content'] ?></span>
@@ -95,19 +112,7 @@ AppAsset::addScript($this, '@web/static/js/blog/blogHandle.js');
                                 <?php endif; ?>
                             </div>
 
-                            <!--回复框-->
-                            <div class="write-reply-box write-box">
-                                <textarea class="comment-texts" placeholder="写下你的回复" name="comment-contents"></textarea>
-                                <div class="comment-btn">
-                                    <a class="cancle-btn">取消</a>
-                                    <?php if (Yii::$app->user->isGuest) : ?>
-                                        <a class="form-submit-btn send-btn"
-                                           href="<?= Url::to(['/site/login']) ?>">回复</a>
-                                    <?php else: ?>
-                                        <a class="form-submit-btn send-btn has-login">回复</a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
+               
                     </div>
                     <?php endforeach;?>
                 </div>

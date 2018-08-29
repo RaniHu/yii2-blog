@@ -8,6 +8,7 @@ $(function () {
             uploadFn.submitForm();
             uploadFn.isChangeUserInfo();
         },
+
         //========显示上传图片弹窗========
         showUploadBox: function () {
             $(".user-cur-icon").on("click", function () {
@@ -24,11 +25,13 @@ $(function () {
                 uploadFn.closeUploadBox();
             });
         },
+
         //=========关闭上传图片弹窗=========
         closeUploadBox: function () {
             $("#icon-config-box").slideUp(200);
             $("#mask").hide();
         },
+
         //=========更改头像========
         changeAvatar: function () {
             $("#chooseImg").on("change", function () {
@@ -44,6 +47,7 @@ $(function () {
                 $("#icon-config-box .avatar-name").text(this.files[0].name);
             })
         },
+        
         //=========剪裁图片========
         tailoringImg: function () {
 
@@ -128,11 +132,15 @@ $(function () {
             })
 
         },
+        
+        //==========是否改变了用户信息=========
         isChangeUserInfo:function () {
             $("#user-config-box input ").change(function () {
                 uploadFn.isChange=1;
             })
         },
+
+        //===========提交表单============
         submitForm: function () {
 
             $("#sub-btn").on("click",function () {
@@ -161,8 +169,6 @@ $(function () {
                                     content:result.msg,
                                     showCloseBtn:true,
                                     showIcon:true,
-                                    position:'left',
-                                    autoClose:false
                                 });
                             }
                             if(result.status==500){
@@ -171,9 +177,7 @@ $(function () {
                                  type:'fail',
                                  content:result.msg,
                                  showCloseBtn:true,
-                                 showIcon:true,
-                                 position:'left',
-                                 autoClose:false
+                                 showIcon:true
                               })
                             }
                         },

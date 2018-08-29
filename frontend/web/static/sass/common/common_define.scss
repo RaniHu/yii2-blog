@@ -1,5 +1,4 @@
 @import './common_mixin.scss';
-
 /*========展开小图标>=======*/
 
 @mixin openIcon($borderColor, $size) {
@@ -15,15 +14,14 @@
     @include transform(rotate(-45deg));
 }
 
-@mixin openIconPc($borderColor, $size ) {
+@mixin openIconPc($borderColor, $size) {
     display: inline-block;
-    width:($size);
+    width: ($size);
     height: ($size);
     border-right: 1px solid $borderColor;
     border-bottom: 1px solid $borderColor;
     @include transform(rotate(45deg));
 }
-
 
 /*========向上小三角======*/
 
@@ -35,7 +33,6 @@
     border-bottom: ($size * 1.5) solid $color;
 }
 
-
 /*========向下小三角======*/
 
 @mixin triangle-down($size, $color) {
@@ -45,7 +42,6 @@
     border-right: ($size) solid transparent;
     border-top: ($size * 1.5) solid $color;
 }
-
 
 /*========向右小三角======*/
 
@@ -58,13 +54,13 @@
 }
 
 
+
 /*========在手机端滑动时更顺畅======*/
 
 %overflow-scroll-mobile {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
-
 
 /*======单行文本溢出省略号=====*/
 
@@ -73,7 +69,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 
 /*======多行文本溢出省略号=====*/
 
@@ -86,7 +81,6 @@
     height: $visible-height;
 }
 
-
 /*======圆圈头像======*/
 
 @mixin circle_icon($circle_icon_size) {
@@ -95,6 +89,13 @@
     @include border-radius(50%);
 }
 
+/*======方块头像======*/
+
+@mixin block_icon($circle_icon_size) {
+    width: $circle_icon_size;
+    height: $circle_icon_size;
+    @include border-radius(3px);
+}
 
 /*======水平垂直居中已知宽高======*/
 
@@ -106,7 +107,6 @@
     margin-top: -$height / 2;
 }
 
-
 /*======水平垂直居中=====*/
 
 %all-center {
@@ -117,7 +117,6 @@
     @include transform(translateY(-50%));
 }
 
-
 /*======水平居中======*/
 
 %center-horizontally {
@@ -125,7 +124,6 @@
     left: 50%;
     @include transform(translateX(-50%));
 }
-
 
 /*======垂直居中======*/
 
@@ -135,50 +133,85 @@
     @include transform(translateY(-50%));
 }
 
+/*======消息提示组件样式======*/
 
-
-
-/*======消息提示框======*/
-$message-style-list:(success: #e1f3d8,fail:#fde2e2,warning:#fdf6ec,message:#edf2fc);
-@each $msg-name,$msg-color in $message-style-list{
-    .msg-#{$msg-name} {
+$message-style-list:(success: #e1f3d8, fail:#fde2e2, warning:#fdf6ec, message:#edf2fc);
+@each $msg-name,
+$msg-color in $message-style-list {
+    .#{$msg-name}-type {
+        @include border-radius(4px);        
         display: none;
-        position: relative;
-        width: 330px;
-        height: 40px;
         font-size: 0;
-        line-height: 40px;
-        padding: 0 10px;
-        background: darken($msg-color,3%);
-        border:1px solid darken($msg-color,10%);
-        margin: 10px auto;
-        @include border-radius(4px);
-        .msg-content{
+        .msg-content {
             display: inline-block;
             font-size: 14px;
             text-align: left;
-            color: darken($msg-color,35%);
-            padding:0 6px 0 6px;
+            padding: 0 6px 0 6px;
             vertical-align: middle;
-            &.center{
+            &.center {
                 text-align: center;
             }
         }
-        .msg-icon{
-            vertical-align:middle;
+        .msg-icon {
+            vertical-align: middle;
             font-size: 22px;
-            color: darken($msg-color,40%);
+            color: darken($msg-color, 40%);
         }
-        .icon-close-btn{
+        .icon-close-btn {
             cursor: pointer;
             font-size: 12px;
-            right:10px;
-            color: darken($msg-color,40%);
+            right: 10px;
+            color: darken($msg-color, 40%);
             @extend %vertical-center;
+        }
+    }
+    /*=====消息提示框======*/
+    .#{$msg-name}-type.msg-theme {
+        position: relative;
+        width: 330px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 10px;
+        background: darken($msg-color, 3%);
+        border: 1px solid darken($msg-color, 10%);
+        margin: 10px auto;
+        .msg-content {
+            color: darken($msg-color, 35%);
         }
     }
 }
 
+
+/*======气泡提示框====== */
+.tooltip-theme {
+    position: absolute;
+    width: 230px;
+    background-color: #fff;
+    color: #333;
+    font-size: 12px;
+    padding: 5px 5px 5px 10px;
+    @include box-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    &:after{
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        bottom: -4px;
+        left: 50%;
+        margin-left: -4px;
+        display:inline-block;
+        background: #fff;
+        border-color:transparent;
+        @include box-shadow(3px 3px 7px rgba(0, 0, 0, 0.07));
+        @include transform(rotate(45deg));
+    }
+    .msg-icon{
+        font-size: 18px;
+    }
+    .msg-content{
+        font-size: 13px;
+    }
+}
 
 /*======遮罩层======*/
 
@@ -277,7 +310,6 @@ $message-style-list:(success: #e1f3d8,fail:#fde2e2,warning:#fdf6ec,message:#edf2
         @include opacity(1);
     }
 }
-
 
 /*=======loading======*/
 
